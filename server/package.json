@@ -6,10 +6,11 @@
   "scripts": {
     "start": "nodemon app.js",
     "lint": "eslint .",
-    "start:test": "PORT=8080 MONGODB_URL='mongodb://tbadded' npm run test",
+    "start:test": "PORT=8080 MONGODB_URL='mongodb+srv://techforgoodtest:1nP18LjL5oE64hrr@test-techforgood.tzfal.mongodb.net/Test-TechForGood?retryWrites=true&w=majority' npm run test",
     "test": "npm run lint && npm run test:unit && npm run test:integration",
     "test:unit": "jest",
-    "test:integration": "cypress run"
+    "test:integration": "cypress run",
+    "e2e": "cypress open"
   },
   "repository": {
     "type": "git",
@@ -23,13 +24,17 @@
   "homepage": "https://github.com/Dash1704/techforgood#readme",
   "dependencies": {
     "cors": "^2.8.5",
-    "cypress": "^9.5.3",
     "dotenv": "^16.0.0",
-    "eslint": "^8.12.0",
     "express": "^4.17.3",
-    "jest": "^27.5.1",
     "mongoose": "^6.2.9",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
+    "cypress": "^9.5.3",
+    "eslint": "^8.12.0",
+    "eslint-plugin-cypress": "^2.8.1",
+    "eslint-plugin-react": "^7.29.4",
+    "jest": "^27.5.1"
   }
 }
