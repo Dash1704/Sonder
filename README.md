@@ -1,4 +1,4 @@
-# techforgood
+# Sonder
 
 ## Tech Stack
 - [Express](https://expressjs.com/) web framework for Node.js.
