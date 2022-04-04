@@ -1,9 +1,14 @@
 # techforgood
 
-## User Stories
+## MVP
+- Refugee: Sign up
+- Refugee: Sign in
+- Refugee Sign out
+- Refugee: Post needed items (email on post for the donor to contact)
+
+## MVP User Stories
 
 ~~~~~~
-
 As a refugee mother
 In order to have access to the application
 I would like to be able to sign up
@@ -19,5 +24,4 @@ I would like to be able to sign out
 As a refugee mother
 So that I could request resources
 I would like to be able to post my requested items
-
 ~~~~~~
