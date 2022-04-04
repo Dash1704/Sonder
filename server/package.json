@@ -1,0 +1,35 @@
+{
+  "name": "sonder",
+  "version": "1.0.0",
+  "description": "Helping refugee mothers in need",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "lint": "eslint .",
+    "start:test": "PORT=8080 MONGODB_URL='mongodb://tbadded' npm run test",
+    "test": "npm run lint && npm run test:unit && npm run test:integration",
+    "test:unit": "jest",
+    "test:integration": "cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Dash1704/techforgood.git"
+  },
+  "author": "Tech4Good",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dash1704/techforgood/issues"
+  },
+  "homepage": "https://github.com/Dash1704/techforgood#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "cypress": "^9.5.3",
+    "dotenv": "^16.0.0",
+    "eslint": "^8.12.0",
+    "express": "^4.17.3",
+    "jest": "^27.5.1",
+    "mongoose": "^6.2.9",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15"
+  }
+}
