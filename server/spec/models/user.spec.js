@@ -36,15 +36,5 @@ describe('User model', () => {
       });
       expect(user.email).toEqual("someone@example.com");
     });
-
-    it("doesn't login a user if no user found", () => {
-      const user = new User({
-        name: "Megan Markle",
-        email: "someone@example.com",
-        password: "password",
-      });
-      User.findOne(err, {email: "1"})
-      expect(err).toBe("No user found")
-    })
   })
 })
