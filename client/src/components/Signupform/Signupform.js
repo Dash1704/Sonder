@@ -21,20 +21,24 @@ const SignupForm = () => {
     return (
 
     <div>
+        <h1>EMAIL</h1>
         <form>
             <label htmlFor="email">Email</label>
             <input type="text" 
+                data-testid="email"
                 value={email}
                 onChange = {(e) => setEmail(e.target.value)}
             /> 
 
             <label htmlFor="password">Password</label>
             <input type="text" 
+                data-testid="password"
                 value={password}
                 onChange = {(e) => setPassword(e.target.value)}
             />
 
             <input type="submit"
+                data-testid="signup-button"
                 onClick = {() => postSignup()} 
             />
     </form>
