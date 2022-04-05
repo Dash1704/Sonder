@@ -23,7 +23,7 @@ const protect = asyncHandler(async (req, res, next) => {
 
   if(!token){
     res.status(401)
-    throw new Error('Mot authorised')
+    throw new Error('Not authorised')
   }
 })
 module.exports = {protect}
