@@ -8,7 +8,8 @@ require('dotenv').config();
 
 // Import routes
 
-const userRouter = require('./routes/users')
+const userRouter = require('./routes/users');
+const sessionRouter = require('./router/sessions');
 
 //app
 const app = express();
@@ -27,6 +28,7 @@ app.use(cors({origin: true, credentials: true}));
 //routes
 
 app.use("/users", userRouter);
+app.use("/sessions", sessionRouter);
 
 // const testRoutes =require('./routes/test');
 // app.use("/", testRoutes)
