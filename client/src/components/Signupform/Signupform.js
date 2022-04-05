@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 const SignupForm = () => {
-
+    const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const postSignup = () => {
@@ -9,6 +9,7 @@ const SignupForm = () => {
             method: "post",
             headers: {'Content-Type':'application/json'},
             body: JSON.stringify({
+                name,
                 email,
                 password
             })
@@ -21,8 +22,13 @@ const SignupForm = () => {
     return (
 
     <div>
-        <h1>EMAIL</h1>
         <form>
+            <label htmlFor="name">Name</label>
+            <input type="text" 
+                data-testid="name"
+                value={name}
+                onChange = {(e) => setName(e.target.value)}
+            /> 
             <label htmlFor="email">Email</label>
             <input type="text" 
                 data-testid="email"
