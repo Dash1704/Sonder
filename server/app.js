@@ -6,6 +6,10 @@ const morgan = require('morgan');
 const cors = require('cors');
 require('dotenv').config();
 
+// Import routes
+
+const userRouter = require('./routes/users')
+
 //app
 const app = express();
 
@@ -21,6 +25,8 @@ app.use(morgan('dev'));
 app.use(cors({origin: true, credentials: true}));
 
 //routes
+
+app.use("/users", userRouter);
 
 // const testRoutes =require('./routes/test');
 // app.use("/", testRoutes)
