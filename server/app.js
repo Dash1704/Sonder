@@ -8,8 +8,8 @@ require('dotenv').config();
 
 // Import routes
 
-const userRouter = require('./routes/users');
-const sessionRouter = require('./router/sessions');
+const homeRouter = require('./routes/home');
+const sessionRouter = require('./routes/sessions');
 
 //app
 const app = express();
@@ -26,8 +26,7 @@ app.use(morgan('dev'));
 app.use(cors({origin: true, credentials: true}));
 
 //routes
-
-app.use("/users", userRouter);
+app.use("/", homeRouter)
 app.use("/sessions", sessionRouter);
 
 // const testRoutes =require('./routes/test');
