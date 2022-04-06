@@ -5,6 +5,7 @@ const AddRequest = () => {
 
     return (
     <div>
+        <h1>Add Request Component </h1>
         <form>
             <label htmlFor="request">Type Your Request Here</label>
             <input type="text" 

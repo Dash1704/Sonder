@@ -5,7 +5,7 @@ import ListRequest from '../components/ListRequest/ListRequest.js'
 const RequestPage = () => {
     return (
       <>
-      <h1>RequestPage</h1>
+      <h1>Request Page</h1>
       < AddRequest />
       < ListRequest />
       </>
