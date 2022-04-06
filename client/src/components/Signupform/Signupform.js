@@ -50,7 +50,11 @@ const SignUpForm = () => {
 
             <button
                 data-testid="signup-button"
-                onClick = {() => postSignup()} >
+                onClick = {(e) => {
+                    e.preventDefault();
+                    postSignup()
+                    }
+                } >
                 Sign-In
             </button>
     </form>
