@@ -14,7 +14,8 @@ const RequestPage = () => {
         })
         .then(response => response.json())
         .then(result => {
-            setAllRequests(result.request)
+            console.log(result)
+            setAllRequests(result.requests)
             })
         }, [])
 
@@ -26,9 +27,10 @@ const RequestPage = () => {
         allRequests={allRequests}
         />
         <>
-        {allRequests.forEach( oneRequest => {
-            < ListRequest 
+        {allRequests.map( oneRequest => {
+            return < ListRequest 
             oneRequest={oneRequest}
+            key={oneRequest._id}
             />
         })}
         </>
