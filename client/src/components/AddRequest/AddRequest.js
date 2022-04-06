@@ -3,21 +3,21 @@ import React, { useState } from 'react'
 const AddRequest = ({setAllRequests, allRequests}) => {
 
     const [newRequest, setNewRequest] = useState("")
+    const [name, setName] = useState("")
 
     const NewRequest = () => {
-        fetch("/users", {
+        fetch("/requests/new", {
             method: "post",
             headers: {'Content-Type':'application/json'},
             body: JSON.stringify({
-                    text: newRequest
+                    text: newRequest,
+                    name
                 })
             })
             .then(response => response.json())
             .then(data => {
                 console.log('request posted succesfully')
-                let updatedRequests = [ 
-                    ...allRequests, data
-                ]
+                let updatedRequests = [...allRequests, data]
                 setAllRequests(updatedRequests);
                 setNewRequest("")
             })
@@ -34,6 +34,12 @@ const AddRequest = ({setAllRequests, allRequests}) => {
                 onChange = {(e) => setNewRequest(e.target.value)}
                 placeholder="Post a new request here..."
                 data-testid="requestBody"
+            /> 
+            <input type="text" 
+                value={name}
+                onChange = {(e) => setName(e.target.value)}
+                placeholder="Write your name here"
+                data-testid="contactName"
             /> 
             <input type="submit"
                 data-testid="addRequestButton"

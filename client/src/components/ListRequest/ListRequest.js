@@ -1,12 +1,15 @@
 import React from 'react';
 
 
-const ListRequest = ({oneRequest}) => {
+const ListRequest = ({ text, name }) => {
 
     return (
+    <>
+    <h1>List Item</h1>
     <div>
-       <p>{oneRequest.text}</p>
+       <p>{`${text} requested by ${name}`}</p>
     </div>
+    </>
     )
 }
 
