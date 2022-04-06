@@ -48,10 +48,11 @@ const SignUpForm = () => {
                 onChange = {(e) => setPassword(e.target.value)}
             />
 
-            <input type="submit"
+            <button
                 data-testid="signup-button"
-                onClick = {() => postSignup()} 
-            />
+                onClick = {() => postSignup()} >
+                Sign-In
+            </button>
     </form>
     </div>
 

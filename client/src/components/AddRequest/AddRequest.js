@@ -41,10 +41,12 @@ const AddRequest = ({setAllRequests, allRequests}) => {
                 placeholder="Write your name here"
                 data-testid="contactName"
             /> 
-            <input type="submit"
+           
+            <button
                 data-testid="addRequestButton"
-                onClick = {() => NewRequest()}
-            />
+                onClick = {() => NewRequest()} >
+                Request!
+            </button>
         </form>
     </div>
     )
