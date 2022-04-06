@@ -14,7 +14,7 @@ const RequestPage = () => {
         })
         .then(response => response.json())
         .then(result => {
-            setAllRequests(result.posts)
+            setAllRequests(result.request)
             })
         }, [])
 
@@ -23,8 +23,15 @@ const RequestPage = () => {
       <h1>Request Page</h1>
       < AddRequest 
         setAllRequests={setAllRequests}
-        allRequests={allRequests}/>
-      < ListRequest />
+        allRequests={allRequests}
+        />
+        <>
+        {allRequests.forEach( oneRequest => {
+            < ListRequest 
+            oneRequest={oneRequest}
+            />
+        })}
+        </>
       </>
     )
   }

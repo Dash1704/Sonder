@@ -1,11 +1,11 @@
 import React from 'react';
 
 
-const ListRequest = () => {
+const ListRequest = ({oneRequest}) => {
 
     return (
     <div>
-       <h1> List Request Component</h1>
+       <p>{oneRequest.text}</p>
     </div>
     )
 }
