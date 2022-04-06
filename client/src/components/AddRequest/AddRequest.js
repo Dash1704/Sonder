@@ -19,7 +19,8 @@ const AddRequest = ({setAllRequests, allRequests}) => {
                 console.log('request posted succesfully')
                 let updatedRequests = [...allRequests, data]
                 setAllRequests(updatedRequests);
-                setNewRequest("")
+                setNewRequest("");
+                setName("");
             })
             .catch(err => console.log(err))
         }
@@ -44,7 +45,9 @@ const AddRequest = ({setAllRequests, allRequests}) => {
            
             <button
                 data-testid="addRequestButton"
-                onClick = {() => NewRequest()} >
+                onClick = {(e) => {
+                    e.preventDefault();
+                    NewRequest()}} >
                 Request!
             </button>
         </form>
