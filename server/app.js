@@ -7,8 +7,8 @@ const cors = require('cors');
 require('dotenv').config();
 
 // Import routes
-
-const homeRouter = require('./routes/home');
+const testRouter = require('./routes/test')
+const userRouter = require('./routes/users');
 const sessionRouter = require('./routes/sessions');
 
 //app
@@ -25,11 +25,13 @@ mongoose.connect(process.env.MONGO_URI, {
 app.use(express.json())
 app.use(morgan('dev'));
 app.use(cors({origin: true, credentials: true}));
+app.use(express.json())
 
 //routes
-app.use("/", homeRouter)
 app.use("/sessions", sessionRouter);
- 
+app.use("/", testRouter)
+app.use("/users", userRouter);
+
 // const testRoutes =require('./routes/test');
 // app.use("/", testRoutes)
 
