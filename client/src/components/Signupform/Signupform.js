@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 
-const SignupForm = () => {
+const SignUpForm = () => {
     const navigate = useNavigate()
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -17,9 +17,11 @@ const SignupForm = () => {
             })
         })
         .then(response => response.json())
-        .then(data => console.log(data))
+        .then(data => {
+            console.log(data)
+            navigate("/login")
+        })
         .catch(err => console.log(err))
-        navigate("/sessions/login")
     }
 
     return (
@@ -56,4 +58,4 @@ const SignupForm = () => {
     )
   }
 
-  export default SignupForm
+  export default SignUpForm
