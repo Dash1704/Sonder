@@ -31,7 +31,7 @@ const AddRequest = ({setAllRequests, allRequests}) => {
             <label htmlFor="request">Type Your Request Here</label>
             <input type="text" 
                 value={newRequest}
-                onChange = {(e) => setNewRequests(e.target.value)}
+                onChange = {(e) => setNewRequest(e.target.value)}
                 placeholder="Post a new request here..."
                 data-testid="requestBody"
             /> 
