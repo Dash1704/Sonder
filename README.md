@@ -1,4 +1,5 @@
 # Sonder
+A web app for refugee mothers which connects them with resources and donors to support future generations.
 
 ## Tech Stack
 - [Express](https://expressjs.com/) web framework for Node.js.
@@ -21,7 +22,7 @@
 - Refugee: Sign up
 - Refugee: Sign in
 - Refugee Sign out
-- Refugee: Post needed items (email on post for the donor to contact)
+- Refugee: Requests
 
 ## MVP User Stories
 
