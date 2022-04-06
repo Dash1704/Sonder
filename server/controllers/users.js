@@ -26,17 +26,11 @@ const UsersController = {
       password: hashedPassword
     })
     if(user) {
-      return res.status(201).json({
-        _id: user.id,
-        name: user.name,
-        email: user.email
-      }, {message: 'User registered'})
+      res.status(201).json({message: 'User registered'})
     } else {
       res.status(400)
       throw new Error ('invalid user data')
     }
-  
-    // return res.status(200).json({message: 'User registered'})
   })
 }
 

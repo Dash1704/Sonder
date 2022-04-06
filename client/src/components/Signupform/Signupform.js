@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
+import {useNavigate} from 'react-router-dom';
 
 const SignupForm = () => {
+    const navigate = useNavigate()
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -17,6 +19,7 @@ const SignupForm = () => {
         .then(response => response.json())
         .then(data => console.log(data))
         .catch(err => console.log(err))
+        navigate("/sessions/login")
     }
 
     return (
