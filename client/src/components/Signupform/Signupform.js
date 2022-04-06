@@ -7,7 +7,7 @@ const SignupForm = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const postSignup = () => {
-        fetch("https://localhost:8080/users", {
+        fetch("/users", {
             method: "post",
             headers: {'Content-Type':'application/json'},
             body: JSON.stringify({

@@ -31,8 +31,6 @@ const UsersController = {
       res.status(400)
       throw new Error ('invalid user data')
     }
-  
-    
   })
 }
 
