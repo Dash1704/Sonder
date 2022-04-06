@@ -6,10 +6,6 @@ const mockingoose = require('mockingoose');
 
 
 describe('session login', () => {
-
-  beforeEach(() => {
-    mockingoose.resetAll();
-  });
  
   it('returns signed in user if email and password correct', async () => {
     const email = "eddie@me.com"
@@ -25,16 +21,16 @@ describe('session login', () => {
     
       const res = await request(app)
       .post('/sessions/login')
-      .send({email: "chris@chris.com", password: "12345"})
+      .send({email: "someone@example.com", password: "password"})
       
       expect(res.statusCode).toEqual(201);
-      expect(res.body.email).toEqual("chris@chris.com");
+      expect(res.body.email).toEqual("someone@example.com");
       expect(res.body.token).toContain("Bearer")
   });
   it('returns status code 400 if only password filled in', async () => {
       const res = await request(app)
       .post('/sessions/login')
-      .send({ email: "chris@chris.com"})
+      .send({ email: "someone@example.com"})
 
       expect(res.statusCode).toEqual(400);
       expect(res.body).toEqual('Invalid credentials');
