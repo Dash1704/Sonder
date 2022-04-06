@@ -8,8 +8,8 @@ require('dotenv').config();
 
 // Import routes
 
-const userRouter = require('./routes/users');
-const sessionRouter = require('./router/sessions');
+const homeRouter = require('./routes/home');
+const sessionRouter = require('./routes/sessions');
 
 //app
 const app = express();
@@ -22,14 +22,14 @@ mongoose.connect(process.env.MONGO_URI, {
   .then(() => console.log("DB CONNECTED")).catch(err => console.log("DB CONNECTION ERROR", err));
 
 //middleware
+app.use(express.json())
 app.use(morgan('dev'));
 app.use(cors({origin: true, credentials: true}));
 
 //routes
-
-app.use("/users", userRouter);
+app.use("/", homeRouter)
 app.use("/sessions", sessionRouter);
-
+ 
 // const testRoutes =require('./routes/test');
 // app.use("/", testRoutes)
 
@@ -38,3 +38,5 @@ const port = process.env.PORT || 8080;
 
 //listener
 const server = app.listen(port, () => console.log(`Server is running on ${port}`))
+
+module.exports = server
