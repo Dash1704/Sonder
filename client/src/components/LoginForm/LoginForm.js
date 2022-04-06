@@ -1,37 +1,31 @@
 import React, {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 
-const SignupForm = () => {
-    const navigate = useNavigate()
-    const [name, setName] = useState("");
+const LoginForm = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const postSignup = () => {
-        fetch("/users", {
+    const navigation = useNavigate();
+    const UserLogin = () => {
+        fetch("/sessions/login", {
             method: "post",
             headers: {'Content-Type':'application/json'},
             body: JSON.stringify({
-                name,
                 email,
                 password
             })
         })
         .then(response => response.json())
-        .then(data => console.log(data))
+        .then(data => {console.log(data)
+        localStorage.setItem("user",JSON.stringify(data.user))
+        
+        navigation('/requests')})
         .catch(err => console.log(err))
-        navigate("/sessions/login")
     }
 
     return (
 
     <div>
         <form>
-            <label htmlFor="name">Name</label>
-            <input type="text" 
-                data-testid="name"
-                value={name}
-                onChange = {(e) => setName(e.target.value)}
-            /> 
             <label htmlFor="email">Email</label>
             <input type="text" 
                 data-testid="email"
@@ -48,7 +42,7 @@ const SignupForm = () => {
 
             <input type="submit"
                 data-testid="signup-button"
-                onClick = {() => postSignup()} 
+                onClick = {() => UserLogin()} 
             />
     </form>
     </div>
@@ -56,4 +50,4 @@ const SignupForm = () => {
     )
   }
 
-  export default SignupForm
+  export default LoginForm
