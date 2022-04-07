@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
  
-const userSchema = new mongoose.Schema( {
+const motherSchema = new mongoose.Schema( {
     name: {
         type: String,
         required: true,
@@ -14,10 +14,15 @@ const userSchema = new mongoose.Schema( {
         type: String,
         required: true,
     },
-  
+    city: {
+        type: String,
+        required: true,
+    },
+    bio: []
+    
 },
     { timestamps: true }
 );
 
-const User = mongoose.model("User", userSchema);
-module.exports = User;
+const Mother = mongoose.model("Mother", motherSchema);
+module.exports = Mother;
