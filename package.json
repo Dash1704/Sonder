@@ -1,5 +1,7 @@
-"scripts": {
+{
+    "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "cd server && npm install && node app.js",
     "heroku-postbuild": "cd client && npm install && npm run build"
-  },
+  }
+}
