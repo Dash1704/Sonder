@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt')
 const asyncHandler = require('express-async-handler')
 
 const UsersController = {
-  Create: asyncHandler (async (req, res) => {
+  CreateMother: asyncHandler (async (req, res) => {
     const {name, email, password, city } = req.body
   
     if (!name || !email || !password || !city) {
