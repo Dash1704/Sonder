@@ -2,6 +2,10 @@ import React, { useState } from 'react'
 
 const AddRequest = ({setAllRequests, allRequests}) => {
 
+    const user = localStorage.getItem("user")
+    const jsonUser = JSON.parse(user)
+    console.log(jsonUser)
+
     const [newRequest, setNewRequest] = useState("")
     const [name, setName] = useState("")
 
@@ -11,7 +15,8 @@ const AddRequest = ({setAllRequests, allRequests}) => {
             headers: {'Content-Type':'application/json'},
             body: JSON.stringify({
                     text: newRequest,
-                    name
+                    name,
+                    userCreatedBy: jsonUser._id
                 })
             })
             .then(response => response.json())
