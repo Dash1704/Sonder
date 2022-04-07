@@ -2,7 +2,8 @@ const express = require("express");
 const router = express.Router();
 const UsersController = require("../controllers/users");
 
-router.post('/', UsersController.CreateMother)
+router.post('/mother', UsersController.CreateMother)
+router.post('/donor', UsersController.CreateDonor)
 
 module.exports = router
 

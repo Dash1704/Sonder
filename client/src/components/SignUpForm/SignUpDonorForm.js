@@ -7,14 +7,16 @@ const SignUpForm = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [city, setCity] = useState("");
     const postSignup = () => {
-        fetch("/users", {
+        fetch("/users/donor", {
             method: "post",
             headers: {'Content-Type':'application/json'},
             body: JSON.stringify({
                 name,
                 email,
-                password
+                password,
+                city
             })
         })
         .then(response => response.json())
@@ -51,6 +53,12 @@ const SignUpForm = () => {
                 data-testid="password"
                 value={password}
                 onChange = {(e) => setPassword(e.target.value)}
+            />
+            <label htmlFor="city">City</label>
+            <input type="text" 
+                data-testid="city"
+                value={city}
+                onChange = {(e) => setCity(e.target.value)}
             />
 
             <button

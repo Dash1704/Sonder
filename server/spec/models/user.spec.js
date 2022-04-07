@@ -1,12 +1,12 @@
 const mongoose = require("mongoose")
 
 require("../mongodb_helper");
-const User = require("../../models/users");
+const Mother = require("../../models/mother");
 
 
 describe('User model', () => {
   beforeEach( async () => {
-    await mongoose.connection.collections.users.deleteMany({});
+    await mongoose.connection.collections.mothers.deleteMany({});
   });
   describe("User schema", () => {
    

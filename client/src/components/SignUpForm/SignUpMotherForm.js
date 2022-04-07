@@ -9,7 +9,7 @@ const SignUpMotherForm = () => {
     const [password, setPassword] = useState("");
     const [city, setCity] = useState("");
     const postSignup = () => {
-        fetch("/users", {
+        fetch("/users/mother", {
             method: "post",
             headers: {'Content-Type':'application/json'},
             body: JSON.stringify({
