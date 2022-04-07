@@ -24,14 +24,11 @@ const SessionsController = {
     };
   }),
 
-  Delete: asyncHandler(async (req, res) => {
-    res.json({message: "logged out successfuly"});
-  }),
 }
 
 const generateToken = (id) => {
   return jwt.sign({id}, `${process.env.JWT_SECRET}`, {
-    expiresIn: '3h',
+    expiresIn: '1d',
   })
 }
 
