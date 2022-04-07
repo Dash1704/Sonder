@@ -13,12 +13,13 @@ const RequestController = {
     }
 
     const request = new Request({text, name, userCreatedBy});
+    console.log(request)
     request.save()
     return res.json(request)
    }),
  
    View: asyncHandler(async (req, res) => {
-     const requests = await Request.find().populate("userCreatedby").sort({createdAt:-1})
+     const requests = await Request.find().sort({createdAt:-1})
      if(requests) {
       res.status(201).json({
         requests: requests

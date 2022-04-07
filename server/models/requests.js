@@ -10,7 +10,7 @@ const requestSchema = new mongoose.Schema( {
       required: true,
     },
     userCreatedBy: {
-        type: mongoose.Schema.Types.ObjectId, ref: 'Mother',
+        type: Object
     }
 },
     { timestamps: true }

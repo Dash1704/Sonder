@@ -25,7 +25,7 @@ const UsersController = {
       name,
       email,
       password: hashedPassword,
-      city
+      city,
     })
     if(user) {
       res.status(201).json({message: "Mother registered"})

@@ -4,19 +4,20 @@ const AddRequest = ({setAllRequests, allRequests}) => {
 
     const user = localStorage.getItem("user")
     const jsonUser = JSON.parse(user)
-    console.log(jsonUser)
+    
 
     const [newRequest, setNewRequest] = useState("")
     const [name, setName] = useState("")
 
     const NewRequest = () => {
+        console.log(jsonUser)
         fetch("/requests/new", {
             method: "post",
             headers: {'Content-Type':'application/json'},
             body: JSON.stringify({
                     text: newRequest,
                     name,
-                    userCreatedBy: jsonUser._id
+                    userCreatedBy: jsonUser
                 })
             })
             .then(response => response.json())

@@ -37,6 +37,7 @@ const SessionsController = {
          _id: user.id,
          name: user.name,
          email: user.email,
+         city: user.city,
          token: generateToken(user._id)
        }})
      } else {

@@ -54,9 +54,9 @@ const SignUpMotherForm = () => {
                 value={password}
                 onChange = {(e) => setPassword(e.target.value)}
             />
-            <label htmlFor="password">City</label>
+            <label htmlFor="city">City</label>
             <input type="text" 
-                data-testid="password"
+                data-testid="city"
                 value={city}
                 onChange = {(e) => setCity(e.target.value)}
             />
