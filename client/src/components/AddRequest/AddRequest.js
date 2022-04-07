@@ -7,7 +7,6 @@ const AddRequest = ({setAllRequests, allRequests}) => {
     
 
     const [newRequest, setNewRequest] = useState("")
-    const [name, setName] = useState("")
 
     const NewRequest = () => {
         console.log(jsonUser)
@@ -16,7 +15,6 @@ const AddRequest = ({setAllRequests, allRequests}) => {
             headers: {'Content-Type':'application/json'},
             body: JSON.stringify({
                     text: newRequest,
-                    name,
                     userCreatedBy: jsonUser
                 })
             })
@@ -26,7 +24,6 @@ const AddRequest = ({setAllRequests, allRequests}) => {
                 let updatedRequests = [data, ...allRequests]
                 setAllRequests(updatedRequests);
                 setNewRequest("");
-                setName("");
             })
             .catch(err => console.log(err))
         }

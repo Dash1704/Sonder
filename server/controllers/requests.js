@@ -4,15 +4,13 @@ const asyncHandler = require('express-async-handler')
 
 const RequestController = {
   Create: asyncHandler(async (req, res) => {
-    const {name, text, userCreatedBy} = req.body
-    console.log("HHHHHHHHHHHHH")
-    console.log(req.body)
-    if (!name || !text) {
+    const {text, userCreatedBy} = req.body
+    if (!text) {
       res.status(400)
       throw new Error('fill in all fields')
     }
 
-    const request = new Request({text, name, userCreatedBy});
+    const request = new Request({text, userCreatedBy});
     console.log(request)
     request.save()
     return res.json(request)
