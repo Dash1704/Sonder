@@ -1,11 +1,14 @@
 import React from 'react';
-import LoginForm from '../components/LoginForm/LoginForm.js'
+import LoginDonorForm from '../components/LoginForm/LoginDonorForm.js'
+import LoginMotherForm from '../components/LoginForm/LoginMotherForm.js';
 
 const Login = () => {
     return (
       <>
-      <h1>Log In</h1>
-      < LoginForm />
+      <h1>Log In as Mother</h1>
+      < LoginMotherForm />
+      <h1>Log In as Donor</h1>
+      < LoginDonorForm />
       </>
     )
   }

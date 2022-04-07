@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 
-const LoginForm = () => {
+const LoginDonorForm = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigation = useNavigate();
-    const UserLogin = () => {
-        fetch("/sessions/login", {
+    const DonorLogin = () => {
+        fetch("/sessions/login/donor", {
             method: "post",
             headers: {'Content-Type':'application/json'},
             body: JSON.stringify({
@@ -44,7 +44,7 @@ const LoginForm = () => {
                 data-testid="login-button"
                 onClick = {(e) => {
                     e.preventDefault();
-                    UserLogin()
+                    DonorLogin()
                     }
                 } >
                 Log-In
@@ -55,4 +55,4 @@ const LoginForm = () => {
     )
   }
 
-  export default LoginForm
+  export default LoginDonorForm

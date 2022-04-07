@@ -18,7 +18,6 @@ const donorSchema = new mongoose.Schema( {
         type: String,
         required: true,
     },
-    bio: []
     
 },
     { timestamps: true }
