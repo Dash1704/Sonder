@@ -4,6 +4,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
 const cors = require('cors');
+const path = require('path')
 require('dotenv').config();
 
 // Import routes
@@ -44,7 +45,7 @@ const port = process.env.PORT || 8080;
 app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
 });
 
 //listener
