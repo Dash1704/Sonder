@@ -43,3 +43,27 @@ As a refugee mother
 So that I could request resources
 I would like to be able to post my requested items
 ~~~~~~
+
+## Extra User Stories
+*(1st round)*
+~~~~~~
+As a User
+So that I can specify who I am
+I want to be able to select either 'Refugee' or 'Donor'
+
+As a Refugee
+So that I can connect with donor in my area
+I want to sign up with my city and bio
+
+As a Donor
+In order to have access to the application
+I would like to be able to sign up 
+
+As a Donor
+So that I could access my account
+I would like to be able to sign in
+
+As a User
+So that I can display my details
+I would like to create a profile and view this
+~~~~~~
