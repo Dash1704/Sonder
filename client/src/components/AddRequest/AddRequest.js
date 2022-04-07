@@ -17,7 +17,7 @@ const AddRequest = ({setAllRequests, allRequests}) => {
             .then(response => response.json())
             .then(data => {
                 console.log('request posted succesfully')
-                let updatedRequests = [...allRequests, data]
+                let updatedRequests = [data, ...allRequests]
                 setAllRequests(updatedRequests);
                 setNewRequest("");
                 setName("");
@@ -27,7 +27,7 @@ const AddRequest = ({setAllRequests, allRequests}) => {
  
     return (
     <div>
-        <h1>Add Request Component </h1>
+        <h1>What items do you need?</h1>
         <form>
             <label htmlFor="request">Type Your Request Here</label>
             <input type="text" 

@@ -15,9 +15,9 @@ const LoginForm = () => {
             })
         })
         .then(response => response.json())
-        .then(data => {console.log(data)
+        .then(data => {
         localStorage.setItem("user",JSON.stringify(data.user))
-        
+
         navigation('/requests')})
         .catch(err => console.log(err))
     }
@@ -40,10 +40,15 @@ const LoginForm = () => {
                 onChange = {(e) => setPassword(e.target.value)}
             />
 
-            <input type="submit"
-                data-testid="signup-button"
-                onClick = {() => UserLogin()} 
-            />
+<button
+                data-testid="login-button"
+                onClick = {(e) => {
+                    e.preventDefault();
+                    UserLogin()
+                    }
+                } >
+                Log-In
+            </button>
     </form>
     </div>
 

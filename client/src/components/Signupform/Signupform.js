@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
+import M from 'materialize-css';
 
 const SignUpForm = () => {
-    const navigate = useNavigate()
+    const navigation = useNavigate()
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -18,8 +19,12 @@ const SignUpForm = () => {
         })
         .then(response => response.json())
         .then(data => {
-            console.log(data)
-            navigate("/login")
+            if (data.error) {
+                M.toast({html: data.error, classes: '#d32f2f red darken-2'})
+            } else {
+              M.toast({html:data.message, classes: '#536dfe indigo accent-2'})
+              navigation('/login')
+            }           
         })
         .catch(err => console.log(err))
     }
@@ -55,7 +60,7 @@ const SignUpForm = () => {
                     postSignup()
                     }
                 } >
-                Sign-In
+                Sign-Up
             </button>
     </form>
     </div>

@@ -12,11 +12,11 @@ const RequestController = {
 
     const request = new Request({text, name});
     request.save()
-    return res.json({message: "request submitted"})
+    return res.json(request)
    }),
  
    View: asyncHandler(async (req, res) => {
-     const requests = await Request.find()
+     const requests = await Request.find().sort({createdAt:-1})
      if(requests) {
       res.status(201).json({
         requests: requests
