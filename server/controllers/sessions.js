@@ -17,6 +17,7 @@ const SessionsController = {
         _id: user.id,
         name: user.name,
         email: user.email,
+        city: user.city,
         bio: user.bio,
         token: generateToken(user._id)
       }})

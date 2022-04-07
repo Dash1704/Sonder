@@ -42,19 +42,13 @@ const AddRequest = ({setAllRequests, allRequests}) => {
                 placeholder="Post a new request here..."
                 data-testid="requestBody"
             /> 
-            <input type="text" 
-                value={name}
-                onChange = {(e) => setName(e.target.value)}
-                placeholder="Write your name here"
-                data-testid="contactName"
-            /> 
            
             <button
                 data-testid="addRequestButton"
                 onClick = {(e) => {
                     e.preventDefault();
                     NewRequest()}} >
-                Request!
+                Request
             </button>
         </form>
     </div>
