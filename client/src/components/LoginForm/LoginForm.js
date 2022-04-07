@@ -16,7 +16,6 @@ const LoginForm = () => {
         })
         .then(response => response.json())
         .then(data => {
-        console.log("AAARRREEEE WWWEEE HERE")
         localStorage.setItem("user",JSON.stringify(data.user))
 
         navigation('/requests')})
