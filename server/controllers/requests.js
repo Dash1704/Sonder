@@ -16,7 +16,7 @@ const RequestController = {
    }),
  
    View: asyncHandler(async (req, res) => {
-     const requests = await Request.find()
+     const requests = await Request.find().sort({createdAt:-1})
      if(requests) {
       res.status(201).json({
         requests: requests
