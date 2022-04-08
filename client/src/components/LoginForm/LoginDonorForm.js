@@ -18,7 +18,7 @@ const LoginDonorForm = () => {
         .then(data => {
         localStorage.setItem("user",JSON.stringify(data.user))
 
-        navigation('/requests')})
+        navigation('/requests/donor')})
         .catch(err => console.log(err))
     }
 
