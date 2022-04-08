@@ -12,6 +12,17 @@ const DonorRequestPage = () => {
         seeAllRequests()
         }, [])
 
+        const filterByActive = () => {
+          fetch(`/requests/active`, {
+            headers:{
+              'Content-Type':'application/json'             
+          }})
+          .then(response => response.json())
+          .then(result => {
+              setAllRequests(result.requests)
+              })   
+        }
+
         const filterByCity = (city) => {
             fetch(`/requests/filter/${city}`,{
                 headers:{
@@ -55,6 +66,14 @@ const DonorRequestPage = () => {
                     e.preventDefault();
                     filterByCity(jsonUser.city)}} >
                 Filter by city
+            </button>
+
+            <button
+                data-testid="filterByFilteredRequests"
+                onClick = {(e) => {
+                    e.preventDefault();
+                    filterByActive()}} >
+                Filter by active
             </button>
  
 

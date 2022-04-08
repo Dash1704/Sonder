@@ -43,7 +43,15 @@ Fulfilled: asyncHandler(async (req, res) => {
       requests: changedRequest
     })
   }
-})
+}),
+
+ActiveFilter: asyncHandler(async (req, res) => {
+  const filteredRequests = await Request.find({active: true})
+    if(filteredRequests) {
+     res.status(201).json({
+       requests: filteredRequests
+     })
+}})
 
 }
 
