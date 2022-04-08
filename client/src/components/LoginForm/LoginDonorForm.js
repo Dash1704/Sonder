@@ -40,7 +40,7 @@ const LoginDonorForm = () => {
                 onChange = {(e) => setPassword(e.target.value)}
             />
 
-<button
+            <button
                 data-testid="login-button"
                 onClick = {(e) => {
                     e.preventDefault();
