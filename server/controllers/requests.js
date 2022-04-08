@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 const Request = require('../models/requests')
+const Item = require('../models/item')
 const asyncHandler = require('express-async-handler')
 
 const RequestController = {
@@ -18,9 +19,11 @@ const RequestController = {
  
    View: asyncHandler(async (req, res) => {
      const requests = await Request.find().sort({createdAt:-1})
+     const images = await Item.find()
      if(requests) {
       res.status(201).json({
-        requests: requests
+        requests,
+        images,
       })
     }
    }),

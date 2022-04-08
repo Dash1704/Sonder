@@ -38,7 +38,8 @@ const AddRequest = ({setAllRequests, allRequests}) => {
                 onChange = {(e) => setNewRequest(e.target.value)}
                 placeholder="Post a new request here..."
                 data-testid="requestBody"
-            /> 
+            />
+            
            
             <button
                 data-testid="addRequestButton"
