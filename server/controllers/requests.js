@@ -35,6 +35,16 @@ const RequestController = {
    }
   }), 
 
+Fulfilled: asyncHandler(async (req, res) => {
+  const requestId = req.params._id
+  const changedRequest = await Request.findOneAndUpdate({_id: requestId}, {active: false})
+  if(changedRequest) {
+    res.status(201).json({
+      requests: changedRequest
+    })
+  }
+})
+
 }
 
 module.exports = RequestController
