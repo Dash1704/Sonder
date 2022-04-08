@@ -35,33 +35,43 @@ const SignUpForm = () => {
 
     <div>
         <form>
+            <div className="input-field validate">
             <label htmlFor="name">Name</label>
             <input type="text" 
                 data-testid="name"
                 value={name}
                 onChange = {(e) => setName(e.target.value)}
             /> 
+            </div>
+            
+            <div className="input-field validate">
             <label htmlFor="email">Email</label>
             <input type="text" 
                 data-testid="email"
                 value={email}
                 onChange = {(e) => setEmail(e.target.value)}
             /> 
+            </div>
 
+            <div className="input-field validate">
             <label htmlFor="password">Password</label>
             <input type="text" 
                 data-testid="password"
                 value={password}
                 onChange = {(e) => setPassword(e.target.value)}
             />
+            </div>
+
+            <div className="input-field validate">
             <label htmlFor="city">City</label>
             <input type="text" 
                 data-testid="city"
                 value={city}
                 onChange = {(e) => setCity(e.target.value)}
             />
+            </div>
 
-            <button
+            <button className="btn waves-effect waves-light"
                 data-testid="signup-button"
                 onClick = {(e) => {
                     e.preventDefault();

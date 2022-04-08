@@ -30,14 +30,18 @@ const NavBar = ()=> {
   }
   
   return (
+  <div className="container">
   <nav>
   <div className="nav-wrapper">
+  <div className="col s12">
     <Link to="/" className="brand-logo left">Sonder</Link>
     <ul id="nav-mobile" className="right hide-on-med-and-down">
       {renderList()}
     </ul>
   </div>
+  </div>
   </nav>
+  </div>
   )
   }
 
