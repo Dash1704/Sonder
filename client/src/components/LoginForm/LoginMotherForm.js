@@ -26,21 +26,25 @@ const LoginMotherForm = () => {
 
     <div>
         <form>
+            <div className="input-field validate">
             <label htmlFor="email">Email</label>
             <input type="text" 
                 data-testid="email"
                 value={email}
                 onChange = {(e) => setEmail(e.target.value)}
             /> 
+            </div>
 
+            <div className="input-field validate">
             <label htmlFor="password">Password</label>
             <input type="text" 
                 data-testid="password"
                 value={password}
                 onChange = {(e) => setPassword(e.target.value)}
             />
+            </div>
 
-<button
+            <button className="btn waves-effect waves-light"
                 data-testid="login-button"
                 onClick = {(e) => {
                     e.preventDefault();

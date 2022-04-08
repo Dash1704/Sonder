@@ -71,7 +71,7 @@ const SignUpForm = () => {
             />
             </div>
 
-            <button
+            <button className="btn waves-effect waves-light"
                 data-testid="signup-button"
                 onClick = {(e) => {
                     e.preventDefault();
