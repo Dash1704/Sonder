@@ -1,31 +1,24 @@
 import React, {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
-import M from 'materialize-css';
 
-const SignUpForm = () => {
-    const navigation = useNavigate()
-    const [name, setName] = useState("");
+const LoginForm = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const postSignup = () => {
-        fetch("/users", {
+    const navigation = useNavigate();
+    const UserLogin = () => {
+        fetch("/sessions/login", {
             method: "post",
             headers: {'Content-Type':'application/json'},
             body: JSON.stringify({
-                name,
                 email,
                 password
             })
         })
         .then(response => response.json())
         .then(data => {
-            if (data.error) {
-                M.toast({html: data.error, classes: '#d32f2f red darken-2'})
-            } else {
-              M.toast({html:data.message, classes: '#536dfe indigo accent-2'})
-              navigation('/login')
-            }           
-        })
+        localStorage.setItem("user",JSON.stringify(data.user))
+
+        navigation('/requests')})
         .catch(err => console.log(err))
     }
 
@@ -33,12 +26,6 @@ const SignUpForm = () => {
 
     <div>
         <form>
-            <label htmlFor="name">Name</label>
-            <input type="text" 
-                data-testid="name"
-                value={name}
-                onChange = {(e) => setName(e.target.value)}
-            /> 
             <label htmlFor="email">Email</label>
             <input type="text" 
                 data-testid="email"
@@ -53,14 +40,14 @@ const SignUpForm = () => {
                 onChange = {(e) => setPassword(e.target.value)}
             />
 
-            <button
-                data-testid="signup-button"
+<button
+                data-testid="login-button"
                 onClick = {(e) => {
                     e.preventDefault();
-                    postSignup()
+                    UserLogin()
                     }
                 } >
-                Sign-Up
+                Log-In
             </button>
     </form>
     </div>
@@ -68,4 +55,4 @@ const SignUpForm = () => {
     )
   }
 
-  export default SignUpForm
+  export default LoginForm

@@ -10,6 +10,7 @@ require('dotenv').config();
 const testRouter = require('./routes/test')
 const userRouter = require('./routes/users');
 const sessionRouter = require('./routes/sessions');
+const requestRouter = require('./routes/requests')
 
 //app
 const app = express();
@@ -31,6 +32,7 @@ app.use(express.json())
 app.use("/sessions", sessionRouter);
 app.use("/", testRouter)
 app.use("/users", userRouter);
+app.use("/requests", requestRouter);
 
 // const testRoutes =require('./routes/test');
 // app.use("/", testRoutes)
