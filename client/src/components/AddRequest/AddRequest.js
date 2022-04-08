@@ -9,7 +9,6 @@ const AddRequest = ({setAllRequests, allRequests}) => {
     const [newRequest, setNewRequest] = useState("")
 
     const NewRequest = () => {
-        console.log(jsonUser)
         fetch("/requests/new", {
             method: "post",
             headers: {'Content-Type':'application/json'},
