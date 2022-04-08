@@ -2,6 +2,7 @@ import React from 'react';
 
 
 const RequestHelpButton = ({ oneRequest }) => {
+    
     const changeStatus = (id) => {
         fetch(`/requests/${id}`,{
             method: "post",
@@ -11,7 +12,8 @@ const RequestHelpButton = ({ oneRequest }) => {
           .then(response => response.json())
           .then(data => {
               console.log('ACTIVITY CHANGED')
-    })
+            })
+
     return (
     <>
     <button
@@ -24,6 +26,7 @@ const RequestHelpButton = ({ oneRequest }) => {
     </>
     
     )
+  }
 }
 
 export default RequestHelpButton
