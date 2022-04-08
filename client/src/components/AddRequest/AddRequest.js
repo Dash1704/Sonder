@@ -19,7 +19,6 @@ const AddRequest = ({setAllRequests, allRequests}) => {
             })
             .then(response => response.json())
             .then(data => {
-                console.log('request posted succesfully')
                 let updatedRequests = [data, ...allRequests]
                 setAllRequests(updatedRequests);
                 setNewRequest("");

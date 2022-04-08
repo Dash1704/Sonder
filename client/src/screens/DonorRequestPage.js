@@ -78,8 +78,10 @@ const DonorRequestPage = () => {
  
 
         {allRequests.map( oneRequest => {
-            return < ListRequest 
+            return < ListRequest
             oneRequest={oneRequest}
+            setAllRequests={setAllRequests}
+            allRequests={allRequests}
             key={oneRequest._id}
             />
         })}
