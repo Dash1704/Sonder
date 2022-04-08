@@ -4,6 +4,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
 const cors = require('cors');
+const path = require('path')
 require('dotenv').config();
 
 // Import routes
@@ -39,6 +40,13 @@ app.use("/requests", requestRouter);
 
 //port
 const port = process.env.PORT || 8080;
+
+// heroku
+app.use(express.static(path.join(__dirname, '../client/build')));
+
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
+});
 
 //listener
 const server = app.listen(port, () => console.log(`Server is running on ${port}`))
