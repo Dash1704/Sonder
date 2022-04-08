@@ -1,5 +1,6 @@
 {
     "scripts": {
-      "start": "cd client && npm install && npm run build cd .. cd server && npm install && node app.js"
-    }
+      "start": "cd server && npm install && node app.js cd .. cd client && npm install && npm run build"
+    },
+    "homepage": "https://sonder-techforgood.herokuapp.com/"
   }
