@@ -30,7 +30,7 @@ const AddRequest = ({setAllRequests, allRequests}) => {
  
     return (
     <div>
-        <h1>What items do you need?</h1>
+        <h2>What items do you need?</h2>
         <form>
             <label htmlFor="request">Type Your Request Here</label>
             <input type="text" 

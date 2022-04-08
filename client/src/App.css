@@ -3,3 +3,7 @@
   right: 20px;
   left: auto;
 }
+
+.btn-block {
+  width: 100%;
+}

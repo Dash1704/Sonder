@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import "@testing-library/jest-dom";
+
 import SignUpForm from "../SignUpForm.js";
 
     
@@ -10,6 +11,7 @@ import SignUpForm from "../SignUpForm.js";
     })
 
     it("should have an email label input", () => {
+
         render(<SignUpForm />);
         const passwordField = screen.getByTestId("password")
         expect(passwordField).toBeInTheDocument()
