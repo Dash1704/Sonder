@@ -2,19 +2,21 @@ import React, {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import M from 'materialize-css';
 
-const SignUpForm = () => {
+const SignUpMotherForm = () => {
     const navigation = useNavigate()
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [city, setCity] = useState("");
     const postSignup = () => {
-        fetch("/users", {
+        fetch("/users/mother", {
             method: "post",
             headers: {'Content-Type':'application/json'},
             body: JSON.stringify({
                 name,
                 email,
-                password
+                password,
+                city
             })
         })
         .then(response => response.json())
@@ -52,6 +54,12 @@ const SignUpForm = () => {
                 value={password}
                 onChange = {(e) => setPassword(e.target.value)}
             />
+            <label htmlFor="city">City</label>
+            <input type="text" 
+                data-testid="city"
+                value={city}
+                onChange = {(e) => setCity(e.target.value)}
+            />
 
             <button
                 data-testid="signup-button"
@@ -68,4 +76,4 @@ const SignUpForm = () => {
     )
   }
 
-  export default SignUpForm
+  export default SignUpMotherForm

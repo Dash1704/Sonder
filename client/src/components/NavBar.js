@@ -23,8 +23,7 @@ const NavBar = ()=> {
       ]
     } else {
       return [
-        <li key="home"><Link to="/">About Us</Link></li>,
-        <li key="signup"><Link to="/signup">Sign Up</Link></li>,
+        <li key="aboutus"><Link to="/aboutus">About Us</Link></li>,
         <li key="login"><Link to="/login">Login</Link></li>
       ]
     }
@@ -33,7 +32,7 @@ const NavBar = ()=> {
   return (
   <nav>
   <div className="nav-wrapper">
-    <Link to="#" className="brand-logo left">Sonder</Link>
+    <Link to="/" className="brand-logo left">Sonder</Link>
     <ul id="nav-mobile" className="right hide-on-med-and-down">
       {renderList()}
     </ul>

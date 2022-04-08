@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
  
-const userSchema = new mongoose.Schema( {
+const donorSchema = new mongoose.Schema( {
     name: {
         type: String,
         required: true,
@@ -14,10 +14,14 @@ const userSchema = new mongoose.Schema( {
         type: String,
         required: true,
     },
-  
+    city: {
+        type: String,
+        required: true,
+    },
+    
 },
     { timestamps: true }
 );
 
-const User = mongoose.model("User", userSchema);
-module.exports = User;
+const Donor = mongoose.model("Donor", donorSchema);
+module.exports = Donor;

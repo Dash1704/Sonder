@@ -2,16 +2,20 @@ import React, { useState } from 'react'
 
 const AddRequest = ({setAllRequests, allRequests}) => {
 
+    const user = localStorage.getItem("user")
+    const jsonUser = JSON.parse(user)
+    
+
     const [newRequest, setNewRequest] = useState("")
-    const [name, setName] = useState("")
 
     const NewRequest = () => {
+        console.log(jsonUser)
         fetch("/requests/new", {
             method: "post",
             headers: {'Content-Type':'application/json'},
             body: JSON.stringify({
                     text: newRequest,
-                    name
+                    userCreatedBy: jsonUser
                 })
             })
             .then(response => response.json())
@@ -20,7 +24,6 @@ const AddRequest = ({setAllRequests, allRequests}) => {
                 let updatedRequests = [data, ...allRequests]
                 setAllRequests(updatedRequests);
                 setNewRequest("");
-                setName("");
             })
             .catch(err => console.log(err))
         }
@@ -36,19 +39,13 @@ const AddRequest = ({setAllRequests, allRequests}) => {
                 placeholder="Post a new request here..."
                 data-testid="requestBody"
             /> 
-            <input type="text" 
-                value={name}
-                onChange = {(e) => setName(e.target.value)}
-                placeholder="Write your name here"
-                data-testid="contactName"
-            /> 
            
             <button
                 data-testid="addRequestButton"
                 onClick = {(e) => {
                     e.preventDefault();
                     NewRequest()}} >
-                Request!
+                Request
             </button>
         </form>
     </div>
