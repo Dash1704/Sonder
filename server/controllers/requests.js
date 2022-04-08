@@ -26,7 +26,7 @@ const RequestController = {
    }),
 
    Filter: asyncHandler(async (req, res) => {
-    const filteredRequests = await Request.find({city: req.body.city}).sort({createdAt:-1})
+    const filteredRequests = await Request.find({"userCreatedBy.city": `${searchCity}`})
     if(filteredRequests) {
      res.status(201).json({
        requests: filteredRequests

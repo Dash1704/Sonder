@@ -22,14 +22,10 @@ const DonorRequestPage = () => {
         }, [])
 
         const filterByCity = (city) => {
-            fetch("/requests/filter",{
+            fetch(`/requests/filter/${city}`,{
                 headers:{
                   'Content-Type':'application/json'
-                  },
-                  body: JSON.stringify({
-                    city,
-                }),
-              })
+              }})
               .then(response => response.json())
               .then(result => {
                   setAllRequests(result.requests)
