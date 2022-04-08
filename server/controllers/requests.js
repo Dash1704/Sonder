@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 const Request = require('../models/requests')
 const asyncHandler = require('express-async-handler')
+const { request } = require('express')
 
 const RequestController = {
   Create: asyncHandler(async (req, res) => {
@@ -11,7 +12,6 @@ const RequestController = {
     }
 
     const request = new Request({text, userCreatedBy});
-    console.log(request)
     request.save()
     return res.json(request)
    }),
@@ -24,6 +24,16 @@ const RequestController = {
       })
     }
    }),
+
+   Filter: asyncHandler(async (req, res) => {
+    const filteredRequests = await Request.find({city: req.body.city}).sort({createdAt:-1})
+    if(filteredRequests) {
+     res.status(201).json({
+       requests: filteredRequests
+     })
+   }
+  }), 
+
 }
 
 module.exports = RequestController

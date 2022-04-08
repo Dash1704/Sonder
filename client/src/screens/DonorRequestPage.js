@@ -22,7 +22,7 @@ const DonorRequestPage = () => {
         }, [])
 
         const filterByCity = (city) => {
-            fetch("/requests",{
+            fetch("/requests/filter",{
                 headers:{
                   'Content-Type':'application/json'
                   },
