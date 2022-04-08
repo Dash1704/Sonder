@@ -9,16 +9,7 @@ const DonorRequestPage = () => {
     const [allRequests, setAllRequests] = useState([])
 
     useEffect(()=>{
-        fetch("/requests",{
-          headers:{
-            'Content-Type':'application/json'
-            }
-            
-        })
-        .then(response => response.json())
-        .then(result => {
-            setAllRequests(result.requests)
-            })
+        seeAllRequests()
         }, [])
 
         const filterByCity = (city) => {
