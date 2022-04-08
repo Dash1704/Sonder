@@ -1,4 +1,5 @@
 # Sonder
+A web app for refugee mothers which connects them with resources and donors to support future generations.
 
 ## Tech Stack
 - [Express](https://expressjs.com/) web framework for Node.js.
@@ -21,7 +22,7 @@
 - Refugee: Sign up
 - Refugee: Sign in
 - Refugee Sign out
-- Refugee: Post needed items (email on post for the donor to contact)
+- Refugee: Requests
 
 ## MVP User Stories
 
@@ -41,4 +42,28 @@ I would like to be able to sign out
 As a refugee mother
 So that I could request resources
 I would like to be able to post my requested items
+~~~~~~
+
+## Extra User Stories
+*(1st round)*
+~~~~~~
+As a User
+So that I can specify who I am
+I want to be able to select either 'Refugee' or 'Donor'
+
+As a Refugee
+So that I can connect with donor in my area
+I want to sign up with my city and bio
+
+As a Donor
+In order to have access to the application
+I would like to be able to sign up 
+
+As a Donor
+So that I could access my account
+I would like to be able to sign in
+
+As a User
+So that I can display my details
+I would like to create a profile and view this
 ~~~~~~
