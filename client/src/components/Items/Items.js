@@ -6,14 +6,6 @@ const Items = ({ item }) => {
     <>
         <div>
             <img src={`${item.image}`} alt={`${item.name}`}></img>
-            <button
-                data-testid="add-button"
-                onClick = {(e) => {
-                    e.preventDefault();
-                    }
-                } >
-                Add to list
-            </button>
         </div>
     </>
     )
