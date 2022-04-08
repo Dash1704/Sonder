@@ -35,7 +35,7 @@ const SignUpMotherForm = () => {
 
     <div>
         <form>
-            <div className="input-field">
+            <div className="input-field validate">
             <label htmlFor="name">Your name</label>
             <input type="text" 
                 data-testid="name"

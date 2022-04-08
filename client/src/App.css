@@ -6,4 +6,12 @@
 
 .btn-block {
   width: 100%;
+  height: 100px;
+  margin-top: 30px;
+  font-size: 2rem;
+  text-transform: none;
+}
+
+.btn-block i {
+  font-size: 5rem;
 }
