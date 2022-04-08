@@ -32,10 +32,31 @@ const DonorRequestPage = () => {
                   })
         }
 
+        const seeAllRequests = () => {
+          fetch("/requests",{
+            headers:{
+              'Content-Type':'application/json'
+              }
+              
+          })
+          .then(response => response.json())
+          .then(result => {
+              setAllRequests(result.requests)
+              })
+        }
+
     return (
       <>
       <h1>Donor Request Page</h1>
         <>
+
+        <button
+                data-testid="seeAllRequests"
+                onClick = {(e) => {
+                    e.preventDefault();
+                    seeAllRequests()}} >
+                See All Requests
+            </button>
 
         <button
                 data-testid="filterCityButton"

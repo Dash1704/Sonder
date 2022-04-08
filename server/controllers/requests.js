@@ -26,6 +26,7 @@ const RequestController = {
    }),
 
    Filter: asyncHandler(async (req, res) => {
+    const searchCity = req.params.city
     const filteredRequests = await Request.find({"userCreatedBy.city": `${searchCity}`})
     if(filteredRequests) {
      res.status(201).json({
