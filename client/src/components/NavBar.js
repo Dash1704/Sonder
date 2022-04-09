@@ -1,9 +1,35 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {Link, useNavigate} from 'react-router-dom';
 import { useTranslation } from "react-i18next";
+import M from 'materialize-css'
+import getUnicodeFlagIcon from 'country-flag-icons/unicode'
+
+const languages = [
+  {
+    code: 'en',
+    name: 'English',
+    country_code: 'GB'
+  },
+  {
+    code: 'es',
+    name: 'Español',
+    country_code: 'ES'
+  },
+]
 
 
 const NavBar = () => {
+  useEffect(()=>{
+    let dropdowns = document.querySelectorAll(".dropdown-trigger");
+    let options = {
+      inDuration: 300,
+      outDuration: 225,
+      hover: true,
+      belowOrigin: true
+    };
+    M.Dropdown.init(dropdowns, options);
+
+    }, [])
 
   const { t } = useTranslation();
   const navigate = useNavigate()
@@ -14,11 +40,20 @@ const NavBar = () => {
       return[
         <li key="home"><Link to="/">{t("about_us_navbar")}</Link></li>,
         <li key="request"><Link to="/requests">{t("requests_navbar")}</Link></li>,
-        <li key="lang">  <a className='dropdown-trigger' href='#' data-target='dropdown1'>language</a>
-                <ul id='dropdown1' className='dropdown-content'>
-                  <li><a href="#!">en</a></li>
-                  <li><a href="#!">es</a></li>
-                </ul>
+        <li key="lang">
+        <a 
+        className='dropdown-trigger large material-icons' 
+        href='#' 
+        data-target='dropdown1'
+        onMouseEnter={e => {
+          const inst = M.Dropdown.getInstance(e.target);
+          inst && inst.open();
+          }}
+        >language</a>
+          <ul id='dropdown1' className='dropdown-content'>
+            <li><a href="#!">{languages[0].name}{getUnicodeFlagIcon("GB")}</a></li>
+            <li><a href="#!">{languages[1].name}{getUnicodeFlagIcon("ES")}</a></li>
+          </ul>
         </li>,
         <li key="logout">
         <button className="btn waves-effect waves-light #f50057 pink accent-3"
