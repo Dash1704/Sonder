@@ -42,13 +42,13 @@ app.use("/requests", requestRouter);
 const port = process.env.PORT || 8080;
 
 // heroku
-if(process.env.NODE_ENV=="production"){
+
   app.use(express.static("../client/build"));
   app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, '..', 'client', 'build', 'index.html'));
     console.log("I'm in production now")
   });
-}
+
 
 //listener
 const server = app.listen(port, () => console.log(`Server is running on ${port}`))
