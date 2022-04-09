@@ -19,12 +19,13 @@ const SessionsController = {
         email: user.email,
         city: user.city,
         bio: user.bio,
-        token: generateToken(user._id)
-      }})
+      }
+      ,token: generateToken(user._id)
+    })
     } else {
       res.status(400)
       throw new Error ('Invalid credentials')
-    };
+    }
   }),
 
   CreateDonor: asyncHandler(async (req, res) => {
@@ -39,12 +40,13 @@ const SessionsController = {
          name: user.name,
          email: user.email,
          city: user.city,
-         token: generateToken(user._id)
-       }})
+       }
+      , token: generateToken(user._id)
+      })
      } else {
        res.status(400)
        throw new Error ('Invalid credentials')
-     };
+     }
    }),
 
 }
