@@ -8,6 +8,10 @@ const MotherProfile = () => {
       <p>Add a bio.</p>
       <p>See you requests below.</p>
       </div>
+      //get alert when someone wants to give you items - can confirm
+      
+
+      //delete from database once requests fullfilled
       
     )
   }
