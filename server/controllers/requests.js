@@ -37,7 +37,8 @@ const RequestController = {
 
 Fulfilled: asyncHandler(async (req, res) => {
   const requestId = req.params._id
-  await Request.findOneAndUpdate({_id: requestId}, {active: false})
+  console.log(req.body.samaritan)
+  await Request.findOneAndUpdate({_id: requestId}, { $set:{ active: "PENDING", fulfilledBy: req.body.samaritan}})
   const changedRequest = await Request.find({_id: requestId})
   if(changedRequest) {
     res.status(201).json(changedRequest)
@@ -45,7 +46,7 @@ Fulfilled: asyncHandler(async (req, res) => {
 }),
 
 ActiveFilter: asyncHandler(async (req, res) => {
-  const filteredRequests = await Request.find({active: true})
+  const filteredRequests = await Request.find({active: "NEW"})
     if(filteredRequests) {
      res.status(201).json({
        requests: filteredRequests

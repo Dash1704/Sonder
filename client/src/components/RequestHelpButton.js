@@ -1,13 +1,19 @@
 import React from 'react';
 
 const RequestHelpButton = ({ oneRequest, allRequests, setAllRequests }) => {
+  const donor = localStorage.getItem("donor")
+  const jsonDonor = JSON.parse(donor)
 
-  const ChangeStatus = (id) => {
+  const ChangeStatus = (id, samaritan ) => {
     fetch(`/requests/${id}`,{
         method: "post",
         headers:{
           'Content-Type':'application/json'
-        }})
+        },
+        body: JSON.stringify({
+          samaritan: samaritan,
+      })
+    })
       .then(response => response.json())
       .then(data => {
         const oldData = [...allRequests]
@@ -27,7 +33,8 @@ const RequestHelpButton = ({ oneRequest, allRequests, setAllRequests }) => {
       <button
         onClick = {(e) => {
         e.preventDefault();
-        ChangeStatus(oneRequest._id)}} >
+        console.log(jsonDonor)
+        ChangeStatus(oneRequest._id, jsonDonor)}} >
         Fulfill this request
       </button>
     </> 

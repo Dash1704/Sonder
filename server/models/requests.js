@@ -9,7 +9,12 @@ const requestSchema = new mongoose.Schema( {
         type: Object
     },
     active: {
-        type: Boolean, default: true,
+        type: String, 
+        default: "NEW",
+    },
+    fulfilledBy: {
+        type: Object,
+        default: null,
     }
 },
     { timestamps: true }
