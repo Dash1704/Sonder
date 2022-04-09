@@ -18,7 +18,7 @@ import SignUpForm from "../SignUpForm.js";
     })
 
     it("should have an email label input", () => {
-        render(<SignUpForm />);
+        render(<SignUpForm />);\
         const signUpButton = screen.getByTestId("signup-button")
         expect(signUpButton).toBeInTheDocument()
     })
