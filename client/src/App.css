@@ -19,3 +19,6 @@
 nav .brand-logo {
   margin-left: 10px;
 }
+.material-icons {
+  margin-right: -10px;
+}
