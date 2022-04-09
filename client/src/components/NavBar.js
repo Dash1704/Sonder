@@ -3,6 +3,7 @@ import {Link, useNavigate} from 'react-router-dom';
 import { useTranslation } from "react-i18next";
 import M from 'materialize-css'
 import getUnicodeFlagIcon from 'country-flag-icons/unicode'
+import i18next from 'i18next';
 
 const languages = [
   {
@@ -51,8 +52,12 @@ const NavBar = () => {
           }}
         >language</a>
           <ul id='dropdown1' className='dropdown-content'>
-            <li><a href="#!">{languages[0].name}{getUnicodeFlagIcon("GB")}</a></li>
-            <li><a href="#!">{languages[1].name}{getUnicodeFlagIcon("ES")}</a></li>
+          <li onClick={() => i18next.changeLanguage(languages[0].code)}>
+            {/* <button className="dropdown-item" onClick={() => i18next.changeLanguage(languages[0].code)}></button> */}
+            <span>{getUnicodeFlagIcon("GB")}</span>{languages[0].name}</li>
+            <li onClick={() => i18next.changeLanguage(languages[1].code)}>
+            {/* <button className="dropdown-item" onClick={() => i18next.changeLanguage(languages[1].code)}></button> */}
+              <span>{getUnicodeFlagIcon("ES")}</span>{languages[1].name}</li>
           </ul>
         </li>,
         <li key="logout">
