@@ -1,3 +1,15 @@
 {
-  "welcome_to_sonder": "Welcome to Sonder"
+  "welcome_to_sonder": "Welcome to Sonder",
+  "helping_mothers": "We help refugee mothers access all the help they need",
+  "refugee_mother_button": "I am a refugee mother",
+  "volunteer_button": "I am a volunteer / donor",
+  "about_us_navbar": "About Us",
+  "requests_navbar": "Requests",
+  "login_navbar": "Login",
+  "logout_navbar": "Log Out",
+  "type_request": "Type Your Request Here",
+  "request_placeholder": "Post a new request here...",
+  "request_button": "Request",
+  "request_page_intro_sentence": "What items do you need?",
+  "requested_by_info": "requested by {{userName}}, in {{userCity}}"
 }

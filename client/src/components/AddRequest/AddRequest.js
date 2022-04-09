@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
+import { useTranslation } from "react-i18next";
 
 const AddRequest = ({setAllRequests, allRequests}) => {
-
+    const { t } = useTranslation();
     const user = localStorage.getItem("user")
     const jsonUser = JSON.parse(user)
     
@@ -9,6 +10,7 @@ const AddRequest = ({setAllRequests, allRequests}) => {
     const [newRequest, setNewRequest] = useState("")
 
     const NewRequest = () => {
+      
         console.log(jsonUser)
         fetch("/requests/new", {
             method: "post",
@@ -30,13 +32,13 @@ const AddRequest = ({setAllRequests, allRequests}) => {
  
     return (
     <div>
-        <h2>What items do you need?</h2>
+        <h2>{t("request_page_intro_sentence")}</h2>
         <form>
-            <label htmlFor="request">Type Your Request Here</label>
+            <label htmlFor="request">{t("type_request")}</label>
             <input type="text" 
                 value={newRequest}
                 onChange = {(e) => setNewRequest(e.target.value)}
-                placeholder="Post a new request here..."
+                placeholder={t("request_placeholder")}
                 data-testid="requestBody"
             /> 
            
@@ -45,7 +47,7 @@ const AddRequest = ({setAllRequests, allRequests}) => {
                 onClick = {(e) => {
                     e.preventDefault();
                     NewRequest()}} >
-                Request
+                {t("request_button")}
             </button>
         </form>
     </div>
