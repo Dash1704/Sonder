@@ -10,6 +10,7 @@ import SignUpDonorPage from './screens/SignUpDonorPage.js';
 import SignUpMotherPage from './screens/SignUpMotherPage.js';
 import RequestPage from './screens/RequestPage.js';
 import NavBar from './components/NavBar';
+import DonorRequestPage from './screens/DonorRequestPage.js';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/signup/donor" element={<SignUpDonorPage />} />
         <Route path="/signup/mother" element={<SignUpMotherPage />} />
         <Route path="/requests" element={<RequestPage />} />
+        <Route path="/requests/donor" element={<DonorRequestPage />} />
    
       </Routes>
     </BrowserRouter>
