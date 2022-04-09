@@ -8,7 +8,7 @@ const NavBar = ()=> {
   const renderList = () =>{
     if(user){
       return[
-        <li key="home"><Link to="/">About Us</Link></li>,
+        <li key="aboutus"><Link to="/aboutus">About Us</Link></li>,
         <li key="request"><Link to="/requests">Requests</Link></li>,
         
         <li key="logout">
