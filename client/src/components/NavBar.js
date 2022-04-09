@@ -53,10 +53,8 @@ const NavBar = () => {
         >language</a>
           <ul id='dropdown1' className='dropdown-content'>
           <li onClick={() => i18next.changeLanguage(languages[0].code)}>
-            {/* <button className="dropdown-item" onClick={() => i18next.changeLanguage(languages[0].code)}></button> */}
             <span>{getUnicodeFlagIcon("GB")}</span>{languages[0].name}</li>
             <li onClick={() => i18next.changeLanguage(languages[1].code)}>
-            {/* <button className="dropdown-item" onClick={() => i18next.changeLanguage(languages[1].code)}></button> */}
               <span>{getUnicodeFlagIcon("ES")}</span>{languages[1].name}</li>
           </ul>
         </li>,
@@ -73,7 +71,24 @@ const NavBar = () => {
     } else {
       return [
         <li key="aboutus"><Link to="/aboutus">{t("about_us_navbar")}</Link></li>,
-        <li key="login"><Link to="/login">{t("login_navbar")}</Link></li>
+        <li key="login"><Link to="/login">{t("login")}</Link></li>, <li key="lang">
+        <a 
+        className='dropdown-trigger large material-icons' 
+        href='#' 
+        data-target='dropdown1'
+        onMouseEnter={e => {
+          const inst = M.Dropdown.getInstance(e.target);
+          inst && inst.open();
+          }}
+        >language</a>
+          <ul id='dropdown1' className='dropdown-content'>
+          <li onClick={() => i18next.changeLanguage(languages[0].code)}>
+            <span>{getUnicodeFlagIcon("GB")}</span>{languages[0].name}</li>
+            <li onClick={() => i18next.changeLanguage(languages[1].code)}>
+              <span>{getUnicodeFlagIcon("ES")}</span>{languages[1].name}</li>
+          </ul>
+        </li>,
+        
       ]
     }
   }

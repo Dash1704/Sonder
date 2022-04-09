@@ -1,7 +1,9 @@
 import React, {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
+import { useTranslation } from "react-i18next";
 
 const LoginMotherForm = () => {
+    const { t } = useTranslation();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigation = useNavigate();
@@ -36,7 +38,7 @@ const LoginMotherForm = () => {
             </div>
 
             <div className="input-field validate">
-            <label htmlFor="password">Password</label>
+            <label htmlFor="password">{t("password")}</label>
             <input type="text" 
                 data-testid="password"
                 value={password}
@@ -51,7 +53,7 @@ const LoginMotherForm = () => {
                     MotherLogin()
                     }
                 } >
-                Log-In
+                {t("login")}
             </button>
     </form>
     </div>

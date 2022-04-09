@@ -1,15 +1,24 @@
 {
   "welcome_to_sonder": "Welcome to Sonder",
   "helping_mothers": "We help refugee mothers access all the help they need",
+  "about_blurb": "Where refugee mothers are able to obtain necessary items for their children and while in pregnancy.",
   "refugee_mother_button": "I am a refugee mother",
   "volunteer_button": "I am a volunteer / donor",
   "about_us_navbar": "About Us",
   "requests_navbar": "Requests",
-  "login_navbar": "Login",
+  "login": "Login",
   "logout_navbar": "Log Out",
   "type_request": "Type Your Request Here",
   "request_placeholder": "Post a new request here...",
   "request_button": "Request",
   "request_page_intro_sentence": "What items do you need?",
-  "requested_by_info": "requested by {{userName}}, in {{userCity}}"
+  "requested_by_info": "requested by {{userName}}, in {{userCity}}",
+  "Login_as_mother": "Login as a mother",
+  "Login_as_donor": "Login as a donor",
+  "password": "password",
+  "name": "Your name",
+  "city": "City",
+  "sign_up": "Únete",
+  "sign_up_mother":"Sign up as a mother",
+  "sign_up_donor": "Sign up as a donor"
 }

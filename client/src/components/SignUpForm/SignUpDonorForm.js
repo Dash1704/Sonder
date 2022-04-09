@@ -1,8 +1,10 @@
 import React, {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import M from 'materialize-css';
+import { useTranslation } from "react-i18next";
 
 const SignUpForm = () => {
+    const { t } = useTranslation();
     const navigation = useNavigate()
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -36,7 +38,7 @@ const SignUpForm = () => {
     <div>
         <form>
             <div className="input-field validate">
-            <label htmlFor="name">Name</label>
+            <label htmlFor="name">{t("name")}</label>
             <input type="text" 
                 data-testid="name"
                 value={name}
@@ -54,7 +56,7 @@ const SignUpForm = () => {
             </div>
 
             <div className="input-field validate">
-            <label htmlFor="password">Password</label>
+            <label htmlFor="password">{t("password")}</label>
             <input type="text" 
                 data-testid="password"
                 value={password}
@@ -63,7 +65,7 @@ const SignUpForm = () => {
             </div>
 
             <div className="input-field validate">
-            <label htmlFor="city">City</label>
+            <label htmlFor="city">{t("city")}</label>
             <input type="text" 
                 data-testid="city"
                 value={city}
@@ -78,7 +80,7 @@ const SignUpForm = () => {
                     postSignup()
                     }
                 } >
-                Sign-Up
+                {t("sign_up")}
             </button>
     </form>
     </div>

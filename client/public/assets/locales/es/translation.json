@@ -1,15 +1,24 @@
 {
   "welcome_to_sonder": "Bienvenido a Sonder",
   "helping_mothers":  "Apoyamos a madres refugiadas a acceder toda la ayuda que necesitan",
+  "about_blurb": "Donde madres refugiadas pueden obtener las necesidades comunes para sus hijos durante el embarazo",
   "refugee_mother_button": "Soy una madre refugiada",
   "volunteer_button": "Soy un voluntario",
   "about_us_navbar": "Acerca de",
   "requests_navbar": "Solicitar",
-  "login_navbar": "Iniciar Sesión",
+  "login": "Iniciar Sesión",
   "logout_navbar": "Cerrar Sesión",
   "type_request": "¿Que necesitas?",
   "request_placeholder": "escribe tus nececidades aqui",
   "request_button": "Enviar",
   "request_page_intro_sentence": "¿Que cosas necesitas para tus niños?",
-  "requested_by_info": "pedido por {{userName}}, en {{userCity}}"
+  "requested_by_info": "pedido por {{userName}}, en {{userCity}}",
+  "Login_as_mother": "Iniciar sesion de madre",
+  "Login_as_donor": "Iniciar sesion de voluntario",
+  "password": "Contraseña",
+  "name": "Tu nombre",
+  "city": "Ciudad",
+  "sign_up": "Únete",
+  "sign_up_mother":"Registrate como madre",
+  "sign_up_donor": "Registrate como voluntario"
 }
