@@ -1,11 +1,14 @@
 import React from 'react';
 import {useNavigate} from 'react-router-dom';
+import { useTranslation } from "react-i18next";
 
 const HomePage = () => {
+
+  const { t } = useTranslation();
   const navigate = useNavigate()
     return (
       <div className="container">
-        <h1 className="center">Welcome to Sonder</h1>
+        <h2 className="center">{t('welcome_to_sonder')}</h2>
         <h3 className="center">We help refugee mothers access all the help they need</h3>
         <div className="section">
           <div className="row">
