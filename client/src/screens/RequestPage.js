@@ -19,7 +19,7 @@ const RequestPage = () => {
         }, [])
 
     return (
-      <>
+      <div className="container">
       <h1>Request Page</h1>
       < AddRequest 
         setAllRequests={setAllRequests}
@@ -33,7 +33,7 @@ const RequestPage = () => {
             />
         })}
         </>
-      </>
+      </div>
     )
   }
 
