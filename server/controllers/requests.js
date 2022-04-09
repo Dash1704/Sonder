@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 const Request = require('../models/requests')
 const asyncHandler = require('express-async-handler')
+const { request } = require('express')
 
 const RequestController = {
   Create: asyncHandler(async (req, res) => {
@@ -11,7 +12,6 @@ const RequestController = {
     }
 
     const request = new Request({text, userCreatedBy});
-    console.log(request)
     request.save()
     return res.json(request)
    }),
@@ -24,6 +24,34 @@ const RequestController = {
       })
     }
    }),
+
+   Filter: asyncHandler(async (req, res) => {
+    const searchCity = req.params.city
+    const filteredRequests = await Request.find({"userCreatedBy.city": `${searchCity}`})
+    if(filteredRequests) {
+     res.status(201).json({
+       requests: filteredRequests
+     })
+   }
+  }), 
+
+Fulfilled: asyncHandler(async (req, res) => {
+  const requestId = req.params._id
+  await Request.findOneAndUpdate({_id: requestId}, {active: false})
+  const changedRequest = await Request.find({_id: requestId})
+  if(changedRequest) {
+    res.status(201).json(changedRequest)
+  }
+}),
+
+ActiveFilter: asyncHandler(async (req, res) => {
+  const filteredRequests = await Request.find({active: true})
+    if(filteredRequests) {
+     res.status(201).json({
+       requests: filteredRequests
+     })
+}})
+
 }
 
 module.exports = RequestController

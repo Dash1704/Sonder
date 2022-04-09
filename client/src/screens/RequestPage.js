@@ -15,7 +15,6 @@ const RequestPage = () => {
         })
         .then(response => response.json())
         .then(result => {
-            console.log(result)
             setAllRequests(result.requests)
             })
         }, [])

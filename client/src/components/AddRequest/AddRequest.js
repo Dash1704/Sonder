@@ -10,8 +10,7 @@ const AddRequest = ({setAllRequests, allRequests}) => {
     const [newRequest, setNewRequest] = useState("")
 
     const NewRequest = () => {
-      
-        console.log(jsonUser)
+
         fetch("/requests/new", {
             method: "post",
             headers: {'Content-Type':'application/json'},
@@ -22,7 +21,6 @@ const AddRequest = ({setAllRequests, allRequests}) => {
             })
             .then(response => response.json())
             .then(data => {
-                console.log('request posted succesfully')
                 let updatedRequests = [data, ...allRequests]
                 setAllRequests(updatedRequests);
                 setNewRequest("");

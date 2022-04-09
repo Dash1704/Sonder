@@ -18,9 +18,9 @@ const LoginDonorForm = () => {
         })
         .then(response => response.json())
         .then(data => {
-        localStorage.setItem("user",JSON.stringify(data.user))
+        localStorage.setItem("donor",JSON.stringify(data.user))
 
-        navigation('/requests')})
+        navigation('/requests/donor')})
         .catch(err => console.log(err))
     }
 
@@ -45,6 +45,7 @@ const LoginDonorForm = () => {
                 onChange = {(e) => setPassword(e.target.value)}
             />
             </div>
+
 
             <button className="btn waves-effect waves-light"
                 data-testid="login-button"
