@@ -7,7 +7,7 @@ const RequestPage = () => {
     const [allRequests, setAllRequests] = useState([])
 
     useEffect(()=>{
-        fetch("/requests",{
+        fetch("/requests/list",{
           headers:{
             'Content-Type':'application/json'
             }
