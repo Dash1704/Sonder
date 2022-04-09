@@ -4,12 +4,14 @@ import {Link, useNavigate} from 'react-router-dom';
 
 const NavBar = ()=> {
   const navigate = useNavigate()
-  const user = localStorage.getItem("user")
+  const mother = localStorage.getItem("mother")
+  const donor = localStorage.getItem("donor")
   const renderList = () =>{
-    if(user){
+    if(mother){
       return[
-        <li key="home"><Link to="/">About Us</Link></li>,
+        <li key="aboutus"><Link to="/aboutus">About Us</Link></li>,
         <li key="request"><Link to="/requests">Requests</Link></li>,
+        <li key="motherprofile"><Link to="/profile/mother">Profile</Link></li>,
         
         <li key="logout">
         <button className="btn waves-effect waves-light #f50057 pink accent-3"
@@ -21,7 +23,25 @@ const NavBar = ()=> {
         </button>
         </li>
       ]
-    } else {
+    } 
+    else if(donor){
+      return[
+        <li key="aboutus"><Link to="/aboutus">About Us</Link></li>,
+        <li key="request"><Link to="/requests">Requests</Link></li>,
+        <li key="donorprofile"><Link to="/profile/donor">Profile</Link></li>,
+        
+        <li key="logout">
+        <button className="btn waves-effect waves-light #f50057 pink accent-3"
+        onClick={()=> {
+          localStorage.clear()
+          navigate('/login')
+        }}>
+         Log Out 
+        </button>
+        </li>
+      ]
+    } 
+    else {
       return [
         <li key="aboutus"><Link to="/aboutus">About Us</Link></li>,
         <li key="login"><Link to="/login">Login</Link></li>
