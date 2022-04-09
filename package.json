@@ -1,6 +1,7 @@
 {
     "scripts": {
-      "start": "cd server && npm install && node app.js && cd .. && cd client && npm install && npm run build"
+      "start": "cd server && npm install && node app.js && cd ..",
+      "heroku-postbuild": "cd client && npm install && npm run build"
     },
     "proxy": "http://localhost:8080",
     "homepage": "https://sonder-techforgood.herokuapp.com/"
