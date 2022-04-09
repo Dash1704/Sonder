@@ -8,7 +8,7 @@ const requestSchema = new mongoose.Schema( {
     userCreatedBy: {
         type: Object
     },
-    active: {
+    status: {
         type: String, 
         default: "NEW",
     },

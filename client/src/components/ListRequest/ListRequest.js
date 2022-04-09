@@ -26,7 +26,7 @@ const ListRequest = ({ oneRequest, allRequests, setAllRequests }) => {
                <h5>{t("requested_by_info", {userName, userCity})}</h5>
               
                 {
-                oneRequest.active=== "NEW" ? 
+                oneRequest.status=== "NEW" ? 
                 <RequestHelpButton
                     oneRequest={oneRequest}
                     allRequests={allRequests}
