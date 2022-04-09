@@ -1,8 +1,11 @@
 {
+    "name": "sonder",
+    "version": "1.0.0",
+    "description": "Helping refugee mothers in need",
+    "main": "app.js",
     "scripts": {
       "start": "cd server && npm install && node app.js && cd ..",
-      "heroku-postbuild": "cd client && npm install && npm run build"
+      "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
     },
-    "proxy": "http://localhost:17218",
     "homepage": "https://sonder-techforgood.herokuapp.com/"
   }
