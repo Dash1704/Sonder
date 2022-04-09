@@ -4,12 +4,13 @@ import {Link, useNavigate} from 'react-router-dom';
 
 const NavBar = ()=> {
   const navigate = useNavigate()
-  const user = localStorage.getItem("user")
+  const user = localStorage.getItem("mother")
   const renderList = () =>{
     if(user){
       return[
         <li key="aboutus"><Link to="/aboutus">About Us</Link></li>,
         <li key="request"><Link to="/requests">Requests</Link></li>,
+        <li key="motherprofile"><Link to="/profile/mother">Profile</Link></li>,
         
         <li key="logout">
         <button className="btn waves-effect waves-light #f50057 pink accent-3"

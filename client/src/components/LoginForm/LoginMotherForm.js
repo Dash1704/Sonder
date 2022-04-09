@@ -16,7 +16,7 @@ const LoginMotherForm = () => {
         })
         .then(response => response.json())
         .then(data => {
-        localStorage.setItem("user",JSON.stringify(data.user))
+        localStorage.setItem("mother",JSON.stringify(data.user))
 
         navigation('/requests')})
         .catch(err => console.log(err))
