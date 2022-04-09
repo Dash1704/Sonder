@@ -7,5 +7,4 @@
       "start": "cd server && npm install && node app.js && cd ..",
       "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
     },
-    "homepage": "https://sonder-techforgood.herokuapp.com/"
   }
