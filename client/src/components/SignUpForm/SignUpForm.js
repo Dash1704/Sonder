@@ -1,11 +1,13 @@
 import React, {useState} from 'react';
+import {useNavigate} from 'react-router-dom';
 
-const SignupForm = () => {
+const SignUpForm = () => {
+    const navigate = useNavigate()
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const postSignup = () => {
-        fetch("https://localhost:8080/users", {
+        fetch("/users", {
             method: "post",
             headers: {'Content-Type':'application/json'},
             body: JSON.stringify({
@@ -15,7 +17,10 @@ const SignupForm = () => {
             })
         })
         .then(response => response.json())
-        .then(data => console.log(data))
+        .then(data => {
+            console.log(data)
+            navigate("/login")
+        })
         .catch(err => console.log(err))
     }
 
@@ -43,14 +48,19 @@ const SignupForm = () => {
                 onChange = {(e) => setPassword(e.target.value)}
             />
 
-            <input type="submit"
+            <button
                 data-testid="signup-button"
-                onClick = {() => postSignup()} 
-            />
+                onClick = {(e) => {
+                    e.preventDefault();
+                    postSignup()
+                    }
+                } >
+                Sign-In
+            </button>
     </form>
     </div>
 
     )
   }
 
-  export default SignupForm
+  export default SignUpForm
