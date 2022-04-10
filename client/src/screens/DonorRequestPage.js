@@ -35,7 +35,7 @@ const DonorRequestPage = () => {
         }
 
         const seeAllRequests = () => {
-          fetch("/requests",{
+          fetch("/requests/list",{
             headers:{
               'Content-Type':'application/json'
               }
