@@ -25,7 +25,7 @@ const RequestController = {
     }
    }),
 
-   Filter: asyncHandler(async (req, res) => {
+   CityFilter: asyncHandler(async (req, res) => {
     const searchCity = req.params.city
     const filteredRequests = await Request.find({"userCreatedBy.city": `${searchCity}`})
     if(filteredRequests) {
@@ -35,17 +35,17 @@ const RequestController = {
    }
   }), 
 
-Fulfilled: asyncHandler(async (req, res) => {
+ChangeToPending: asyncHandler(async (req, res) => {
   const requestId = req.params._id
-  await Request.findOneAndUpdate({_id: requestId}, {active: false})
+  await Request.findOneAndUpdate({_id: requestId}, { $set:{ status: "PENDING", fulfilledBy: req.body.samaritan}})
   const changedRequest = await Request.find({_id: requestId})
   if(changedRequest) {
     res.status(201).json(changedRequest)
   }
 }),
 
-ActiveFilter: asyncHandler(async (req, res) => {
-  const filteredRequests = await Request.find({active: true})
+StatusFilter: asyncHandler(async (req, res) => {
+  const filteredRequests = await Request.find({status: "NEW"})
     if(filteredRequests) {
      res.status(201).json({
        requests: filteredRequests

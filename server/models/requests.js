@@ -8,8 +8,13 @@ const requestSchema = new mongoose.Schema( {
     userCreatedBy: {
         type: Object
     },
-    active: {
-        type: Boolean, default: true,
+    status: {
+        type: String, 
+        default: "NEW",
+    },
+    fulfilledBy: {
+        type: Object,
+        default: null,
     }
 },
     { timestamps: true }

@@ -3,8 +3,8 @@ import { useTranslation } from "react-i18next";
 
 const AddRequest = ({setAllRequests, allRequests}) => {
     const { t } = useTranslation();
-    const user = localStorage.getItem("user")
-    const jsonUser = JSON.parse(user)
+    const mother = localStorage.getItem("mother")
+    const jsonUser = JSON.parse(mother)
     
 
     const [newRequest, setNewRequest] = useState("")
