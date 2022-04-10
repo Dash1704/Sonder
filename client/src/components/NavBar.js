@@ -18,12 +18,12 @@ const languages = [
   },
   {
     code: 'it',
-    name: 'Italien',
+    name: 'Italiano',
     country_code: 'IT'
   },
   {
     code: 'fr',
-    name: 'français',
+    name: 'Français',
     country_code: 'FR'
   },
 ]
