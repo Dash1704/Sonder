@@ -6,7 +6,7 @@ body {
   color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url(../public/images/homepage1.jpg); 
+  background-image: url(../public/images/gradient1.jpg); 
   background-size: cover;
   background-size: 100%;
 }
