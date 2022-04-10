@@ -1,4 +1,5 @@
 import React from 'react';
+import EmailAlert from './EmailAlert.js'
 
 const RequestHelpButton = ({ oneRequest, allRequests, setAllRequests }) => {
   const donor = localStorage.getItem("donor")
@@ -33,10 +34,10 @@ const RequestHelpButton = ({ oneRequest, allRequests, setAllRequests }) => {
       <button
         onClick = {(e) => {
         e.preventDefault();
-        console.log(jsonDonor)
         ChangeStatus(oneRequest._id, jsonDonor)}} >
         Fulfill this request
       </button>
+      < EmailAlert oneRequest={oneRequest} />
     </> 
   )
 }
