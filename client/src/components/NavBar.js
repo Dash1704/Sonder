@@ -26,6 +26,11 @@ const languages = [
     name: 'Français',
     country_code: 'FR'
   },
+  {
+    code: 'pl',
+    name: 'Polski',
+    country_code: 'PL'
+  },
 ]
 
 
@@ -70,6 +75,9 @@ const NavBar = () => {
         </li>
         <li onClick={() => i18next.changeLanguage(languages[3].code)}>
           <span>{getUnicodeFlagIcon("FR")}</span>{languages[3].name}
+        </li>
+        <li onClick={() => i18next.changeLanguage(languages[4].code)}>
+          <span>{getUnicodeFlagIcon("PL")}</span>{languages[4].name}
         </li>
         </ul>
   </li>
