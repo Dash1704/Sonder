@@ -27,7 +27,7 @@ const MotherRequestPage = () => {
         }
 
         const removeFromBasket = (item) => {
-          return setBasket(basket.filter(i =>  i.name !== item.name))
+          return setBasket(basket.filter(i =>  i !== item))
         }
         
 
