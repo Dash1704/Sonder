@@ -15,10 +15,10 @@
     "requested_by_info": "По просьбе {{userName}}, В {{userCity}}",
     "Login_as_mother": "Войти как мать",
     "Login_as_donor": "Войти как донор",
-    "password": "",
-    "name": "",
-    "city": "",
-    "sign_up": "",
-    "sign_up_mother":"",
-    "sign_up_donor": ""
+    "password": "пароль",
+    "name": "Ваше имя и фамилия",
+    "city": "Город",
+    "sign_up": "Зарегистрируйтесь",
+    "sign_up_mother":"Зарегистрируйтесь как мать",
+    "sign_up_donor": "Зарегистрируйтесь как донор"
   }
