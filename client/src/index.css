@@ -8,7 +8,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: url(../public/images/homepage1.jpg); 
   background-size: cover;
-  background-size: 1200px;
+  background-size: 100%;
 }
 
 code {

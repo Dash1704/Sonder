@@ -23,15 +23,17 @@ nav {
 
 nav .brand-logo {
   margin-left: 10px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
 }
 
 .material-icons {
   margin-right: -10px;
 }
 
-.sonder-logo {
+.font-body {
   font-family: 'Inter', sans-serif;
-  font-weight: 900;
+  font-weight: 300;
 }
 
 /* .homepage {
