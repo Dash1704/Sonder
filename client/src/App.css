@@ -35,7 +35,8 @@ nav .brand-logo {
 }
 
 /* .homepage {
-  background-image: url(../public/images/homepage1.jpg); 
+  background-image: url(../public/images/homepage1.jpg) no-repeat; 
   background-size: cover;
-  background-size: 1200px;
+  min-width: 100%;
+  min-height: 100%;
 } */
