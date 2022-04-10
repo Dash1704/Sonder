@@ -16,9 +16,26 @@
   font-size: 5rem;
 }
 
+nav {
+  background-color: rgba(0, 255, 0, 0);
+  color: black;
+}
+
 nav .brand-logo {
   margin-left: 10px;
 }
+
 .material-icons {
   margin-right: -10px;
 }
+
+.sonder-logo {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+}
+
+/* .homepage {
+  background-image: url(../public/images/homepage1.jpg); 
+  background-size: cover;
+  background-size: 1200px;
+} */
