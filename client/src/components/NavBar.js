@@ -27,7 +27,27 @@ const languages = [
     country_code: 'FR'
   },
 ]
-const languageDropdownButton = 
+
+
+const NavBar = () => {
+  useEffect(()=>{
+    let dropdowns = document.querySelectorAll(".dropdown-trigger");
+    let options = {
+      inDuration: 300,
+      outDuration: 225,
+      hover: true,
+      belowOrigin: true
+    };
+    M.Dropdown.init(dropdowns, options);
+    }, [])
+    
+
+  const { t } = useTranslation();
+  const navigate = useNavigate()
+  const mother = localStorage.getItem("mother")
+  const donor = localStorage.getItem("donor")
+  const renderList = () =>{
+    const languageDropdownButton = 
   <li key="lang">
       <a 
       className='dropdown-trigger large material-icons' 
@@ -53,25 +73,16 @@ const languageDropdownButton =
         </li>
         </ul>
   </li>
-
-
-const NavBar = () => {
-  useEffect(()=>{
-    let dropdowns = document.querySelectorAll(".dropdown-trigger");
-    let options = {
-      inDuration: 300,
-      outDuration: 225,
-      hover: true,
-      belowOrigin: true
-    };
-    M.Dropdown.init(dropdowns, options);
-    }, [])
-
-  const { t } = useTranslation();
-  const navigate = useNavigate()
-  const mother = localStorage.getItem("mother")
-  const donor = localStorage.getItem("donor")
-  const renderList = () =>{
+  const logoutNavbar =
+      <li key="logout">
+        <button className="btn waves-effect waves-light #f50057 pink accent-3"
+            onClick={()=> {
+              localStorage.clear()
+              navigate('/login')
+            }}>
+          {t("logout_navbar")}
+        </button>
+      </li>
       
     if(mother){
       return[
@@ -79,15 +90,7 @@ const NavBar = () => {
         <li key="request"><Link to="/requests">Requests</Link></li>,
         <li key="motherprofile"><Link to="/profile/mother">Profile</Link></li>,
         languageDropdownButton,
-        <li key="logout">
-        <button className="btn waves-effect waves-light #f50057 pink accent-3"
-          onClick={()=> {
-            localStorage.clear()
-            navigate('/login')
-          }}>
-         {t("logout_navbar")}
-        </button>
-        </li>
+        logoutNavbar
       ]
     } 
     else if(donor){
@@ -96,6 +99,7 @@ const NavBar = () => {
         <li key="request"><Link to="/requests">Requests</Link></li>,
         <li key="donorprofile"><Link to="/profile/donor">Profile</Link></li>,
         languageDropdownButton,
+        logoutNavbar
       ]
     } 
     else {
