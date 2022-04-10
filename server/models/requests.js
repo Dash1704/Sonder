@@ -7,6 +7,9 @@ const requestSchema = new mongoose.Schema( {
     },
     userCreatedBy: {
         type: Object
+    },
+    active: {
+        type: Boolean, default: true,
     }
 },
     { timestamps: true }

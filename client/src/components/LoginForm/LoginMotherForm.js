@@ -1,7 +1,9 @@
 import React, {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
+import { useTranslation } from "react-i18next";
 
 const LoginMotherForm = () => {
+    const { t } = useTranslation();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigation = useNavigate();
@@ -16,7 +18,7 @@ const LoginMotherForm = () => {
         })
         .then(response => response.json())
         .then(data => {
-        localStorage.setItem("user",JSON.stringify(data.user))
+        localStorage.setItem("mother",JSON.stringify(data.user))
 
         navigation('/requests')})
         .catch(err => console.log(err))
@@ -26,28 +28,32 @@ const LoginMotherForm = () => {
 
     <div>
         <form>
+            <div className="input-field validate">
             <label htmlFor="email">Email</label>
             <input type="text" 
                 data-testid="email"
                 value={email}
                 onChange = {(e) => setEmail(e.target.value)}
             /> 
+            </div>
 
-            <label htmlFor="password">Password</label>
+            <div className="input-field validate">
+            <label htmlFor="password">{t("password")}</label>
             <input type="text" 
                 data-testid="password"
                 value={password}
                 onChange = {(e) => setPassword(e.target.value)}
             />
+            </div>
 
-<button
+            <button className="btn waves-effect waves-light"
                 data-testid="login-button"
                 onClick = {(e) => {
                     e.preventDefault();
                     MotherLogin()
                     }
                 } >
-                Log-In
+                {t("login")}
             </button>
     </form>
     </div>

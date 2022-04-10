@@ -1,7 +1,9 @@
 import React, {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
+import { useTranslation } from "react-i18next";
 
 const LoginDonorForm = () => {
+    const { t } = useTranslation();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigation = useNavigate();
@@ -16,9 +18,9 @@ const LoginDonorForm = () => {
         })
         .then(response => response.json())
         .then(data => {
-        localStorage.setItem("user",JSON.stringify(data.user))
+        localStorage.setItem("donor",JSON.stringify(data.user))
 
-        navigation('/requests')})
+        navigation('/requests/donor')})
         .catch(err => console.log(err))
     }
 
@@ -26,28 +28,33 @@ const LoginDonorForm = () => {
 
     <div>
         <form>
+            <div className="input-field validate">
             <label htmlFor="email">Email</label>
             <input type="text" 
                 data-testid="email"
                 value={email}
                 onChange = {(e) => setEmail(e.target.value)}
-            /> 
-
-            <label htmlFor="password">Password</label>
+            />
+            </div>
+            
+            <div className="input-field validate">
+            <label htmlFor="password">{t("password")}</label>
             <input type="text" 
                 data-testid="password"
                 value={password}
                 onChange = {(e) => setPassword(e.target.value)}
             />
+            </div>
 
-<button
+
+            <button className="btn waves-effect waves-light"
                 data-testid="login-button"
                 onClick = {(e) => {
                     e.preventDefault();
                     DonorLogin()
                     }
                 } >
-                Log-In
+               {t("login")}
             </button>
     </form>
     </div>

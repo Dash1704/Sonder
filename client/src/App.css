@@ -3,3 +3,22 @@
   right: 20px;
   left: auto;
 }
+
+.btn-block {
+  width: 100%;
+  height: 100px;
+  margin-top: 30px;
+  font-size: 2rem;
+  text-transform: none;
+}
+
+.btn-block i {
+  font-size: 5rem;
+}
+
+nav .brand-logo {
+  margin-left: 10px;
+}
+.material-icons {
+  margin-right: -10px;
+}

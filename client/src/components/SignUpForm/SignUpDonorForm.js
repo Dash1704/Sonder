@@ -1,8 +1,10 @@
 import React, {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import M from 'materialize-css';
+import { useTranslation } from "react-i18next";
 
 const SignUpForm = () => {
+    const { t } = useTranslation();
     const navigation = useNavigate()
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -35,40 +37,50 @@ const SignUpForm = () => {
 
     <div>
         <form>
-            <label htmlFor="name">Name</label>
+            <div className="input-field validate">
+            <label htmlFor="name">{t("name")}</label>
             <input type="text" 
                 data-testid="name"
                 value={name}
                 onChange = {(e) => setName(e.target.value)}
             /> 
+            </div>
+            
+            <div className="input-field validate">
             <label htmlFor="email">Email</label>
             <input type="text" 
                 data-testid="email"
                 value={email}
                 onChange = {(e) => setEmail(e.target.value)}
             /> 
+            </div>
 
-            <label htmlFor="password">Password</label>
+            <div className="input-field validate">
+            <label htmlFor="password">{t("password")}</label>
             <input type="text" 
                 data-testid="password"
                 value={password}
                 onChange = {(e) => setPassword(e.target.value)}
             />
-            <label htmlFor="city">City</label>
+            </div>
+
+            <div className="input-field validate">
+            <label htmlFor="city">{t("city")}</label>
             <input type="text" 
                 data-testid="city"
                 value={city}
                 onChange = {(e) => setCity(e.target.value)}
             />
+            </div>
 
-            <button
+            <button className="btn waves-effect waves-light"
                 data-testid="signup-button"
                 onClick = {(e) => {
                     e.preventDefault();
                     postSignup()
                     }
                 } >
-                Sign-Up
+                {t("sign_up")}
             </button>
     </form>
     </div>

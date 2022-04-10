@@ -1,12 +1,14 @@
 import React from 'react';
+import { useTranslation } from "react-i18next";
 
 const AboutUs = () => {
+  const { t } = useTranslation();
     return (
-      <>
-      <h1>Welcome to Sonder!</h1>
+      <div className="container">
+      <h1>{t("welcome_to_sonder")}</h1>
 
-      <p>Where refugee mothers are able to obtain necessary items for their children and while in pregnancy.</p>
-      </>
+      <p>{t("about_blurb")}</p>
+      </div>
       
     )
   }
