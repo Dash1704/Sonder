@@ -7,7 +7,10 @@ const requestSchema = new mongoose.Schema( {
     },
     userCreatedBy: {
         type: Object
-    }
+    },
+    basket: [{
+        type: Object
+    }]
 },
     { timestamps: true }
 );

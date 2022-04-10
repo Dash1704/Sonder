@@ -1,23 +1,21 @@
 import React, { useState } from 'react'
 
-const AddRequest = ({setAllRequests, allRequests}) => {
+const AddRequest = ({setAllRequests, allRequests, basket, setBasket}) => {
 
     const user = localStorage.getItem("user")
     const jsonUser = JSON.parse(user)
     
-
     const [newRequest, setNewRequest] = useState("")
-    // const [basket, setBasket] = useState([])
-    // const [allItems, setAllItems] = useState([])
 
     const NewRequest = () => {
-        console.log(jsonUser)
+        console.log(basket)
         fetch("/requests/new", {
             method: "post",
             headers: {'Content-Type':'application/json'},
             body: JSON.stringify({
                     text: newRequest,
-                    userCreatedBy: jsonUser
+                    userCreatedBy: jsonUser,
+                    basket: basket
                 })
             })
             .then(response => response.json())
@@ -26,13 +24,10 @@ const AddRequest = ({setAllRequests, allRequests}) => {
                 let updatedRequests = [data, ...allRequests] 
                 setAllRequests(updatedRequests);
                 setNewRequest("");
+                setBasket([]);
             })
             .catch(err => console.log(err))
         }
-
-        // const addToBasket = (item) => {
-        //     setBasket([...basket, item])
-        //   }
  
     return (
     <div>
@@ -45,41 +40,15 @@ const AddRequest = ({setAllRequests, allRequests}) => {
                 placeholder="Post a new request here..."
                 data-testid="requestBody"
             />
-             {/* <>
-        {allItems.map( item => {
-        return (   
-        <>
-        <div item={item}
-            key={item._id}>
-            <img src={`${item.image}`} alt={`${item.name}`}></img>
-            <button onClick={() => addToBasket(item)}> Add to basket</button>
-            </div>
-        </>
-        )
-          })}
-          </> */}
             <button
                 data-testid="addRequestButton"
                 onClick = {(e) => {
                     e.preventDefault();
-                    NewRequest()}} >
+                    NewRequest()
+                }} >
                 Request
             </button>
         </form>
-        {/* <div className="order_title">
-         <h5>Your Order</h5>
-        </div>
-        <div className="order_list">
-         {
-          basket.map((item, index) => { 
-            return (
-              <>
-              <h6 key={index}>{item.name} </h6>
-              </>
-              )
-            })
-          }
-        </div> */}
     </div>
 
     

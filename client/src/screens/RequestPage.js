@@ -23,12 +23,12 @@ const RequestPage = () => {
         }, [])
 
     const addToBasket = (item) => {
-      setBasket([...basket, item])
+      setBasket([...basket, item.name])
     }
 
     const removeFromBasket = (item) => {
       console.log(item)
-      const removed= basket.filter(i => i.index !== item.index)
+      const removed= basket.filter(i => i.name !== item.name)
       return setBasket(removed)
     }
 
@@ -50,9 +50,11 @@ const RequestPage = () => {
         )
           })}
           </>
-          < AddRequest 
+          < AddRequest
         setAllRequests={setAllRequests}
         allRequests={allRequests}
+        basket = {basket}
+        setBasket = {setBasket}
         />
          </div>
         
@@ -65,11 +67,10 @@ const RequestPage = () => {
 
          <div className="order_list">
          {
-          basket.map((item, index) => { 
-            item.index = item
+          basket.map((item) => { 
             return (
               <>
-              <h6 key={index}>{item.name} </h6>
+              <h6 key={item}>{item} </h6>
               <btn onClick={() => removeFromBasket(item)}> x</btn>
               </>
               )
