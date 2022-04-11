@@ -10,8 +10,9 @@ const HomePage = () => {
     return (
       // <div className="homepage">
         <div className="container font-body">
-          <h2 className="center">{t('welcome_to_sonder')}</h2>
-          <h3 className="center">{t('helping_mothers')}</h3>
+          <h1 className="left">{t('welcome_to_sonder')}</h1>
+          <h2 className="left">{t('helping_mothers')}</h2>
+          <h3 className="left">{t('sonder_motto')}</h3>
           <div className="section">
             <div className="row">
             <div className="col s6">
