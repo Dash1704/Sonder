@@ -95,7 +95,7 @@ const NavBar = () => {
     if(mother){
       return[
         <li key="aboutus"><Link to="/aboutus">{t("about_us_navbar")}</Link></li>,
-        <li key="request"><Link to="/requests">{t("requests_navbar")}</Link></li>,
+        <li key="request"><Link to="/requests/mother">{t("requests_navbar")}</Link></li>,
         <li key="motherprofile"><Link to="/profile/mother">{t("profile_navbar")}</Link></li>,
         languageDropdownButton,
         logoutNavbar
@@ -104,7 +104,7 @@ const NavBar = () => {
     else if(donor){
       return[
         <li key="aboutus"><Link to="/aboutus">{t("about_us_navbar")}</Link></li>,
-        <li key="request"><Link to="/requests">{t("requests_navbar")}</Link></li>,
+        <li key="request"><Link to="/requests/donor">{t("requests_navbar")}</Link></li>,
         <li key="donorprofile"><Link to="/profile/donor">{t("profile_navbar")}</Link></li>,
         languageDropdownButton,
         logoutNavbar
