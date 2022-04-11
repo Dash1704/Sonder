@@ -35,6 +35,17 @@ const RequestController = {
    }
   }), 
 
+   ViewMyRequests: asyncHandler(async (req, res) => {
+    const searchId = req.params._id
+    const myRequests = await Request.find({"userCreatedBy._id": `${searchId}`})
+    console.log(myRequests)
+    if(myRequests) {
+     res.status(201).json({
+       requests: myRequests
+     })
+   }
+  }), 
+
 ChangeToPending: asyncHandler(async (req, res) => {
   const requestId = req.params._id
   await Request.findOneAndUpdate({_id: requestId}, { $set:{ status: "PENDING", fulfilledBy: req.body.samaritan}})

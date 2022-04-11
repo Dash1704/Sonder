@@ -1,11 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import ListRequest from '../components/ListRequest/ListRequest.js'
-//import ViewMotherProfile from '../components/ViewMotherProfile/ViewMotherProfile.js';
-//import RequestResponse from '../components/RequestResponse/RequestResponse.js';
 
 const MotherProfile = () => {
   const [profile, setProfile] = useState([])
-  const [allRequests, setAllRequests] = useState([])
+  const [myRequests, setMyRequests] = useState([])
   const [toSend, setToSend] = useState({
     about_yourself: "",
     languages: "",
@@ -15,9 +13,10 @@ const MotherProfile = () => {
   const mother = localStorage.getItem("mother")
   const jsonUser = JSON.parse(mother)
   const userEmail = jsonUser.email
+  const userId = JSON.parse(localStorage.getItem('mother'))._id
 
   useEffect(()=>{
-    seeAllRequests(),
+    seeMyRequests(userId),
     getUserProfile(userEmail)
   }, [])
     
@@ -34,16 +33,17 @@ const MotherProfile = () => {
         })
       }
 
-    const seeAllRequests = () => {
-      fetch("/requests/list",{
+    const seeMyRequests = (userId) => {
+      console.log(userId)
+      fetch(`/requests/${userId}`,{
         headers:{
           'Content-Type':'application/json'
-          }
-          
+          }  
       })
       .then(response => response.json())
       .then(result => {
-          setAllRequests(result.requests)
+        console.log(result.requests)
+          setMyRequests(result.requests)
           })
     }
     
@@ -84,7 +84,6 @@ const MotherProfile = () => {
     <>
    <div className="container"> 
    <div className='profile'>
-   <h3>Hello {profile.name}, see your requests below and if anyone has responded</h3>
     <h4>
      <ul>
        <li>Name: {profile.name}</li>
@@ -98,13 +97,11 @@ const MotherProfile = () => {
       </ul>
     </h4>
    </div>
-  
-       <div className='update_bio_form'>
+      <div className='update_bio_form'>
         <form onSubmit={onSubmit}>
           <input
             type='text'
             name='about_yourself'
-            initalValue={profile.about_yourself}
             placeholder='tell us about yourself'
             value={toSend.about_yourself}
             onChange={handleChange}
@@ -112,7 +109,6 @@ const MotherProfile = () => {
           <input
             type='text'
             name='languages'
-            initalValue={profile.languages}
             placeholder='What language do you speak'
             value={toSend.languages}
             onChange={handleChange}
@@ -120,7 +116,6 @@ const MotherProfile = () => {
           <input
             type='text'
             name='how_many_children'
-            initalValue={profile.how_many_children}
             placeholder='Do you have kids or are they on the way?'
             value={toSend.how_many_children}
             onChange={handleChange}
@@ -128,15 +123,18 @@ const MotherProfile = () => {
           <button type='submit'>Update Bio</button>
         </form>
       </div>
-  
-   
-        {allRequests.map( oneRequest => {
-            return < ListRequest 
-            oneRequest={oneRequest}
-            key={oneRequest._id}
-            />
-        })}
-        
+
+      <div className='my_requests'>
+        <h5>Please find your requests below. An email will be sent to you when the request has been accepted</h5>
+        {myRequests.map( oneRequest => {
+              return < ListRequest 
+              oneRequest={oneRequest}
+              setMyRequests={setMyRequests}
+              myRequests={myRequests}
+              key={oneRequest._id}
+              />
+          })}
+      </div>
    </div>
    </>
     )

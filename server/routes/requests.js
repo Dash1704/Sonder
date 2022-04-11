@@ -7,5 +7,6 @@ router.get('/list', RequestController.View)
 router.get('/filter/:city', RequestController.CityFilter)
 router.post('/:_id', RequestController.ChangeToPending)
 router.get('/active', RequestController.StatusFilter)
+router.get('/:_id', RequestController.ViewMyRequests)
 
 module.exports = router
