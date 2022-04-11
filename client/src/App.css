@@ -30,10 +30,6 @@ nav .brand-logo {
   margin-right: -10px;
 }
 
-.font-body {
-  font-family: 'Inter', sans-serif;
-}
-
 /* .homepage {
   background-image: url(../public/images/homepage1.jpg) no-repeat; 
   background-size: cover;
@@ -60,4 +56,19 @@ nav .brand-logo {
 .homepage-motto {
   font-size: 16px;
   font-weight: 400;
+}
+
+.homepage-top-divide {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.homepage-bottom-divide {
+  background-color: #93EFFE;
+  min-height: fit-content;
+  /* padding-left: 500px;
+  padding-right: 500px;
+  padding-top: 150px; */
 }
