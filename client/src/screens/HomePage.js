@@ -9,7 +9,7 @@ const HomePage = () => {
   const { t } = useTranslation();
   const navigate = useNavigate()
     return (
-      <div className="font-body">
+      <div className="font">
         <div className="container">
         <div className="row homepage-top-divide">
           <div className="col s6">
@@ -17,7 +17,7 @@ const HomePage = () => {
             <h2 className="left homepage-slogan">{t('helping_mothers')}</h2>
             <h3 className="left homepage-motto">{t('sonder_motto')}</h3>
           </div>
-          <div className="col s6 cropped1">
+          <div className="col s6 homepage-image-cropped">
             <img className="homepage-image" src={homepage}/>
           </div>
         </div>
@@ -26,16 +26,28 @@ const HomePage = () => {
         <div className="row homepage-bottom-divide">
           <div className="container">
           <div className="col s6">
-          <button className="waves-effect waves-light btn-large btn-block"
+            <div className="call-to-action center">
+            <i className="medium material-icons top">pregnant_woman</i>
+            <p>{t('refugee_mother_call_to_action')}</p>
+            <div className="call-to-action-button">
+            <button className="waves-effect waves-light btn-large"
           onClick={()=> {
             navigate('/signup/mother')
-          }}><i className="large material-icons right">pregnant_woman</i>{t("refugee_mother_button")}</button>
+          }}>{t("refugee_mother_button")}</button>
+          </div>
+          </div>
           </div>
           <div className="col s6">
-          <button className="waves-effect waves-light btn-large btn-block"
-          onClick={()=> {
-            navigate('/signup/donor')
-          }}><i className="large material-icons right">tag_faces</i>{t("volunteer_button")}</button>
+          <div className="call-to-action center">
+          <i className="medium material-icons top">tag_faces</i>
+            <p>{t('donor_call_to_action')}</p>
+            <div className="call-to-action-button">
+            <button className="waves-effect waves-light btn-large"
+            onClick={()=> {
+              navigate('/signup/donor')
+            }}>{t("volunteer_button")}</button>
+            </div>
+            </div>
           </div>
         </div>
         </div>

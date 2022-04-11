@@ -27,7 +27,20 @@ nav .brand-logo {
 }
 
 .material-icons {
-  margin-right: -10px;
+  size: 10px;
+}
+
+
+/* homepage */
+
+.font {
+  font-family: 'Inter', sans-serif; 
+  font-size: 0.8vw;
+}
+
+.homepage-image {
+  width: 128%;
+  height: 126%;
 }
 
 /* .homepage {
@@ -37,12 +50,7 @@ nav .brand-logo {
   min-height: 100%;
 } */
 
-.homepage-image {
-  width: 127%;
-  height: 126%;
-}
-
-.cropped1 {
+.homepage-image-cropped {
   width: 250px; /* width of container */
   height: 441px; /* height of container */
   object-fit: cover;
@@ -80,11 +88,23 @@ nav .brand-logo {
 }
 
 .homepage-bottom-divide {
-  background-color: #886DFB;
+  background-color: #70A7FC;
   margin: 0;
-  padding: 132px;
+  padding-top: 10px;
+  padding-left: 132px;
+  padding-right: 132px;
+  padding-bottom: 132px;
   bottom: 0;
   /* padding-left: 500px;
   padding-right: 500px;
   padding-top: 150px; */
+}
+
+.call-to-action {
+  padding: 50px;
+}
+
+.call-to-action-button {
+  padding: 10px;
+  color: #9E59FB;
 }
