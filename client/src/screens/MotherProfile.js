@@ -48,13 +48,7 @@ const MotherProfile = () => {
     }
     
     const handleChange = (e) => {
-       if(e.target.value === ""){
-          setToSend({ ...toSend, [e.target.name]: e.target.initalValue})
-       }else{
          setToSend({ ...toSend, [e.target.name]: e.target.value });
-       }   
-       
-      
     };
     
     const onSubmit = async (e) => {
@@ -73,13 +67,16 @@ const MotherProfile = () => {
         .then(response => response.json())
         .then((bigResponse) => {
           setProfile(bigResponse.resMother[0])
-          console.log(bigResponse)
           console.log('Success, bio added');
         })
         .catch((err) => {
           console.log('Failed to add to bio...', err);
         });
-       
+        setToSend({
+          about_yourself: "",
+          languages: "",
+          how_many_children: "",
+        })
     };
     
 
@@ -94,9 +91,9 @@ const MotherProfile = () => {
        <li>Email: {profile.email}</li>
        <li>City: {profile.city}</li>
        <ul>Bio:
-         <li>{profile.about_yourself}</li>
-         <li>{profile.languages}</li>
-         <li>{profile.how_many_children}</li>
+         <li><h5>About Yourself: {profile.about_yourself}</h5></li>
+         <li><h5>Languages: {profile.languages}</h5></li>
+         <li><h5>Children: {profile.how_many_children}</h5></li>
        </ul>
       </ul>
     </h4>

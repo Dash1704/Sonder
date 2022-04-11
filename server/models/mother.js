@@ -20,15 +20,15 @@ const motherSchema = new mongoose.Schema( {
     },
     about_yourself: {
         type: String,
-        default: "Tell us a bit about yourself"
+        default: ""
     }, 
     languages: {
         type: String,
-        default: "What languages do you speak?"
+        default: ""
     },
     how_many_children: {
         type: String,
-        default: "Tell us about your children"
+        default: ""
     }
     
 },
