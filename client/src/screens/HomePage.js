@@ -13,12 +13,12 @@ const HomePage = () => {
         <div className="container font-body">
           <div className="row">
           <div className="col s6">
-          <h1 className="left">{t('welcome_to_sonder')}</h1>
-          <h2 className="left">{t('helping_mothers')}</h2>
-          <h3 className="left">{t('sonder_motto')}</h3>
+          <h1 className="left homepage-header">{t('welcome_to_sonder')}</h1>
+          <h2 className="left homepage-slogan">{t('helping_mothers')}</h2>
+          <h3 className="left homepage-motto">{t('sonder_motto')}</h3>
           </div>
           <div className="col s6">
-          <img src={homepage1}></img>
+          <img className="homepage-image" src={homepage1}></img>
           </div>
           <div className="section">
             <div className="row">
