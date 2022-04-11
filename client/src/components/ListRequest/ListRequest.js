@@ -14,6 +14,14 @@ const ListRequest = ({ oneRequest, allRequests, setAllRequests }) => {
             <>
             <div>
                <p>{`${oneRequest.text}`}</p> 
+               {oneRequest.basket.map(item => {
+                   return (
+                   <>
+                   <p> {item} </p>
+                   </>
+                   )
+               }
+               )}
                <h5>{t("requested_by_info", {userName, userCity})}</h5>   
             </div>
             </>
