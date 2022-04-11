@@ -4,6 +4,8 @@ const UsersController = require("../controllers/users");
 
 router.post('/mother', UsersController.CreateMother)
 router.post('/donor', UsersController.CreateDonor)
+router.get('/mother/:email', UsersController.FindMother)
+router.post('/mother/:email', UsersController.UpdateMotherBio)
 
 module.exports = router
 

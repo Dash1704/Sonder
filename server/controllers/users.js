@@ -3,6 +3,7 @@ const Donor = require('../models/donor')
 const bcrypt = require('bcrypt')
 const asyncHandler = require('express-async-handler')
 
+
 const UsersController = {
   CreateMother: asyncHandler (async (req, res) => {
     const {name, email, password, city } = req.body
@@ -25,7 +26,7 @@ const UsersController = {
       name,
       email,
       password: hashedPassword,
-      city,
+      city
     })
     if(user) {
       res.status(201).json({message: "Mother registered"})
@@ -63,6 +64,33 @@ const UsersController = {
       res.status(400).json({error: "invalid user data"})
       throw new Error ('invalid user data')
     }
+  }),
+
+  FindMother: asyncHandler (async (req, res) => {
+    const mother = await Mother.findOne({"email": req.params.email})
+    if(mother) {
+      res.status(201).json({
+        mother
+      })
+    }
+  }),
+
+  UpdateMotherBio: asyncHandler (async (req, res) => {
+    
+    await Mother.findOneAndUpdate({"email": req.params.email}, {$set:{ "about_yourself":req.body.toSend.about_yourself, "languages":req.body.toSend.languages, "how_many_children":req.body.toSend.how_many_children}})
+    const resMother = await Mother.find({email: req.params.email})
+    console.log(resMother)
+
+    
+    // console.log(motherUpdate)
+    if(resMother) {
+      res.status(201).json({
+        resMother,
+
+        message: "Updated successfully"
+      })
+    }
+
   })
 }
   

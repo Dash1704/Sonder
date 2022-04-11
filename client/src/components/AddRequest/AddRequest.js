@@ -5,10 +5,7 @@ const AddRequest = ({setAllRequests, allRequests}) => {
     const { t } = useTranslation();
     const mother = localStorage.getItem("mother")
     const jsonUser = JSON.parse(mother)
-    console.log(jsonUser)
     const userName = jsonUser.name
-    console.log(userName)
-   
 
     const [newRequest, setNewRequest] = useState("")
 

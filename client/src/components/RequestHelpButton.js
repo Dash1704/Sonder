@@ -33,7 +33,6 @@ const RequestHelpButton = ({ oneRequest, allRequests, setAllRequests }) => {
       <button
         onClick = {(e) => {
         e.preventDefault();
-        console.log(jsonDonor)
         ChangeStatus(oneRequest._id, jsonDonor)}} >
         Fulfill this request
       </button>

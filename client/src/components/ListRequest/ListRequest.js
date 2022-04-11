@@ -9,8 +9,6 @@ const ListRequest = ({ oneRequest, allRequests, setAllRequests }) => {
   const userName = oneRequest.userCreatedBy.name
   const userCity = oneRequest.userCreatedBy.city
   const donor = localStorage.getItem("donor")
-  console.log(donor)
-  console.log(userName)
     if(!donor) {
         return (
             <>
