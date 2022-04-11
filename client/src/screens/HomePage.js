@@ -1,6 +1,7 @@
 import React from 'react';
 import {useNavigate} from 'react-router-dom';
 import { useTranslation } from "react-i18next";
+import homepage1 from "../images/homepage1.jpg"
 
 
 const HomePage = () => {
@@ -10,9 +11,15 @@ const HomePage = () => {
     return (
       // <div className="homepage">
         <div className="container font-body">
+          <div className="row">
+          <div className="col s6">
           <h1 className="left">{t('welcome_to_sonder')}</h1>
           <h2 className="left">{t('helping_mothers')}</h2>
           <h3 className="left">{t('sonder_motto')}</h3>
+          </div>
+          <div className="col s6">
+          <img src={homepage1}></img>
+          </div>
           <div className="section">
             <div className="row">
             <div className="col s6">
@@ -30,7 +37,7 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-      // </div>
+      </div>
     )
   }
 
