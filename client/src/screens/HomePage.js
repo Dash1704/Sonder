@@ -17,7 +17,7 @@ const HomePage = () => {
             <h2 className="left homepage-slogan">{t('helping_mothers')}</h2>
             <h3 className="left homepage-motto">{t('sonder_motto')}</h3>
           </div>
-          <div className="col s6 div-wrapper">
+          <div className="col s6 cropped1">
             <img className="homepage-image" src={homepage}/>
           </div>
         </div>
