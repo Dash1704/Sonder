@@ -87,7 +87,6 @@ const MotherProfile = () => {
     <>
    <div className="container"> 
    <div className='profile'>
-     <p>{profile.name}</p>
    </div>
     <h3>Hello {profile.name}, see your requests below and if anyone has responded</h3>
    <h4>

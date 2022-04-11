@@ -29,7 +29,7 @@ function App() {
         <Route path="/requests/donor" element={<DonorRequestPage />} />
         <Route path="/profile/mother" element={<MotherProfilePage />} />
         <Route path="/profile/donor" element={<DonorProfilePage />} />
-        <Route path="/viewmotherprofile" element={<ViewProfile />} />
+        <Route path="/viewmotherprofile/:id" element={<ViewProfile />} />
    
       </Routes>
     </BrowserRouter>

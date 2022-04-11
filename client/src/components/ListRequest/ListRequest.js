@@ -16,7 +16,7 @@ const ListRequest = ({ oneRequest, allRequests, setAllRequests }) => {
             <div>
                <p>{`${oneRequest.text}`}</p> 
                <h5>{t("requested_by_info", {userName, userCity})}</h5>   
-               <a href={`/users/mother/${oneRequest.userCreatedBy._id}`}>View {userName} Profile</a>
+               <a href={`/viewmotherprofile`}>View {userName} Profile</a>
             </div>
             </>
         )
