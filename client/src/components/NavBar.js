@@ -26,6 +26,11 @@ const languages = [
     name: 'Français',
     country_code: 'FR'
   },
+  {
+    code: 'pl',
+    name: 'Polski',
+    country_code: 'PL'
+  },
 ]
 
 
@@ -71,6 +76,9 @@ const NavBar = () => {
         <li onClick={() => i18next.changeLanguage(languages[3].code)}>
           <span>{getUnicodeFlagIcon("FR")}</span>{languages[3].name}
         </li>
+        <li onClick={() => i18next.changeLanguage(languages[4].code)}>
+          <span>{getUnicodeFlagIcon("PL")}</span>{languages[4].name}
+        </li>
         </ul>
   </li>
   const logoutNavbar =
@@ -86,18 +94,18 @@ const NavBar = () => {
       
     if(mother){
       return[
-        <li key="aboutus"><Link to="/aboutus">About Us</Link></li>,
-        <li key="request"><Link to="/requests">Requests</Link></li>,
-        <li key="motherprofile"><Link to="/profile/mother">Profile</Link></li>,
+        <li key="aboutus"><Link to="/aboutus">{t("about_us_navbar")}</Link></li>,
+        <li key="request"><Link to="/requests">{t("requests_navbar")}</Link></li>,
+        <li key="motherprofile"><Link to="/profile/mother">{t("profile_navbar")}</Link></li>,
         languageDropdownButton,
         logoutNavbar
       ]
     } 
     else if(donor){
       return[
-        <li key="aboutus"><Link to="/aboutus">About Us</Link></li>,
-        <li key="request"><Link to="/requests">Requests</Link></li>,
-        <li key="donorprofile"><Link to="/profile/donor">Profile</Link></li>,
+        <li key="aboutus"><Link to="/aboutus">{t("about_us_navbar")}</Link></li>,
+        <li key="request"><Link to="/requests">{t("requests_navbar")}</Link></li>,
+        <li key="donorprofile"><Link to="/profile/donor">{t("profile_navbar")}</Link></li>,
         languageDropdownButton,
         logoutNavbar
       ]
