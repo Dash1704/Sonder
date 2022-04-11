@@ -11,11 +11,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: url(./images/gradient1.jpg); 
   /* background-size: cover; */
-  background-size: 100%;
-}
-
-body .homepage-bottom-divide {
-  padding: 150px;
+  background-size: 100vmax;
 }
 
 code {
