@@ -87,9 +87,8 @@ const MotherProfile = () => {
     <>
    <div className="container"> 
    <div className='profile'>
-   </div>
-    <h3>Hello {profile.name}, see your requests below and if anyone has responded</h3>
-   <h4>
+   <h3>Hello {profile.name}, see your requests below and if anyone has responded</h3>
+    <h4>
      <ul>
        <li>Name: {profile.name}</li>
        <li>Email: {profile.email}</li>
@@ -99,9 +98,11 @@ const MotherProfile = () => {
          <li>{profile.languages}</li>
          <li>{profile.how_many_children}</li>
        </ul>
-
-       </ul>
-       <div className='contact_form'>
+      </ul>
+    </h4>
+   </div>
+  
+       <div className='update_bio_form'>
         <form onSubmit={onSubmit}>
           <input
             type='text'
@@ -130,8 +131,7 @@ const MotherProfile = () => {
           <button type='submit'>Update Bio</button>
         </form>
       </div>
-
-   </h4>
+  
    
         {allRequests.map( oneRequest => {
             return < ListRequest 
