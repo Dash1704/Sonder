@@ -75,6 +75,16 @@ const UsersController = {
     }
   }),
 
+  ShowMotherProfile: asyncHandler (async (req, res) => {
+    const mother = await Mother.findOne({"_id": req.params._id})
+    console.log(mother)
+    if(mother) {
+      res.status(201).json({
+        mother
+      })
+    }
+  }),
+
   UpdateMotherBio: asyncHandler (async (req, res) => {
     
     await Mother.findOneAndUpdate({"email": req.params.email}, {$set:{ "about_yourself":req.body.toSend.about_yourself, "languages":req.body.toSend.languages, "how_many_children":req.body.toSend.how_many_children}})
@@ -92,6 +102,8 @@ const UsersController = {
     }
 
   })
+
+
 }
   
 module.exports = UsersController;
