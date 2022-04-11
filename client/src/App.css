@@ -1,20 +1,22 @@
 #toast-container{
-  top:30px;
+  top: 30px;
   right: 20px;
   left: auto;
 }
 
-.btn-block {
+/* .btn-block {
   width: 100%;
   height: 100px;
   margin-top: 30px;
   font-size: 2rem;
   text-transform: none;
-}
+} */
 
-.btn-block i {
+/* .btn-block i {
   font-size: 5rem;
-}
+} */
+
+/* == navbar == */
 
 nav {
   background-color: rgba(0, 255, 0, 0);
@@ -30,29 +32,21 @@ nav .brand-logo {
   size: 10px;
 }
 
-
-/* homepage */
+/* == homepage == */
 
 .font {
-  font-family: 'Inter', sans-serif; 
   font-size: 0.8vw;
 }
 
 .homepage-image {
-  width: 128%;
+  width: 129%;
   height: 126%;
+  /* position: sticky; */
 }
-
-/* .homepage {
-  background-image: url(../public/images/homepage1.jpg) no-repeat; 
-  background-size: cover;
-  min-width: 100%;
-  min-height: 100%;
-} */
 
 .homepage-image-cropped {
   width: 250px; /* width of container */
-  height: 441px; /* height of container */
+  height: 448px; /* height of container */
   object-fit: cover;
   position: relative;
 }
@@ -69,35 +63,34 @@ nav .brand-logo {
 }
 
 .homepage-slogan {
-  font-size: 1.4vw;
+  font-size: 1.3vw;
   font-weight: 200;
   font-style: italic;
 }
 
 .homepage-motto {
-  font-size: 1vw;
+  font-size: 0.9vw;
   font-weight: 400;
 }
 
 .homepage-top-divide {
-  /* padding-top: 100px; */
+  position: relative;
   padding-bottom: 40px;
   padding-left: 100px;
-  padding-right: 100px;
+  padding-right: 145px;
   margin: 0;
 }
 
 .homepage-bottom-divide {
   background-color: #70A7FC;
   margin: 0;
-  padding-top: 10px;
+  /* padding-top: 10px;
   padding-left: 132px;
   padding-right: 132px;
-  padding-bottom: 132px;
+  padding-bottom: 132px; */
+  position: absolute;
   bottom: 0;
-  /* padding-left: 500px;
-  padding-right: 500px;
-  padding-top: 150px; */
+  width: 100%;
 }
 
 .call-to-action {
@@ -105,6 +98,18 @@ nav .brand-logo {
 }
 
 .call-to-action-button {
+  background-color: #8789fc;
+}
+
+button .call-to-action-button {
   padding: 10px;
-  color: #9E59FB;
+}
+
+button .call-to-action-button :hover {
+  background-color: #8789fc; /* isnt working right now */
+}
+
+.call_to_action_title {
+  font-size: 0.9vw;
+  font-weight: 500;
 }

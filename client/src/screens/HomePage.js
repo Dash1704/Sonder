@@ -13,6 +13,7 @@ const HomePage = () => {
         <div className="container">
         <div className="row homepage-top-divide">
           <div className="col s6">
+            <br/>
             <h1 className="left homepage-header">{t('welcome_to_sonder')}</h1>
             <h2 className="left homepage-slogan">{t('helping_mothers')}</h2>
             <h3 className="left homepage-motto">{t('sonder_motto')}</h3>
@@ -28,25 +29,23 @@ const HomePage = () => {
           <div className="col s6">
             <div className="call-to-action center">
             <i className="medium material-icons top">pregnant_woman</i>
+            <p className="call_to_action_title">{t('refugee_mother_call_to_action_title')}</p>
             <p>{t('refugee_mother_call_to_action')}</p>
-            <div className="call-to-action-button">
-            <button className="waves-effect waves-light btn-large"
+            <button className="waves-effect waves-light btn-large call-to-action-button"
           onClick={()=> {
             navigate('/signup/mother')
           }}>{t("refugee_mother_button")}</button>
           </div>
           </div>
-          </div>
           <div className="col s6">
           <div className="call-to-action center">
           <i className="medium material-icons top">tag_faces</i>
+            <p className="call_to_action_title">{t('donor_call_to_action_title')}</p>
             <p>{t('donor_call_to_action')}</p>
-            <div className="call-to-action-button">
-            <button className="waves-effect waves-light btn-large"
+            <button className="waves-effect waves-light btn-large call-to-action-button"
             onClick={()=> {
               navigate('/signup/donor')
             }}>{t("volunteer_button")}</button>
-            </div>
             </div>
           </div>
         </div>
