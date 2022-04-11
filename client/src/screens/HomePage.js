@@ -31,7 +31,7 @@ const HomePage = () => {
             <i className="medium material-icons top">pregnant_woman</i>
             <p className="call_to_action_title">{t('refugee_mother_call_to_action_title')}</p>
             <p>{t('refugee_mother_call_to_action')}</p>
-            <button className="waves-effect waves-light btn-large call-to-action-button"
+            <button className="waves-effect waves-light btn-small call-to-action-button"
           onClick={()=> {
             navigate('/signup/mother')
           }}>{t("refugee_mother_button")}</button>
@@ -42,7 +42,7 @@ const HomePage = () => {
           <i className="medium material-icons top">tag_faces</i>
             <p className="call_to_action_title">{t('donor_call_to_action_title')}</p>
             <p>{t('donor_call_to_action')}</p>
-            <button className="waves-effect waves-light btn-large call-to-action-button"
+            <button className="waves-effect waves-light btn-small call-to-action-button"
             onClick={()=> {
               navigate('/signup/donor')
             }}>{t("volunteer_button")}</button>
