@@ -100,7 +100,7 @@ const NavBar = () => {
         <button className="btn waves-effect waves-light #f50057 pink accent-3"
             onClick={()=> {
               localStorage.clear()
-              navigate('/login')
+              navigate('/')
             }}>
           {t("logout_navbar")}
         </button>
