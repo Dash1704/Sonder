@@ -19,6 +19,10 @@ const ContactForm = () => {
     )
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
+        setToSend({from_name: '',
+        message: '',
+        from_email: '',
+      })
       })
       .catch((err) => {
         console.log('FAILED...', err);
