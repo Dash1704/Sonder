@@ -13,7 +13,7 @@ const ListRequest = ({ oneRequest, allRequests, setAllRequests }) => {
     if(!donor) {
         return (
             <>
-            <div>
+            <div key={oneRequest.userCreatedBy._id}>
                <p>{`${oneRequest.text}`}</p> 
                {oneRequest.basket.map(item => {
                    return (
@@ -31,7 +31,7 @@ const ListRequest = ({ oneRequest, allRequests, setAllRequests }) => {
     } else {
         return (
             <>
-            <div>
+            <div key={oneRequest.userCreatedBy._id}>
                <p>{`${oneRequest.text}`}</p> 
                <h5>{t("requested_by_info", {userName, userCity})}</h5>
                <a href={`/viewmotherprofile/${oneRequest.userCreatedBy._id}`}>View {userName} Profile</a>

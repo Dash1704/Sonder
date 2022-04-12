@@ -8,7 +8,6 @@ const path = require('path')
 require('dotenv').config();
 
 // Import routes
-// const testRouter = require('./routes/test')
 const userRouter = require('./routes/users');
 const sessionRouter = require('./routes/sessions');
 const requestRouter = require('./routes/requests')
@@ -33,13 +32,9 @@ app.use(cors({origin: true, credentials: true}));
 
 //routes
 app.use("/sessions", sessionRouter);
-// app.use("/", testRouter)
 app.use("/users", userRouter);
 app.use("/requests", requestRouter);
 app.use("/item", itemRouter);
-
-// const testRoutes =require('./routes/test');
-// app.use("/", testRoutes)
 
 //port
 const port = process.env.PORT || 8080;

@@ -72,25 +72,25 @@ const NavBar = () => {
         }}
       >language</a>
         <ul id='dropdown1' className='dropdown-content'>
-        <li onClick={() => i18next.changeLanguage(languages[0].code)}>
+        <li key={languages[0].code} onClick={() => i18next.changeLanguage(languages[0].code)}>
           <span>{getUnicodeFlagIcon("GB")}</span>{languages[0].name}
         </li>
-        <li onClick={() => i18next.changeLanguage(languages[1].code)}>
+        <li  key={languages[1].code} onClick={() => i18next.changeLanguage(languages[1].code)}>
           <span>{getUnicodeFlagIcon("ES")}</span>{languages[1].name}
         </li>
-        <li onClick={() => i18next.changeLanguage(languages[2].code)}>
+        <li  key={languages[2].code} onClick={() => i18next.changeLanguage(languages[2].code)}>
           <span>{getUnicodeFlagIcon("IT")}</span>{languages[2].name}
         </li>
-        <li onClick={() => i18next.changeLanguage(languages[3].code)}>
+        <li key={languages[3].code} onClick={() => i18next.changeLanguage(languages[3].code)}>
           <span>{getUnicodeFlagIcon("FR")}</span>{languages[3].name}
         </li>
-        <li onClick={() => i18next.changeLanguage(languages[4].code)}>
+        <li  key={languages[4].code} onClick={() => i18next.changeLanguage(languages[4].code)}>
           <span>{getUnicodeFlagIcon("PL")}</span>{languages[4].name}
         </li>
-        <li onClick={() => i18next.changeLanguage(languages[5].code)}>
+        <li  key={languages[5].code} onClick={() => i18next.changeLanguage(languages[5].code)}>
           <span>{getUnicodeFlagIcon("RU")}</span>{languages[5].name}
         </li>
-        <li onClick={() => i18next.changeLanguage(languages[6].code)}>
+        <li  key={languages[6].code} onClick={() => i18next.changeLanguage(languages[6].code)}>
           <span>{getUnicodeFlagIcon("UA")}</span>{languages[6].name}
         </li>
         </ul>
