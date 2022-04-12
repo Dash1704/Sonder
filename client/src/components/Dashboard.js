@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 
 const Dashboard = () => {
@@ -16,8 +16,7 @@ const Dashboard = () => {
     })
     .then(response => response.json())
     .then(result => {
-        console.log(result);
-        sortByStatus(results);
+        sortByStatus(result.requests);
     })
     .catch((err) => {
         console.log('Failed to load requests...', err);
@@ -43,6 +42,23 @@ const Dashboard = () => {
     };
 
 
+    const acceptHelp = (id) => {
+        fetch(`/requests/accept/${id}`,{
+            method: "post",
+            headers:{
+              'Content-Type':'application/json'
+            }
+        })
+          .then(response => response.json())
+          .then(data => {
+            const oldPendingData = [...pending]
+            const newPendingData = oldPendingData.filter(item => item._id != data[0]._id)
+            setPending(newPendingData);
+            setFinished([data[0], ...finished])
+          })
+    }
+
+
   return (
    
     <>
@@ -52,11 +68,22 @@ const Dashboard = () => {
         })}
     <h4>Pending Requests</h4>
         {pending.map(request => {
-            return `${request.fullfilledBy.name} has offered to donate these items`
+            return(
+            <>
+            <p> {request.fulfilledBy.name} has offered to donate these items`</p>
+            <button 
+                    onClick = {(e) => {
+                    e.preventDefault();
+                    acceptHelp(request._id)
+                    }}> 
+                    Accept this donation
+            </button>
+            </>
+            )
         })}
     <h4>Finished Requests</h4>
         {finished.map(request => {
-            return `${request.fullfilledBy.name} has donated these items`
+            return `${request.fulfilledBy.name} has donated these items`
         })}
     
     </>

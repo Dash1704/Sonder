@@ -43,7 +43,6 @@ const MotherProfile = () => {
       })
       .then(response => response.json())
       .then(result => {
-        console.log(result.requests)
           setMyRequests(result.requests)
           })
     }

@@ -13,6 +13,7 @@ import NavBar from './components/NavBar';
 import DonorRequestPage from './screens/DonorRequestPage.js';
 import MotherProfilePage from './screens/MotherProfile.js';
 import ViewProfile from './screens/ViewProfile.js';
+import Dashboard from './components/Dashboard'
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
         <Route path="/requests/donor" element={<DonorRequestPage />} />
         <Route path="/profile/mother" element={<MotherProfilePage />} />
         <Route path="/viewmotherprofile/:id" element={<ViewProfile />} />
-   
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </BrowserRouter>
   
