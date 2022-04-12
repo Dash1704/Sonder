@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react'
-import AddRequest from '../components/AddRequest/AddRequest.js'
-import ListRequest from '../components/ListRequest/ListRequest.js'
+import React, { useState, useEffect } from 'react';
+import AddRequest from '../components/AddRequest/AddRequest.js';
+import ListRequest from '../components/ListRequest/ListRequest.js';
+import { useTranslation } from "react-i18next";
 
 
 const MotherRequestPage = () => {
 
+    const { t } = useTranslation();
     const [allRequests, setAllRequests] = useState([])
     const [basket, setBasket] = useState([])
     const [allItems, setAllItems] = useState([])
@@ -42,7 +44,7 @@ const MotherRequestPage = () => {
               <div item={item}
               key={item._id}>
                 <img src={`${item.image}`} alt={`${item.name}`}></img>
-                <button onClick={() => addToBasket(item)}> Add to basket</button>
+                <button onClick={() => addToBasket(item)}> {t("add_to_request_button")}</button>
                 </div>
             </>
               )
@@ -52,8 +54,8 @@ const MotherRequestPage = () => {
           basket.map((item) => { 
             return (
               <>
-              <h6 key={item}>{item} </h6>
-              <btn onClick={() => removeFromBasket(item)}> Remove </btn>
+              <h6 key={item}>{t(`${item}`)} </h6>
+              <btn onClick={() => removeFromBasket(item)}> {t("remove_button")} </btn>
               </>
               )
             })

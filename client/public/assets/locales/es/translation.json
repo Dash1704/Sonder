@@ -21,5 +21,19 @@
   "city": "Ciudad",
   "sign_up": "Únete",
   "sign_up_mother":"Registrate como madre",
-  "sign_up_donor": "Registrate como voluntario"
+  "sign_up_donor": "Registrate como voluntario",
+
+   
+  "add_to_request_button": "Añadir",
+  "remove_button": "Retirar",
+
+  "Nappies": "Pañales",
+  "Baby Formula": "Formula para bebés",
+  "Boys clothes": "Ropa de niño",
+  "Girls clothes": "Ropa de niña",
+  "Toys": "Jugetes",
+  "School supplies": "Útiles escolares",
+  "Fruit": "Frutas",
+  "Pram": "Cochecito",
+  "Mobile phone": "Celular"
 }

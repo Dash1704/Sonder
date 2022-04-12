@@ -21,5 +21,19 @@
     "city": "Ville",
     "sign_up": "Registrazione",
     "sign_up_mother":"Inscription comme mère",
-    "sign_up_donor": "Inscription comme donateur"
+    "sign_up_donor": "Inscription comme donateur",
+
+
+    
+    "add_to_request_button": "Add to Request",
+    "remove_button": "Remove",
+    "Nappies": "Nappies",
+    "Baby Formula": "Baby Formula",
+    "Boys clothes": "Boys clothes",
+    "Girls clothes": "Girls clothes",
+    "Toys": "Toys",
+    "School supplies": "School supplies",
+    "Fruit": "Fruit",
+    "Pram": "Pram",
+    "Mobile phone": "Mobile phone"
   }

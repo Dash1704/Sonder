@@ -20,5 +20,19 @@
     "city": "Город",
     "sign_up": "Зарегистрируйтесь",
     "sign_up_mother":"Зарегистрируйтесь как мать",
-    "sign_up_donor": "Зарегистрируйтесь как донор"
+    "sign_up_donor": "Зарегистрируйтесь как донор",
+
+
+    
+    "add_to_request_button": "Add to Request",
+    "remove_button": "Remove",
+    "Nappies": "Nappies",
+    "Baby Formula": "Baby Formula",
+    "Boys clothes": "Boys clothes",
+    "Girls clothes": "Girls clothes",
+    "Toys": "Toys",
+    "School supplies": "School supplies",
+    "Fruit": "Fruit",
+    "Pram": "Pram",
+    "Mobile phone": "Mobile phone"
   }

@@ -21,5 +21,19 @@
     "city": "Miasto",
     "sign_up": "Zarejestruj się",
     "sign_up_mother":"Zarejestruj się jako matka",
-    "sign_up_donor": "Zarejestruj się jako darczyńca"
+    "sign_up_donor": "Zarejestruj się jako darczyńca",
+
+
+    
+    "add_to_request_button": "Add to Request",
+    "remove_button": "Remove",
+    "Nappies": "Nappies",
+    "Baby Formula": "Baby Formula",
+    "Boys clothes": "Boys clothes",
+    "Girls clothes": "Girls clothes",
+    "Toys": "Toys",
+    "School supplies": "School supplies",
+    "Fruit": "Fruit",
+    "Pram": "Pram",
+    "Mobile phone": "Mobile phone"
   }
