@@ -1,10 +1,11 @@
 import React from 'react';
 import { send } from 'emailjs-com';
-// import EmailAlert from './EmailAlert.js'
+import { useTranslation } from "react-i18next";
 
 const RequestHelpButton = ({ oneRequest, allRequests, setAllRequests }) => {
   const donor = localStorage.getItem("donor")
   const jsonDonor = JSON.parse(donor)
+  const { t } = useTranslation();
 
   const ChangeStatus = (id, samaritan ) => {
     fetch(`/requests/${id}`,{
@@ -59,9 +60,8 @@ const RequestHelpButton = ({ oneRequest, allRequests, setAllRequests }) => {
         e.preventDefault();
         sendEmailAlert()
         ChangeStatus(oneRequest._id, jsonDonor)}} >
-        Fulfill this request
+          {t("Fulfill this request")}
       </button>
-      {/* < EmailAlert oneRequest={oneRequest} /> */}
     </> 
   )
 }

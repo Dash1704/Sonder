@@ -54,6 +54,7 @@
   "interests_placeholder": "What languages do you speak? Do you have any hobbies?",
   "children_bio_placeholder": "How many children do you have? What are their names?",
   "update_bio": "Update Bio",
-  "request_and_email_sentence_profile": "Please find your requests below. An email will be sent to you when the request has been accepted"
+  "request_and_email_sentence_profile": "Please find your requests below. An email will be sent to you when the request has been accepted",
+  "Fulfill this request": "Fulfill this request"
 
 }
