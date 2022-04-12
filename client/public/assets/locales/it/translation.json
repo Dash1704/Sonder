@@ -24,9 +24,14 @@
     "sign_up_donor": "Registrati come donatore",
 
 
+
+
+
     
     "add_to_request_button": "Add to Request",
     "remove_button": "Remove",
+    "signed_in_as_navbar": "Signed in as: ",
+  
     "Nappies": "Nappies",
     "Baby Formula": "Baby Formula",
     "Boys clothes": "Boys clothes",
@@ -35,5 +40,23 @@
     "School supplies": "School supplies",
     "Fruit": "Fruit",
     "Pram": "Pram",
-    "Mobile phone": "Mobile phone"
+    "Mobile phone": "Mobile phone",
+    "name_profile": "Name",
+    "email": "Email",
+    "bio": "Bio",
+    "About Yourself": "About Yourself",
+    "Interests": "Interests",
+    "Children": "Children",
+    "about_yourself_placeholder": "Tell us about yourself",
+    "interests_placeholder": "What languages do you speak? Do you have any hobbies?",
+    "children_bio_placeholder": "How many children do you have? What are their names?",
+    "update_bio": "Update Bio",
+    "request_and_email_sentence_profile": "Please find your requests below. An email will be sent to you when the request has been accepted",
+    "Fulfill this request": "Fulfill this request",
+    "Filter by your city": "Filter by your city",
+    "Show active requests": "Show active requests",
+    "See All Requests": "See All Requests",
+    "donor_request_page_intro": "Here you can see all the current requests that are being made by mothers across the country.\n You can filter the requests by your city or by which ones are active with the buttons below.\n Or just click on 'view all requests' to see what items are really needed right now.\n Thank you for all your hard work and help!",
+    "view_profile_button": "View {{userName}}'s profile"
+  
   }
