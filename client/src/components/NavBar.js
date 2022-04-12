@@ -65,7 +65,7 @@ const NavBar = () => {
     const languageDropdownButton = 
   <li key="lang">
       <a 
-      className='dropdown-trigger large material-icons' 
+      className='dropdown-trigger small material-icons language-icon' 
       href='#' 
       data-target='dropdown1'
       onMouseEnter={e => {
@@ -74,6 +74,8 @@ const NavBar = () => {
         }}
       >language</a>
         <ul id='dropdown1' className='dropdown-content'>
+
+
         <li onClick={() => i18next.changeLanguage(languages[0].code)}>
           <span>{getUnicodeFlagIcon("GB")} {languages[0].name}</span>
         </li>
@@ -95,11 +97,12 @@ const NavBar = () => {
         <li onClick={() => i18next.changeLanguage(languages[6].code)}>
           <span>{getUnicodeFlagIcon("UA")} {languages[6].name}</span>
         </li>
+
         </ul>
   </li>
   const logoutNavbar =
       <li key="logout">
-        <button className="btn waves-effect waves-light #f50057 pink accent-3"
+        <button className="btn-small waves-effect logout-button"
             onClick={()=> {
               localStorage.clear()
               navigate('/')
