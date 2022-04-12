@@ -58,6 +58,16 @@ ChangeToPending: asyncHandler(async (req, res) => {
     res.status(201).json(changedRequest)
   }
 }),
+DeleteRequest: asyncHandler(async (req, res) => {
+  const requestId = req.params._id
+  console.log(requestId)
+  const deleted = await Request.findOneAndRemove({"userCreatedBy._id": requestId})
+  console.log(deleted)
+  if (deleted) {
+    res.status(201).json({message: "request deleted"})
+  }
+  
+}),
 
 StatusFilter: asyncHandler(async (req, res) => {
   const filteredRequests = await Request.find({status: "NEW"})
