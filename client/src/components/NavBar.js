@@ -54,8 +54,11 @@ const NavBar = () => {
       coverTrigger: false
     };
     M.Dropdown.init(dropdowns, options);
-    }, [])
-    
+  }, [])
+  
+
+
+  
   const { t } = useTranslation();
   const navigate = useNavigate()
   const mother = localStorage.getItem("mother")
@@ -135,6 +138,11 @@ const NavBar = () => {
       ]
     }
   }
+
+  useEffect(() => {
+    var sidenav = document.querySelectorAll(".sidenav");
+    M.Sidenav.init(sidenav, {});
+  }, []);
   
   return (
   <div>
@@ -142,12 +150,16 @@ const NavBar = () => {
       <div className="nav-wrapper">
         <div className="col s12">
           <Link to="/" className="brand-logo center">Sonder</Link>
+          <Link to="#" data-target="mobile" className="sidenav-trigger"><i className="material-icons">menu</i></Link>
           <ul id="nav-mobile" className="right hide-on-med-and-down">
             {renderList()}
           </ul>
         </div>
       </div>
     </nav>
+    <ul className="sidenav" id="mobile">
+    {renderList()}
+    </ul>
   </div>
   )
   }
