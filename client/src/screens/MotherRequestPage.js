@@ -36,7 +36,29 @@ const MotherRequestPage = () => {
     
     <div className="container order-list">
       <div className='row'>
-  <>
+  <>    <div className='m-requests-question'> 
+          <div className='col s6'>
+            < AddRequest 
+              setAllRequests={setAllRequests}
+              allRequests={allRequests}
+              basket={basket}
+              setBasket={setBasket}
+              />
+        <div>
+          <div className='col s5 '>
+            <h5 className="requested-city-title">{t("requested_title")}</h5>
+            <div className='m-requests-list'>
+              {allRequests.map( oneRequest => {
+                  return < ListRequest 
+                  oneRequest={oneRequest}
+                  key={oneRequest._id}
+                  />
+              })}
+            </div>           
+          </div>
+      </div>
+        </div>
+        </div>
           <ul className='m-requests-items-all'>
             {allItems.map((item, index) => {
                   return (   
@@ -46,47 +68,22 @@ const MotherRequestPage = () => {
                             <button className="waves-effect waves-light btn-small call-to-action-button center" onClick={() => addToBasket(item)}> Add {item.name}</button>
                           </li>
                         )
-                  })}
-            </ul>
-      <div>
-         {
+            })}
+          </ul>
+            {
           basket.map((item) => { 
             return (
               <>
+              <h5 className="request_item_added">{t("request_item_added")}</h5>
               <h6 key={item}>{item} </h6>
-              <btn onClick={() => removeFromBasket(item)}> Remove </btn>
+              <btn className="waves-effect waves-light btn-small call-to-action-button" onClick={() => removeFromBasket(item)}> Remove </btn>
               </>
               )
             })
           }
-      </div>
   </>
-      <div className='m-requests-question'> 
-        <div className='col s6'>
-          < AddRequest 
-            setAllRequests={setAllRequests}
-            allRequests={allRequests}
-            basket={basket}
-            setBasket={setBasket}
-            />
         </div>
-       </div>
-          <>
-        <div className='col s3'>
-            <h5 className="requested-city-title">{t("requested_title")}</h5>
-            <div className='m-requests-list'>
-              {allRequests.map( oneRequest => {
-                  return < ListRequest 
-                  oneRequest={oneRequest}
-                  key={oneRequest._id}
-                  />
-              })}
-            </div>
-        </div>
-          </>
-      </div> 
-      </div>
-     
+      </div>  
     )
   }
 

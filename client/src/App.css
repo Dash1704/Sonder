@@ -146,7 +146,7 @@ button .call-to-action-button :hover {
 
 /* container box */
 .order-list {
-  background-color: black;
+  /* background-color: black; */
 }
 
 /* items the mother can request */
@@ -155,31 +155,20 @@ button .call-to-action-button :hover {
 }
 
 .m-requests-items {
-  width: 
-  /* align-items: flex-start; */
+  margin-left: 100px;
 }
 
 /* request item images */
 .m-requests-img {
-  width: 30%;
-  margin: 10px;
+  width: 20%;
+  margin-top: 10px;
+  margin-bottom: 10px;
   /* margin: 20px; */
-}
-
-.img-polaroid-effect {
-  width: 80%;
-  background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.img-polaroid-container {
-  text-align: center;
-  padding: 10px 20px;
 }
 
 /* request question */
 .m-requests-question {
-  background-color: purple;
+  /* background-color: purple; */
 }
 
 /* requests in mothers city box */
@@ -196,11 +185,9 @@ button .call-to-action-button :hover {
   border-radius: 10px;
   overflow: scroll;
   margin-bottom: 30px;
-  margin-left: 30px;
 }
 
 .requested-city-title {
-  margin-left: 30px;
 }
 
 
