@@ -69,8 +69,19 @@ await Request.findOneAndUpdate({_id: requestId}, { $set:{ status: "FINISHED"}})
 const changedRequest = await Request.find({_id: requestId})
   if(changedRequest) {
     res.status(201).json(changedRequest)
-  }
-}),
+}}),
+
+RepeatRequest: asyncHandler(async (req, res) => {
+  const requestId = req.params._id
+  const replica = await Request.findById(requestId)
+  const newText = replica.text
+  const newUserCreatedBy = replica.userCreatedBy
+  const newBasket = replica.basket
+  const repeat = new Request({text:newText, userCreatedBy: newUserCreatedBy, basket: newBasket});
+  repeat.save()
+    if(repeat) {
+      res.status(201).json({repeat:repeat})
+  }}),
 
 }
 

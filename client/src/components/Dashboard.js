@@ -58,19 +58,44 @@ const Dashboard = () => {
           })
     }
 
+    const repeatRequest = (id) => {
+        fetch(`/requests/repeat/${id}`,{
+            method: "post",
+            headers:{
+              'Content-Type':'application/json'
+            }
+        })
+          .then(response => response.json())
+          .then(data => {
+              const repeatRequest = data.repeat
+              console.log(repeatRequest)
+            setActive([repeatRequest, ...active])
+          })
+    }
+
+
+
+
 
   return (
    
     <>
     <h4>Active Requests</h4>
         {active.map(request => {
-           return request.text
+            return (
+            <>
+                <p>Item in this request: </p>
+                {request.basket.join(',   ')}
+                {request.text}
+           </>
+            )
         })}
     <h4>Pending Requests</h4>
         {pending.map(request => {
             return(
             <>
-            <p> {request.fulfilledBy.name} has offered to donate these items`</p>
+            <p> These items were requested by you: {request.basket.join(',   ')} </p>
+            <p> {request.fulfilledBy.name} has offered to donate these items</p>
             <button 
                     onClick = {(e) => {
                     e.preventDefault();
@@ -83,9 +108,20 @@ const Dashboard = () => {
         })}
     <h4>Finished Requests</h4>
         {finished.map(request => {
-            return `${request.fulfilledBy.name} has donated these items`
+            return (
+            <>
+             <p> These items were requested by you: {request.basket.join(' ')} </p>
+            <p>{request.fulfilledBy.name} has donated these items</p>
+            <button 
+                    onClick = {(e) => {
+                    e.preventDefault();
+                    repeatRequest(request._id)
+                    }}> 
+                    Repeat this request
+            </button>
+            </>
+            )
         })}
-    
     </>
   )
 }
