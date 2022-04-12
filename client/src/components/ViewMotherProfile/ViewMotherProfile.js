@@ -1,12 +1,15 @@
 import React, {useEffect, useState} from 'react';
+import { useParams } from 'react-router-dom'
+ 
 
-
-const ViewMotherProfile = ({userId}) => {
+const ViewMotherProfile = () => {
   const [profile, setProfile] = useState([])
+  const { _id } = useParams()
 
   useEffect(()=>{
-    fetch(`/users/mother/${userId}`,{
-      headers: {'content-Type':'application/json'},
+    console.log(_id)
+    fetch(`/users/mother/profile/${_id}`,{
+      headers: {'Content-Type':'application/json'},
     })
     .then(res => res.json())
     .then(result => {
