@@ -17,8 +17,10 @@ const itemRouter = require('./routes/item')
 //app
 const app = express();
 
-//db
-mongoose.connect(process.env.MONGO_URI, {
+
+const uri = process.env.NODE_ENV === 'test' ? process.env.MONGO_URI_TEST : process.env.MONGO_URI
+
+mongoose.connect(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
