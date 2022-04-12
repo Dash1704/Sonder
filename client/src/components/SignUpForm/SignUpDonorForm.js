@@ -40,6 +40,7 @@ const SignUpForm = () => {
     return (
 
     <div>
+        <div className="card">
         <form>
             <div className="input-field validate">
             <label htmlFor="name">{t("name")}</label>
@@ -87,6 +88,7 @@ const SignUpForm = () => {
                 {t("sign_up")}
             </button>
     </form>
+    </div>
     </div>
 
     )

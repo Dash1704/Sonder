@@ -39,9 +39,10 @@ const SignUpMotherForm = () => {
     return (
 
     <div>
+
+    
         <div className="card">
-         
-        <form>
+         <form>
             <div className="input-field validate">
             <label htmlFor="name">{t("name")}</label>
             <input type="text" 
