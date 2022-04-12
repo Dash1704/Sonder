@@ -38,14 +38,14 @@ const MotherRequestPage = () => {
       <div className='row'>
   <>
       <div className='col s12'>
-          <ul className='m-requests-items'>
+          <ul className='m-requests-items-all'>
             {allItems.map((item) => {
                   return (   
                       <>
-                        <div item={item}
+                        <div className="m-requests-items" item={item}
                         key={item._id}>
                           <ul>
-                            <li><img src={`${item.image}`} alt={`${item.name}`}></img></li> 
+                            <li><img className="m-requests-img" src={`${item.image}`} alt={`${item.name}`}></img></li> 
                             <li><button onClick={() => addToBasket(item)}> Add to basket</button></li>
                           </ul>
                         </div>
@@ -54,7 +54,7 @@ const MotherRequestPage = () => {
                   })}
             </ul>
       </div>
-      <div className='col s6'>
+      <div>
          {
           basket.map((item) => { 
             return (
