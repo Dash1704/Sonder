@@ -35,5 +35,15 @@
   "School supplies": "Útiles escolares",
   "Fruit": "Frutas",
   "Pram": "Cochecito",
-  "Mobile phone": "Celular"
+  "Mobile phone": "Celular",
+  "email": "Email",
+  "bio": "Bio",
+  "About Yourself": "Un poco sobre ti",
+  "Interests": "Intereses",
+  "Children": "Tu familia",
+  "about_yourself_placeholder": "Dinos un poco sobre tu familia",
+  "interests_placeholder": "¿Que idiomas hablas? ¿Tienes algunos intereses?",
+  "children_bio_placeholder": "¿Cuantos niños tienes? ¿Como se llaman?",
+  "update_bio": "Actualiza tú biografía",
+  "request_and_email_sentence_profile": "Descubre tus pedidos abajo. Te llegara un correo electrónico una vez que el pedido sea acceptado por un voluntario"
 }

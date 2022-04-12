@@ -30,7 +30,7 @@
 
 
 
-  
+
   "add_to_request_button": "Add to Request",
   "remove_button": "Remove",
 
@@ -42,6 +42,17 @@
   "School supplies": "School supplies",
   "Fruit": "Fruit",
   "Pram": "Pram",
-  "Mobile phone": "Mobile phone"
+  "Mobile phone": "Mobile phone",
+  "name_profile": "Name",
+  "email": "Email",
+  "bio": "Bio",
+  "About Yourself": "About Yourself",
+  "Interests": "Interests",
+  "Children": "Children",
+  "about_yourself_placeholder": "Tell us about yourself",
+  "interests_placeholder": "What languages do you speak? Do you have any hobbies?",
+  "children_bio_placeholder": "How many children do you have? What are their names?",
+  "update_bio": "Update Bio",
+  "request_and_email_sentence_profile": "Please find your requests below. An email will be sent to you when the request has been accepted"
 
 }

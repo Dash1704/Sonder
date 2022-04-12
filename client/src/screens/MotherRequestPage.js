@@ -44,7 +44,7 @@ const MotherRequestPage = () => {
               <div item={item}
               key={item._id}>
                 <img src={`${item.image}`} alt={`${item.name}`}></img>
-                <button onClick={() => addToBasket(item)}> {t("add_to_request_button")}</button>
+                <button onClick={() => addToBasket(item)}>{t("add_to_request_button")}</button>
                 </div>
             </>
               )
