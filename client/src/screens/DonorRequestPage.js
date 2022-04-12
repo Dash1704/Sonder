@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import ListRequest from '../components/ListRequest/ListRequest.js';
 import { useTranslation } from "react-i18next";
-import donorImage from "../images/donor-image.png";
+import donorImage from "../images/mothering.png";
 
 
 const DonorRequestPage = () => {
@@ -79,10 +79,10 @@ const DonorRequestPage = () => {
           </button>
         </div>
         <div className='row'>
-        <div className='col s6 right donor-image-box'>
+        <div className='col s5 right donor-image-box'>
           <img className="donor-image" src={donorImage}></img>
         </div>
-          <div className='d-requests-list col s5'>
+          <div className='d-requests-list col s6'>
           {allRequests.map( oneRequest => {
               return < ListRequest
               oneRequest={oneRequest}
