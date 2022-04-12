@@ -23,7 +23,16 @@ const ViewMotherProfile = () => {
   return (
 
     <div>
-       <h2>{profile.name}</h2>
+      <ul>
+       <li>Name: {profile.name}</li>
+       <li>Email: {profile.email}</li>
+       <li>City: {profile.city}</li>
+       <ul>Bio:
+         <li><h5>About Yourself: {profile.about_yourself}</h5></li>
+         <li><h5>Languages: {profile.languages}</h5></li>
+         <li><h5>Children: {profile.how_many_children}</h5></li>
+       </ul>
+      </ul>
     </div>
 
     )
