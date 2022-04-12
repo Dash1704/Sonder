@@ -27,6 +27,7 @@ const LoginDonorForm = () => {
     return (
 
     <div>
+        <div className='card'>
         <form>
             <div className="input-field validate">
             <label htmlFor="email">Email</label>
@@ -58,6 +59,7 @@ const LoginDonorForm = () => {
                {t("login")}
             </button>
     </form>
+    </div>
     </div>
 
     )

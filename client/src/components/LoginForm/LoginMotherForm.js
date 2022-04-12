@@ -27,6 +27,7 @@ const LoginMotherForm = () => {
     return (
 
     <div>
+        <div className='card'>
         <form>
             <div className="input-field validate">
             <label htmlFor="email">Email</label>
@@ -56,6 +57,7 @@ const LoginMotherForm = () => {
                 {t("login")}
             </button>
     </form>
+    </div>
     </div>
 
     )
