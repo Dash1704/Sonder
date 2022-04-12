@@ -48,7 +48,6 @@ const ContactForm = () => {
             id="first_name icon_prefix" 
             type='text'
             name='from_name'
-            placeholder='Your name'
             required="true"
             aria-required="true"
             value={toSend.from_name}
@@ -64,7 +63,6 @@ const ContactForm = () => {
             id="email icon_prefix"
             type='email'
             name='from_email'
-            placeholder='Your email'
             required="true"
             aria-required="true"
             value={toSend.from_email}
@@ -79,7 +77,6 @@ const ContactForm = () => {
             className="materialize-textarea validate"
             id="message icon_prefix"
             name='message'
-            placeholder='Your message'
             required="true"
             aria-required="true"
             value={toSend.message}
