@@ -24,7 +24,7 @@ const ListRequest = ({ oneRequest, allRequests, setAllRequests }) => {
                }
                )}
                <p className="m-request-details">{t("requested_by_info", {userName, userCity})}</p>   
-               <a href={`/viewmotherprofile`}>View {userName} Profile</a>
+               <a href={`/viewmotherprofile`}>View {userName}s Profile</a>
             </div>
             </>
         )
