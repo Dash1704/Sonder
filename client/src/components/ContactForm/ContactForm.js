@@ -47,6 +47,14 @@ const ContactForm = () => {
             value={toSend.from_name}
             onChange={handleChange}
           />
+           <input
+            type='email'
+            className='validate'
+            name='from_email'
+            placeholder='Your email'
+            value={toSend.from_email}
+            onChange={handleChange}
+          />
           <input
             type='text'
             name='message'
@@ -54,13 +62,7 @@ const ContactForm = () => {
             value={toSend.message}
             onChange={handleChange}
           />
-          <input
-            type='text'
-            name='from_email'
-            placeholder='Your email'
-            value={toSend.from_email}
-            onChange={handleChange}
-          />
+       
           <button type='submit'>Submit</button>
         </form>
       </div>
