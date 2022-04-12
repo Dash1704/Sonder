@@ -22,3 +22,11 @@ code {
 #root {
   white-space: pre-line;
 }
+
+.input-field label {
+  pointer-events: none;
+}
+
+.input-field .prefix {
+  z-index: -1;
+}
