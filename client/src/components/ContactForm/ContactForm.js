@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import { send } from 'emailjs-com';
+import M from 'materialize-css';
+
 
 const ContactForm = () => {
 
@@ -22,8 +24,8 @@ const ContactForm = () => {
         setToSend({from_name: '',
         message: '',
         from_email: '',
-      })
-      })
+      })})
+      .then(M.toast({html: 'Email Sent To Sonder HQ', classes: '#536dfe indigo accent-2'}))
       .catch((err) => {
         console.log('FAILED...', err);
       });
