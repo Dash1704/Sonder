@@ -37,6 +37,8 @@ const ContactForm = () => {
 
  return (
    <>
+
+   <div className='card'>
     <h5> Please get in touch if you have any feedback or help with our website and we will get back to you as soon as we can</h5>
       <div className='contact_form'>
         <form onSubmit={onSubmit}>
@@ -63,8 +65,9 @@ const ContactForm = () => {
             onChange={handleChange}
           />
        
-          <button type='submit'>Submit</button>
+          <button className="btn waves-effect waves-light" type='submit'>Submit</button>
         </form>
+      </div>
       </div>
    </>
   

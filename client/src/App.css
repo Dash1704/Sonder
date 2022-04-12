@@ -124,6 +124,8 @@ button .call-to-action-button :hover {
   max-width: 450px;
   margin: 10px auto;
   color: #ffffff;
+  
+
 }
 
 .container{
@@ -131,5 +133,12 @@ button .call-to-action-button :hover {
   font-family: 'Inter', sans-serif;
 }
 
+.mother-image {
+  margin-right: -70%;
+  margin-left: auto;
+  width: 10;
+  height: 10;
+  /* position: sticky; */
+}
 
 

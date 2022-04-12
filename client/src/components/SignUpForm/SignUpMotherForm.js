@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import M from 'materialize-css';
 import { useTranslation } from "react-i18next";
+//import motherimage from "../../images/pregnantmother.png"
 
 const SignUpMotherForm = () => {
     const { t } = useTranslation();
@@ -39,9 +40,11 @@ const SignUpMotherForm = () => {
     return (
 
     <div>
-
+       {/* <div className="mother-image-cropped">
+            <img className="mother-image" src={motherimage}/>
+          </div> */}
     
-        <div className="card">
+        <div className="card ">
          <form>
             <div className="input-field validate">
             <label htmlFor="name">{t("name")}</label>
@@ -91,6 +94,7 @@ const SignUpMotherForm = () => {
     </form>
     </div>
             </div>
+            
     
 
     )
