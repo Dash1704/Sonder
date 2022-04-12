@@ -1,7 +1,7 @@
 import React from 'react';
 import {useNavigate} from 'react-router-dom';
 import { useTranslation } from "react-i18next";
-import homepage from "../images/homepage-image.png"
+import homepage from "../images/homepage-image1.png"
 
 
 const HomePage = () => {
