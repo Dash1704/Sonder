@@ -1,22 +1,24 @@
 import React, { useState } from 'react'
 import { useTranslation } from "react-i18next";
 
-const AddRequest = ({setAllRequests, allRequests}) => {
+const AddRequest = ({setAllRequests, allRequests, basket, setBasket}) => {
     const { t } = useTranslation();
     const mother = localStorage.getItem("mother")
     const jsonUser = JSON.parse(mother)
     const userName = jsonUser.name
 
+
     const [newRequest, setNewRequest] = useState("")
 
     const NewRequest = () => {
-
+        console.log(basket)
         fetch("/requests/new", {
             method: "post",
             headers: {'Content-Type':'application/json'},
             body: JSON.stringify({
                     text: newRequest,
-                    userCreatedBy: jsonUser
+                    userCreatedBy: jsonUser,
+                    basket
                 })
             })
             .then(response => response.json())
@@ -24,6 +26,7 @@ const AddRequest = ({setAllRequests, allRequests}) => {
                 let updatedRequests = [data, ...allRequests]
                 setAllRequests(updatedRequests);
                 setNewRequest("");
+                setBasket([])
             })
             .catch(err => console.log(err))
         }

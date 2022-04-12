@@ -15,7 +15,10 @@ const requestSchema = new mongoose.Schema( {
     fulfilledBy: {
         type: Object,
         default: null,
-    }
+    },
+    basket: [{
+        type: String
+    }]
 },
     { timestamps: true }
 );

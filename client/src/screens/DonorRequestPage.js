@@ -4,7 +4,7 @@ import ListRequest from '../components/ListRequest/ListRequest.js'
 
 const DonorRequestPage = () => {
 
-    const user = localStorage.getItem("user")
+    const user = localStorage.getItem("donor")
     const jsonUser = JSON.parse(user)
     const [allRequests, setAllRequests] = useState([])
 
@@ -65,7 +65,7 @@ const DonorRequestPage = () => {
                 onClick = {(e) => {
                     e.preventDefault();
                     filterByCity(jsonUser.city)}} >
-                Filter by city
+                Filter by your city
             </button>
 
             <button
@@ -73,7 +73,7 @@ const DonorRequestPage = () => {
                 onClick = {(e) => {
                     e.preventDefault();
                     filterByActive()}} >
-                Filter by active
+                Show active requests
             </button>
  
 

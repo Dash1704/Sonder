@@ -26,6 +26,21 @@ const languages = [
     name: 'Français',
     country_code: 'FR'
   },
+  {
+    code: 'pl',
+    name: 'Polski',
+    country_code: 'PL'
+  },
+  {
+    code: 'ru',
+    name: 'Pосійський',
+    country_code: 'RU'
+  },
+  {
+    code: 'ua',
+    name: 'Yкраїнський',
+    country_code: 'UA'
+  },
 ]
 
 const NavBar = () => {
@@ -68,6 +83,15 @@ const NavBar = () => {
         </li>
         <li onClick={() => i18next.changeLanguage(languages[3].code)}>
           <span>{getUnicodeFlagIcon("FR")}</span>{languages[3].name}
+        </li>
+        <li onClick={() => i18next.changeLanguage(languages[4].code)}>
+          <span>{getUnicodeFlagIcon("PL")}</span>{languages[4].name}
+        </li>
+        <li onClick={() => i18next.changeLanguage(languages[5].code)}>
+          <span>{getUnicodeFlagIcon("RU")}</span>{languages[5].name}
+        </li>
+        <li onClick={() => i18next.changeLanguage(languages[6].code)}>
+          <span>{getUnicodeFlagIcon("UA")}</span>{languages[6].name}
         </li>
         </ul>
   </li>
@@ -113,11 +137,11 @@ const NavBar = () => {
   }
   
   return (
-  <div className="container">
-    <nav>
+  <div>
+    <nav className="z-depth-0">
       <div className="nav-wrapper">
         <div className="col s12">
-          <Link to="/" className="brand-logo left">Sonder</Link>
+          <Link to="/" className="brand-logo center">Sonder</Link>
           <ul id="nav-mobile" className="right hide-on-med-and-down">
             {renderList()}
           </ul>

@@ -1,4 +1,6 @@
 import React from 'react';
+import { send } from 'emailjs-com';
+// import EmailAlert from './EmailAlert.js'
 
 const RequestHelpButton = ({ oneRequest, allRequests, setAllRequests }) => {
   const donor = localStorage.getItem("donor")
@@ -27,15 +29,39 @@ const RequestHelpButton = ({ oneRequest, allRequests, setAllRequests }) => {
        setAllRequests(newData)
       })
     }
-    
+
+    const sendEmailAlert = () => {
+      const emailSetting = {
+          mother_name: oneRequest.userCreatedBy.name,
+          mother_email: oneRequest.userCreatedBy.email,
+          donor_name: jsonDonor.name,
+          mother_city: oneRequest.userCreatedBy.city,
+          message: oneRequest.text
+      };
+      send(
+        'SonderEmail',
+        'template_89ahmrr',
+         emailSetting, 
+        'gWfY7gMc4qo9a3kBt'
+      )
+        .then((response) => {
+          console.log('SUCCESS!', response.status, response.text);
+        })
+        .catch((err) => {
+          console.log('FAILED...', err);
+        });
+    };
+
   return (
     <>
       <button
         onClick = {(e) => {
         e.preventDefault();
+        sendEmailAlert()
         ChangeStatus(oneRequest._id, jsonDonor)}} >
         Fulfill this request
       </button>
+      {/* < EmailAlert oneRequest={oneRequest} /> */}
     </> 
   )
 }

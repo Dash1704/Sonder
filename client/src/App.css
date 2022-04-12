@@ -1,24 +1,115 @@
 #toast-container{
-  top:30px;
+  top: 30px;
   right: 20px;
   left: auto;
 }
 
-.btn-block {
+/* .btn-block {
   width: 100%;
   height: 100px;
   margin-top: 30px;
   font-size: 2rem;
   text-transform: none;
-}
+} */
 
-.btn-block i {
+/* .btn-block i {
   font-size: 5rem;
+} */
+
+/* == navbar == */
+
+nav {
+  background-color: rgba(0, 255, 0, 0);
 }
 
 nav .brand-logo {
   margin-left: 10px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
 }
+
 .material-icons {
-  margin-right: -10px;
+  size: 10px;
+}
+
+/* == homepage == */
+
+.font {
+  font-size: 0.8vw;
+}
+
+.homepage-image {
+  width: 129%;
+  height: 126%;
+  /* position: sticky; */
+}
+
+.homepage-image-cropped {
+  width: 250px; /* width of container */
+  height: 448px; /* height of container */
+  object-fit: cover;
+  position: relative;
+}
+
+.homepage-image-position {
+  /* position: relative;
+  vertical-align: bottom; */
+}
+
+.homepage-header {
+  font-size: 2.8vw;
+  font-weight: 300;
+  padding: 0;
+}
+
+.homepage-slogan {
+  font-size: 1.3vw;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.homepage-motto {
+  font-size: 0.9vw;
+  font-weight: 400;
+}
+
+.homepage-top-divide {
+  position: relative;
+  padding-bottom: 40px;
+  padding-left: 100px;
+  padding-right: 145px;
+  margin: 0;
+}
+
+.homepage-bottom-divide {
+  background-color: #70A7FC;
+  margin: 0;
+  /* padding-top: 10px;
+  padding-left: 132px;
+  padding-right: 132px;
+  padding-bottom: 132px; */
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.call-to-action {
+  padding: 50px;
+}
+
+.call-to-action-button {
+  background-color: #9e59fb;
+}
+
+button .call-to-action-button {
+  padding: 10px;
+}
+
+button .call-to-action-button :hover {
+  background-color: #8789fc; /* isnt working right now */
+}
+
+.call_to_action_title {
+  font-size: 0.9vw;
+  font-weight: 500;
 }
