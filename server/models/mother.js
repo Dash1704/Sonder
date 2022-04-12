@@ -18,7 +18,18 @@ const motherSchema = new mongoose.Schema( {
         type: String,
         required: true,
     },
-    bio: []
+    about_yourself: {
+        type: String,
+        default: ""
+    }, 
+    languages: {
+        type: String,
+        default: ""
+    },
+    how_many_children: {
+        type: String,
+        default: ""
+    }
     
 },
     { timestamps: true }

@@ -9,6 +9,7 @@ const ListRequest = ({ oneRequest, allRequests, setAllRequests }) => {
   const userName = oneRequest.userCreatedBy.name
   const userCity = oneRequest.userCreatedBy.city
   const donor = localStorage.getItem("donor")
+
     if(!donor) {
         return (
             <>
@@ -23,6 +24,7 @@ const ListRequest = ({ oneRequest, allRequests, setAllRequests }) => {
                }
                )}
                <h5>{t("requested_by_info", {userName, userCity})}</h5>   
+               <a href={`/viewmotherprofile`}>View {userName} Profile</a>
             </div>
             </>
         )

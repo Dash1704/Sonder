@@ -43,7 +43,6 @@ const languages = [
   },
 ]
 
-
 const NavBar = () => {
   useEffect(()=>{
     let dropdowns = document.querySelectorAll(".dropdown-trigger");
@@ -56,7 +55,6 @@ const NavBar = () => {
     M.Dropdown.init(dropdowns, options);
     }, [])
     
-
   const { t } = useTranslation();
   const navigate = useNavigate()
   const mother = localStorage.getItem("mother")
@@ -110,18 +108,20 @@ const NavBar = () => {
       
     if(mother){
       return[
-        <li key="aboutus"><Link to="/aboutus">{t("about_us_navbar")}</Link></li>,
-        <li key="request"><Link to="/requests/mother">{t("requests_navbar")}</Link></li>,
-        <li key="motherprofile"><Link to="/profile/mother">{t("profile_navbar")}</Link></li>,
+        <li key="userName">Signed in as {JSON.parse(localStorage.getItem('mother')).name}</li>,
+        <li key="aboutus"><Link to="/aboutus">About Us</Link></li>,
+        <li key="request"><Link to="/requests">Requests</Link></li>,
+        <li key="motherprofile"><Link to="/profile/mother">Profile</Link></li>,
         languageDropdownButton,
         logoutNavbar
       ]
     } 
     else if(donor){
       return[
-        <li key="aboutus"><Link to="/aboutus">{t("about_us_navbar")}</Link></li>,
-        <li key="request"><Link to="/requests/donor">{t("requests_navbar")}</Link></li>,
-        <li key="donorprofile"><Link to="/profile/donor">{t("profile_navbar")}</Link></li>,
+        <li key="userName">Signed in as {JSON.parse(localStorage.getItem('donor')).name}</li>,
+        <li key="aboutus"><Link to="/aboutus">About Us</Link></li>,
+        <li key="request"><Link to="/requests/mother">Requests</Link></li>,
+        <li key="donorprofile"><Link to="/profile/donor">Profile</Link></li>,
         languageDropdownButton,
         logoutNavbar
       ]

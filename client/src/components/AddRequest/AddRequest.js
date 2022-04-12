@@ -5,8 +5,8 @@ const AddRequest = ({setAllRequests, allRequests, basket, setBasket}) => {
     const { t } = useTranslation();
     const mother = localStorage.getItem("mother")
     const jsonUser = JSON.parse(mother)
-    
-    
+    const userName = jsonUser.name
+
 
     const [newRequest, setNewRequest] = useState("")
 
@@ -33,7 +33,8 @@ const AddRequest = ({setAllRequests, allRequests, basket, setBasket}) => {
  
     return (
     <div>
-        <h2>{t("request_page_intro_sentence")}</h2>
+        
+        <h2>{t("request_page_intro_sentence", {userName})}</h2>
         <form>
             <label htmlFor="request">{t("type_request")}</label>
             <input type="text" 
