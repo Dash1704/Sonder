@@ -108,19 +108,19 @@ const NavBar = () => {
       
     if(mother){
       return[
-        <li key="userName">Signed in as {JSON.parse(localStorage.getItem('mother')).name}</li>,
-        <li key="aboutus"><Link to="/aboutus">About Us</Link></li>,
-        <li key="request"><Link to="/requests/mother">Requests</Link></li>,
-        <li key="motherprofile"><Link to="/profile/mother">Profile</Link></li>,
+        <li key="userName">{t("signed_in_as_navbar")}{JSON.parse(localStorage.getItem('mother')).name}</li>,
+        <li key="aboutus"><Link to="/aboutus">{t("about_us_navbar")}</Link></li>,
+        <li key="request"><Link to="/requests/mother">{t("requests_navbar")}</Link></li>,
+        <li key="motherprofile"><Link to="/profile/mother">{t("profile_navbar")}</Link></li>,
         languageDropdownButton,
         logoutNavbar
       ]
     } 
     else if(donor){
       return[
-        <li key="userName">Signed in as {JSON.parse(localStorage.getItem('donor')).name}</li>,
-        <li key="aboutus"><Link to="/aboutus">About Us</Link></li>,
-        <li key="request"><Link to="/requests/donor">Requests</Link></li>,
+        <li key="userName">{t("signed_in_as_navbar")}{JSON.parse(localStorage.getItem('donor')).name}</li>,
+        <li key="aboutus"><Link to="/aboutus">{t("about_us_navbar")}</Link></li>,
+        <li key="request"><Link to="/requests/donor">{t("requests_navbar")}</Link></li>,
         languageDropdownButton,
         logoutNavbar
       ]
