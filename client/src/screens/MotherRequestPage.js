@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import AddRequest from '../components/AddRequest/AddRequest.js'
-import ListRequest from '../components/ListRequest/ListRequest.js'
+import AddRequest from '../components/AddRequest/AddRequest.js';
+import ListRequest from '../components/ListRequest/ListRequest.js';
+import { useTranslation } from "react-i18next";
 
 
 const MotherRequestPage = () => {
-
+    const { t } = useTranslation();
     const [allRequests, setAllRequests] = useState([])
     const [basket, setBasket] = useState([])
     const [allItems, setAllItems] = useState([])
@@ -34,22 +35,26 @@ const MotherRequestPage = () => {
     return (
     
     <div className="container order-list">
-
+      <div className='row'>
   <>
-      <div className="m-requests-items">
-      {allItems.map((item) => {
-        return (   
-            <>
-              <div item={item}
-              key={item._id}>
-                <img src={`${item.image}`} alt={`${item.name}`}></img>
-                <button onClick={() => addToBasket(item)}> Add to basket</button>
-                </div>
-            </>
-              )
-        })}
-        </div>
-      <div className="m-requests-list">
+      <div className='col s12'>
+          <ul className='m-requests-items'>
+            {allItems.map((item) => {
+                  return (   
+                      <>
+                        <div item={item}
+                        key={item._id}>
+                          <ul>
+                            <li><img src={`${item.image}`} alt={`${item.name}`}></img></li> 
+                            <li><button onClick={() => addToBasket(item)}> Add to basket</button></li>
+                          </ul>
+                        </div>
+                      </>
+                        )
+                  })}
+            </ul>
+      </div>
+      <div className='col s6'>
          {
           basket.map((item) => { 
             return (
@@ -63,24 +68,30 @@ const MotherRequestPage = () => {
       </div>
   </>
       <div className='m-requests-question'> 
-        < AddRequest 
-          setAllRequests={setAllRequests}
-          allRequests={allRequests}
-          basket={basket}
-          setBasket={setBasket}
-          />
+        <div className='col s6'>
+          < AddRequest 
+            setAllRequests={setAllRequests}
+            allRequests={allRequests}
+            basket={basket}
+            setBasket={setBasket}
+            />
+        </div>
+       </div>
           <>
-        <div className='m-requests-list'>
-          {allRequests.map( oneRequest => {
-              return < ListRequest 
-              oneRequest={oneRequest}
-              key={oneRequest._id}
-              />
-          })}
+        <div className='col s3'>
+            <h5>{t("requested_title")}</h5>
+            <div className='m-requests-list'>
+              {allRequests.map( oneRequest => {
+                  return < ListRequest 
+                  oneRequest={oneRequest}
+                  key={oneRequest._id}
+                  />
+              })}
+            </div>
         </div>
           </>
       </div> 
-    </div>
+      </div>
      
     )
   }

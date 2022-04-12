@@ -18,6 +18,7 @@
   "request_placeholder": "Post a new request here...",
   "request_button": "Request",
   "request_page_intro_sentence": "Hello, {{userName}}, what items do you need?",
+  "requested_title": "Requests in {{userCity}}",
   "requested_by_info": "requested by {{userName}}, in {{userCity}}",
   "Login_as_mother": "Login as a mother",
   "Login_as_donor": "Login as a donor",
