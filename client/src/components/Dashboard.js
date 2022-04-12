@@ -80,48 +80,81 @@ const Dashboard = () => {
   return (
    
     <>
-    <h4>Active Requests</h4>
+    <div className="container" 
+          style={{
+            margin: "10px auto",
+            maxWidth: "1000px",
+            padding: "20px",
+            textAlign: "center"
+            }}>
+
+    <h4><b>Active Requests</b></h4>
         {active.map(request => {
             return (
             <>
-                <p>Item in this request: </p>
-                {request.basket.join(',   ')}
-                {request.text}
-           </>
-            )
+            <div className="row">
+            <div className="card blue darken">
+            <div className="card-content white-text">
+                <p>Request Note: {request.text}</p> 
+                <p><b>Items in this request: </b></p>
+                <p>{request.basket.join(',   ')}</p>
+            </div>
+            </div>
+            </div>   
+            </>
+        )
         })}
-    <h4>Pending Requests</h4>
+    <h4><b>Pending Requests</b></h4>
         {pending.map(request => {
             return(
             <>
+            <div className="row">
+            <div className="card indigo">
+            <div className="card-content white-text">
             <p> These items were requested by you: {request.basket.join(',   ')} </p>
             <p> {request.fulfilledBy.name} has offered to donate these items</p>
-            <button 
+            <div className="card-action">
+            <button className="waves-effect waves-light btn-small"
                     onClick = {(e) => {
                     e.preventDefault();
                     acceptHelp(request._id)
                     }}> 
+                    <i className="material-icons left">check_box</i>
                     Accept this donation
             </button>
+            </div>
+            </div>
+            </div>
+            </div>
             </>
             )
         })}
-    <h4>Finished Requests</h4>
+    <h4><b>Finished Requests</b></h4>
         {finished.map(request => {
             return (
             <>
-             <p> These items were requested by you: {request.basket.join(' ')} </p>
-            <p>{request.fulfilledBy.name} has donated these items</p>
-            <button 
+            <div className="row">
+            <div className="card deep-purple">
+            <div className="card-content white-text">
+                <p> These items were requested by you: {request.basket.join(', ')} </p>
+                <p><b>{request.fulfilledBy.name} has donated these items</b></p>
+                <div className="card-action">
+                <button className="waves-effect waves-light btn-small"
                     onClick = {(e) => {
                     e.preventDefault();
                     repeatRequest(request._id)
                     }}> 
+                    <i className="material-icons left">autorenew</i>
                     Repeat this request
-            </button>
+                </button>
+                </div>
+            </div>
+            </div>
+            </div>
             </>
             )
         })}
+        </div>
     </>
   )
 }
