@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon app.js",
     "lint": "eslint .",
-    "start:test": "PORT=8080 MONGODB_URL='mongodb+srv://techforgoodtest:1nP18LjL5oE64hrr@test-techforgood.tzfal.mongodb.net/Test-TechForGood?retryWrites=true&w=majority' npm run test",
+    "start:test": "NODE_ENV=test npm start",
     "test": "npm run lint && npm run test:unit && npm run test:integration",
     "test:unit": "jest",
     "test:integration": "cypress run",

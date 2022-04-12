@@ -12,7 +12,6 @@ import MotherRequestPage from './screens/MotherRequestPage.js';
 import NavBar from './components/NavBar';
 import DonorRequestPage from './screens/DonorRequestPage.js';
 import MotherProfilePage from './screens/MotherProfile.js';
-import DonorProfilePage from './screens/DonorProfile.js';
 import ViewProfile from './screens/ViewProfile.js';
 
 function App() {
@@ -28,8 +27,7 @@ function App() {
         <Route path="/requests/mother" element={<MotherRequestPage />} />
         <Route path="/requests/donor" element={<DonorRequestPage />} />
         <Route path="/profile/mother" element={<MotherProfilePage />} />
-        <Route path="/profile/donor" element={<DonorProfilePage />} />
-        <Route path="/viewmotherprofile/:id" element={<ViewProfile />} />
+        <Route path="/viewmotherprofile/:_id" element={<ViewProfile />} />
    
       </Routes>
     </BrowserRouter>

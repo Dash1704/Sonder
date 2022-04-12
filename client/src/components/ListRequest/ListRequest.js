@@ -13,7 +13,7 @@ const ListRequest = ({ oneRequest, allRequests, setAllRequests }) => {
     if(!donor) {
         return (
             <>
-            <div className='m-list-requests-box'>
+          <div className='m-list-requests-box'>
                <p>{`${oneRequest.text}`}</p> 
                {oneRequest.basket.map(item => {
                    return (
@@ -34,6 +34,7 @@ const ListRequest = ({ oneRequest, allRequests, setAllRequests }) => {
             <div>
                <p>{`${oneRequest.text}`}</p> 
                <h5>{t("requested_by_info", {userName, userCity})}</h5>
+               <a href={`/viewmotherprofile/${oneRequest.userCreatedBy._id}`}>{t("view_profile_button", {userName})}</a>
               
                 {
                 oneRequest.status=== "NEW" ? 

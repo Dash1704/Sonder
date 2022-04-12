@@ -1,12 +1,18 @@
 import React, {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import { useTranslation } from "react-i18next";
+// import M from "materialize-css"
 
 const LoginMotherForm = () => {
     const { t } = useTranslation();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigation = useNavigate();
+
+    // useEffect(() => {
+    //     M.updateTextFields();
+    // }, [])
+
     const MotherLogin = () => {
         fetch("/sessions/login/mother", {
             method: "post",
@@ -27,34 +33,50 @@ const LoginMotherForm = () => {
     return (
 
     <div>
-        <form>
-            <div className="input-field validate">
-            <label htmlFor="email">Email</label>
-            <input type="text" 
-                data-testid="email"
+        <form className="col s12">
+        <div className="row">
+        <div className="input-field col s5">
+        <i className="material-icons prefix">email</i>
+            <input 
+                className="validate"
+                id="email-mother icon_prefix"
+                type='email'
+                // placeholder='Your registered email'
+                required
+                aria-required="true"
+                data-testid="email-mother"
                 value={email}
                 onChange = {(e) => setEmail(e.target.value)}
-            /> 
-            </div>
-
-            <div className="input-field validate">
-            <label htmlFor="password">{t("password")}</label>
-            <input type="text" 
-                data-testid="password"
+            />
+            <label htmlFor="email-mother">Email</label>
+            <span className="helper-text" data-error="Please enter a valid email" data-success=""></span>
+        </div>
+        <div className="input-field col s5">
+        <i className="material-icons prefix">lock_outside</i>
+            <input 
+                className='validate'
+                id="password-mother"
+                type="password"
+                aria-required="true"
+                data-testid="password-mother"
                 value={password}
                 onChange = {(e) => setPassword(e.target.value)}
             />
+            <label htmlFor="password-mother">{t("Password")}</label>
             </div>
 
+            <div className="input-field col s2">
             <button className="btn waves-effect waves-light"
-                data-testid="login-button"
+                data-testid="login-mother-button"
                 onClick = {(e) => {
                     e.preventDefault();
                     MotherLogin()
                     }
                 } >
-                {t("login")}
+               {t("Login")}
             </button>
+            </div>
+        </div>
     </form>
     </div>
 

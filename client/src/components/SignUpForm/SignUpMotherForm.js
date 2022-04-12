@@ -10,7 +10,10 @@ const SignUpMotherForm = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [city, setCity] = useState("");
+
+
     const postSignup = () => {
+   
         fetch("/users/mother", {
             method: "post",
             headers: {'Content-Type':'application/json'},
@@ -48,7 +51,7 @@ const SignUpMotherForm = () => {
 
             <div className="input-field validate">
             <label htmlFor="email">Email</label>
-            <input type="text" 
+            <input type="email" 
                 data-testid="email"
                 value={email}
                 onChange = {(e) => setEmail(e.target.value)}
@@ -57,7 +60,7 @@ const SignUpMotherForm = () => {
 
             <div className="input-field validate">
             <label htmlFor="password">{t("password")}</label>
-            <input type="text" 
+            <input type="password" 
                 data-testid="password"
                 value={password}
                 onChange = {(e) => setPassword(e.target.value)}
@@ -76,7 +79,7 @@ const SignUpMotherForm = () => {
                 data-testid="signup-button"
                 onClick = {(e) => {
                     e.preventDefault();
-                    postSignup()
+                    postSignup();
                     }
                 } >
                 {t("sign_up")}
