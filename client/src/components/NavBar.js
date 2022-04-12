@@ -50,7 +50,9 @@ const NavBar = () => {
       inDuration: 300,
       outDuration: 225,
       hover: true,
-      belowOrigin: true
+      belowOrigin: true,
+      constrainWidth: false,
+      coverTrigger: false
     };
     M.Dropdown.init(dropdowns, options);
     }, [])
@@ -73,25 +75,25 @@ const NavBar = () => {
       >language</a>
         <ul id='dropdown1' className='dropdown-content'>
         <li onClick={() => i18next.changeLanguage(languages[0].code)}>
-          <span>{getUnicodeFlagIcon("GB")}</span>{languages[0].name}
+          <span>{getUnicodeFlagIcon("GB")} {languages[0].name}</span>
         </li>
         <li onClick={() => i18next.changeLanguage(languages[1].code)}>
-          <span>{getUnicodeFlagIcon("ES")}</span>{languages[1].name}
+          <span>{getUnicodeFlagIcon("ES")} {languages[1].name}</span>
         </li>
         <li onClick={() => i18next.changeLanguage(languages[2].code)}>
-          <span>{getUnicodeFlagIcon("IT")}</span>{languages[2].name}
+          <span>{getUnicodeFlagIcon("IT")} {languages[2].name}</span>
         </li>
         <li onClick={() => i18next.changeLanguage(languages[3].code)}>
-          <span>{getUnicodeFlagIcon("FR")}</span>{languages[3].name}
+          <span>{getUnicodeFlagIcon("FR")} {languages[3].name}</span>
         </li>
         <li onClick={() => i18next.changeLanguage(languages[4].code)}>
-          <span>{getUnicodeFlagIcon("PL")}</span>{languages[4].name}
+          <span>{getUnicodeFlagIcon("PL")} {languages[4].name}</span>
         </li>
         <li onClick={() => i18next.changeLanguage(languages[5].code)}>
-          <span>{getUnicodeFlagIcon("RU")}</span>{languages[5].name}
+          <span>{getUnicodeFlagIcon("RU")} {languages[5].name}</span>
         </li>
         <li onClick={() => i18next.changeLanguage(languages[6].code)}>
-          <span>{getUnicodeFlagIcon("UA")}</span>{languages[6].name}
+          <span>{getUnicodeFlagIcon("UA")} {languages[6].name}</span>
         </li>
         </ul>
   </li>

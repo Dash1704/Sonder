@@ -30,3 +30,7 @@ code {
 .input-field .prefix {
   z-index: -1;
 }
+
+#nav-mobile .material-icons {
+  line-height: 2.5;
+}
