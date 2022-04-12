@@ -21,5 +21,46 @@
   "city": "Ciudad",
   "sign_up": "Únete",
   "sign_up_mother":"Registrate como madre",
-  "sign_up_donor": "Registrate como voluntario"
+  "sign_up_donor": "Registrate como voluntario",
+
+   
+
+
+
+
+  "add_to_request_button": "Añadir",
+  "remove_button": "Retirar",
+  "signed_in_as_navbar": "Session de: ",
+
+  "Nappies": "Pañales",
+  "Baby Formula": "Formula para bebés",
+  "Boys clothes": "Ropa de niño",
+  "Girls clothes": "Ropa de niña",
+  "Toys": "Jugetes",
+  "School supplies": "Útiles escolares",
+  "Fruit": "Frutas",
+  "Pram": "Cochecito",
+  "Mobile phone": "Celular",
+  "Pregnancy supplements": "Suplementos para el embarazo",
+  "email": "Email",
+  "bio": "Bio",
+  "About Yourself": "Un poco sobre ti",
+  "Interests": "Intereses",
+  "Children": "Tu familia",
+  "about_yourself_placeholder": "Dinos un poco sobre tu familia",
+  "interests_placeholder": "¿Que idiomas hablas? ¿Tienes algunos intereses?",
+  "children_bio_placeholder": "¿Cuantos niños tienes? ¿Como se llaman?",
+  "update_bio": "Actualiza tú biografía",
+  "request_and_email_sentence_profile": "Descubre tus pedidos abajo. Te llegara un correo electrónico una vez que el pedido sea acceptado por un voluntario",
+  "Fulfill this request": "Cumple este pedido",
+  "sonder_motto": "Creemos que usted es primero, no hay dos necesidades de madres iguales, y debe tener el poder nuevamente en sus manos.\n\n Nosotros lo ayudamos a establecer los cimientos y restablecer esas raíces importantes para apoyarlo a usted y a su hijo.\n\n Sonder brinda todo lo necesario para volver a abrir la puerta a experimentar las alegrías de la maternidad y la niñez sin limitaciones.",
+  "refugee_mother_call_to_action_title": "¿Eres una madre que necesita nuestra ayuda?",
+  "refugee_mother_call_to_action": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  "donor_call_to_action_title": "¿Quieres ser un voluntario?",
+  "donor_call_to_action": "It's our donors who make the magic happen here at Sonder. We are currently looking for nappies, toys, baby clothes. Sign up below to get donating and help make a change today.",
+  "Filter by your city": "Filtra por tú ciudad",
+  "Show active requests": "Ver pedidos activos",
+  "See All Requests": "Ver todos los pedidos",
+  "donor_request_page_intro": "Aquí puedes ver cada pedido recibido por Sonder de madres por todo el país.\n Puedes filtrar los pedidos por su ciudad o cuales estan en este momento activos con los botones abajo.\n O simplemente hacer clic en 'Ver todos los pedidos' para ver cuales son los articulos realmente necesarios en este momento .\n ¡Mil gracias por todo su apoyo y gran trabajo!",
+  "view_profile_button": "Ver el perfil de {{userName}}"
 }
