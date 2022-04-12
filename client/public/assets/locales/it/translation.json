@@ -27,7 +27,7 @@
 
 
 
-    
+
     "add_to_request_button": "Add to Request",
     "remove_button": "Remove",
     "signed_in_as_navbar": "Signed in as: ",
@@ -41,6 +41,7 @@
     "Fruit": "Fruit",
     "Pram": "Pram",
     "Mobile phone": "Mobile phone",
+    "Pregnancy supplements": "Pregnancy supplements",
     "name_profile": "Name",
     "email": "Email",
     "bio": "Bio",
