@@ -39,6 +39,8 @@ const SignUpMotherForm = () => {
     return (
 
     <div>
+        <div className="card">
+         
         <form>
             <div className="input-field validate">
             <label htmlFor="name">{t("name")}</label>
@@ -49,7 +51,7 @@ const SignUpMotherForm = () => {
             /> 
             </div>
 
-            <div className="input-field validate">
+        <div className="input-field validate">
             <label htmlFor="email">Email</label>
             <input type="email" 
                 data-testid="email"
@@ -87,6 +89,8 @@ const SignUpMotherForm = () => {
             </button>
     </form>
     </div>
+            </div>
+    
 
     )
   }
