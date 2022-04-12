@@ -30,7 +30,7 @@ const LoginMotherForm = () => {
         <form>
             <div className="input-field validate">
             <label htmlFor="email">Email</label>
-            <input type="text" 
+            <input type="email" 
                 data-testid="email"
                 value={email}
                 onChange = {(e) => setEmail(e.target.value)}
@@ -39,7 +39,7 @@ const LoginMotherForm = () => {
 
             <div className="input-field validate">
             <label htmlFor="password">{t("password")}</label>
-            <input type="text" 
+            <input type="password" 
                 data-testid="password"
                 value={password}
                 onChange = {(e) => setPassword(e.target.value)}

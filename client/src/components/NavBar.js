@@ -110,7 +110,7 @@ const NavBar = () => {
       return[
         <li key="userName">Signed in as {JSON.parse(localStorage.getItem('mother')).name}</li>,
         <li key="aboutus"><Link to="/aboutus">About Us</Link></li>,
-        <li key="request"><Link to="/requests">Requests</Link></li>,
+        <li key="request"><Link to="/requests/mother">Requests</Link></li>,
         <li key="motherprofile"><Link to="/profile/mother">Profile</Link></li>,
         languageDropdownButton,
         logoutNavbar
@@ -120,8 +120,7 @@ const NavBar = () => {
       return[
         <li key="userName">Signed in as {JSON.parse(localStorage.getItem('donor')).name}</li>,
         <li key="aboutus"><Link to="/aboutus">About Us</Link></li>,
-        <li key="request"><Link to="/requests/mother">Requests</Link></li>,
-        <li key="donorprofile"><Link to="/profile/donor">Profile</Link></li>,
+        <li key="request"><Link to="/requests/donor">Requests</Link></li>,
         languageDropdownButton,
         logoutNavbar
       ]
