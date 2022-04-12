@@ -32,10 +32,11 @@ const MotherRequestPage = () => {
         
 
     return (
-   
-      <div className="container">
+    
+    <div className="container order-list">
 
   <>
+      <div className="m-requests-items">
       {allItems.map((item) => {
         return (   
             <>
@@ -47,7 +48,8 @@ const MotherRequestPage = () => {
             </>
               )
         })}
-      <div className="order_list">
+        </div>
+      <div className="m-requests-list">
          {
           basket.map((item) => { 
             return (
@@ -58,24 +60,27 @@ const MotherRequestPage = () => {
               )
             })
           }
-         </div>
-  </>
-        
-      < AddRequest 
-        setAllRequests={setAllRequests}
-        allRequests={allRequests}
-        basket={basket}
-        setBasket={setBasket}
-        />
-        <>
-        {allRequests.map( oneRequest => {
-            return < ListRequest 
-            oneRequest={oneRequest}
-            key={oneRequest._id}
-            />
-        })}
-        </>
       </div>
+  </>
+      <div className='m-requests-question'> 
+        < AddRequest 
+          setAllRequests={setAllRequests}
+          allRequests={allRequests}
+          basket={basket}
+          setBasket={setBasket}
+          />
+          <>
+        <div className='m-requests-list'>
+          {allRequests.map( oneRequest => {
+              return < ListRequest 
+              oneRequest={oneRequest}
+              key={oneRequest._id}
+              />
+          })}
+        </div>
+          </>
+      </div> 
+    </div>
      
     )
   }

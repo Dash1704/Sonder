@@ -4,19 +4,8 @@
   left: auto;
 }
 
-/* .btn-block {
-  width: 100%;
-  height: 100px;
-  margin-top: 30px;
-  font-size: 2rem;
-  text-transform: none;
-} */
 
-/* .btn-block i {
-  font-size: 5rem;
-} */
-
-/* == navbar == */
+/* == NAVBAR == */
 
 nav {
   background-color: rgba(0, 255, 0, 0);
@@ -28,11 +17,49 @@ nav .brand-logo {
   font-weight: 900;
 }
 
-.material-icons {
-  size: 10px;
+/* logout button */
+nav .logout-button {
+  color: white;
+  border: 1px solid white;
+  background-color: #9e59fb;
+  margin-right: 30px;
+  margin-left: 10px;
 }
 
-/* == homepage == */
+nav .logout-button :hover {
+  background-color: #93EFFE;
+}
+
+/* language drop down */
+nav .dropdown-content {
+  margin-top: 100px;
+  padding-left: 40px;
+  padding-right: 120px;
+  padding-bottom: 30px;
+  align-items: center;
+  background-color: #8789fc;
+  font-family: 'Inter', sans-serif; 
+  border-radius: 25px;
+}
+
+nav .dropdown-text {
+  font-family: 'Inter', sans-serif; 
+  color: white;
+}
+
+nav .dropdown-text :hover {
+  background-color: #9e59fb;
+}
+
+.language-icon :hover {
+  border: none;
+}
+
+.material-icons {
+  /* size: 10px; */
+}
+
+/* == HOMEPAGE == */
 
 .font {
   font-size: 0.8vw;
@@ -113,3 +140,33 @@ button .call-to-action-button :hover {
   font-size: 0.9vw;
   font-weight: 500;
 }
+
+/* == MOTHER REQUESTS PAGE == */
+
+.order-list {
+  background-color: black;
+}
+
+.m-requests-items {
+  background-color: red;
+}
+
+.m-requests-question {
+  background-color: purple;
+}
+
+.m-requests-list {
+  background-color: green;
+}
+
+/* == DONOR REQUEST PAGE == */
+
+/* == MOTHER SIGN UP PAGE == */
+
+/* == DONOR SIGN UP PAGE == */
+
+/* == ABOUT US PAGE == */
+
+/* == MOTHER PROFILE PAGE == */
+
+/* == DONOR PROFILE PAGE == */
