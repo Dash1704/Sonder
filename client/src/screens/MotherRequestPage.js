@@ -43,10 +43,10 @@ const MotherRequestPage = () => {
               allRequests={allRequests}
               basket={basket}
               setBasket={setBasket}
-              />
+            />
         <div>
-          <div className='col s5 '>
-            <h5 className="requested-city-title">{t("requested_title")}</h5>
+          <div className='col s6 '>
+            <p className="requested-city-title">{t("requested_title")}</p>
             <div className='m-requests-list'>
               {allRequests.map( oneRequest => {
                   return < ListRequest 
@@ -55,6 +55,21 @@ const MotherRequestPage = () => {
                   />
               })}
             </div>           
+          </div>
+          <div className='col s6 '>
+            <p className="request_item_added_title">{t("request_item_added")}</p>
+          {
+            basket.map((item) => { 
+              return (
+                <>
+                <div className="request_item_added">
+                  <p key={item}>{item} </p>
+                  <btn className="waves-effect waves-light btn-small call-to-action-button" onClick={() => removeFromBasket(item)}> Remove </btn>
+                </div>
+                </>
+                )
+            })
+          }
           </div>
       </div>
         </div>
@@ -70,17 +85,6 @@ const MotherRequestPage = () => {
                         )
             })}
           </ul>
-            {
-          basket.map((item) => { 
-            return (
-              <>
-              <h5 className="request_item_added">{t("request_item_added")}</h5>
-              <h6 key={item}>{item} </h6>
-              <btn className="waves-effect waves-light btn-small call-to-action-button" onClick={() => removeFromBasket(item)}> Remove </btn>
-              </>
-              )
-            })
-          }
   </>
         </div>
       </div>  
