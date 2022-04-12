@@ -1,16 +1,18 @@
 const app = require('../../app')
 const request = require('supertest')
-const User = require('../../models/users')
+const Mother = require('../../models/mother')
 const mockingoose = require('mockingoose');
+const SessionsController = require('../../controllers/sessions');
 
 
-
+app.use(express.json())
+app.use("/sessions", SessionsController)
 describe('session login', () => {
  
   it('returns signed in user if email and password correct', async () => {
     const email = "eddie@me.com"
 
-    mockingoose(User).toReturn(
+    mockingoose(Mother).toReturn(
       {
         _id: '507f191e810c19729de860ea',
         name: 'name',

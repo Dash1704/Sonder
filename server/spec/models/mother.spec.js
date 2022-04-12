@@ -72,14 +72,14 @@ describe('Mother model', () => {
     });
     it("can't save a user with an email aready signed up", async () => {
       const mother1 = new Mother({
-        name: "Bob",
+        name: "Susan",
         email: "someone@example.com",
         password: "password",
         city: "London"
       });
   
       const mother2 = new Mother({
-        name: "Chris",
+        name: "Mary",
         email: "someone@example.com",
         password: "password1",
         city: "London"

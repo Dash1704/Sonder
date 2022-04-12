@@ -4,7 +4,7 @@ require("../mongodb_helper");
 const Donor = require("../../models/donor");
 
 
-describe('Mother model', () => {
+describe('Donor model', () => {
   beforeEach( async () => {
     await mongoose.connection.collections.donors.deleteMany({});
   });
@@ -12,18 +12,18 @@ describe('Mother model', () => {
    
     it("has a name", async () => {
       const donor = new Donor({
-        name: "Megan Markle",
+        name: "Chris Hemsworth",
         email: "someone@example.com",
         password: "password",
         city: "London"
       });
       await donor.save()
-      expect(donor.name).toEqual("Megan Markle");
+      expect(donor.name).toEqual("Chris Hemsworth");
     });
 
     it("has a password", () => {
       const donor = new Donor({
-        name: "Megan Markle",
+        name: "Chris Hemsworth",
         email: "someone@example.com",
         password: "password",
         city: "London"
@@ -33,7 +33,7 @@ describe('Mother model', () => {
 
     it("has a city", () => {
       const donor = new Donor({
-        name: "Megan Markle",
+        name: "Chris Hemsworth",
         email: "someone@example.com",
         password: "password",
         city: "London"
@@ -43,7 +43,7 @@ describe('Mother model', () => {
 
     it("has an email", () => {
       const donor = new Donor({
-        name: "Megan Markle",
+        name: "Chris Hemsworth",
         email: "someone@example.com",
         password: "password",
         city: "London"
