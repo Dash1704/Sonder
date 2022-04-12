@@ -1,11 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import HttpApi from 'i18next-http-backend';
-
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
@@ -29,14 +28,13 @@ i18n
 
   });
 
+const rootElement = document.getElementById('root');
+const root = createRoot(rootElement);
 
-
-ReactDOM.render(
-
+root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-   document.getElementById('root')
+  </React.StrictMode>
 );
 
 reportWebVitals();

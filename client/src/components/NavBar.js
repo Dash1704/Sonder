@@ -50,7 +50,6 @@ const NavBar = () => {
       inDuration: 300,
       outDuration: 225,
       hover: true,
-      belowOrigin: true,
       constrainWidth: false,
       coverTrigger: false
     };
