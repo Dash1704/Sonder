@@ -1,7 +1,12 @@
 {
     "welcome_to_sonder": "Witamy w Sonder",
     "helping_mothers": "Pomagamy matkom uchodźczyniom uzyskać każdą pomoc, której potrzebują",
+    "sonder_motto": "",
     "about_blurb": "Gdzie matki uchodźczynie mogą uzyskać potrzebne rzeczy dla swoich dzieci, również podczas ciąży",
+    "refugee_mother_call_to_action_title": "",
+    "refugee_mother_call_to_action": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "donor_call_to_action_title": "",
+    "donor_call_to_action": "",
     "refugee_mother_button": "Jestem matką uchodźczynią",
     "volunteer_button": "Jestem wolontariuszem / wolontariuszką / darczyńcą",
     "about_us_navbar": "O nas",
@@ -25,7 +30,6 @@
 
 
     
-
 
     "add_to_request_button": "Add to Request",
     "remove_button": "Remove",
@@ -58,5 +62,5 @@
     "See All Requests": "See All Requests",
     "donor_request_page_intro": "Here you can see all the current requests that are being made by mothers across the country.\n You can filter the requests by your city or by which ones are active with the buttons below.\n Or just click on 'view all requests' to see what items are really needed right now.\n Thank you for all your hard work and help!",
     "view_profile_button": "View {{userName}}'s profile"
-  
+
   }
