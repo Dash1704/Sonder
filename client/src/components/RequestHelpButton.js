@@ -1,5 +1,6 @@
 import React from 'react';
 import { send } from 'emailjs-com';
+import { t } from 'i18next';
 // import EmailAlert from './EmailAlert.js'
 
 const RequestHelpButton = ({ oneRequest, allRequests, setAllRequests }) => {
@@ -54,12 +55,12 @@ const RequestHelpButton = ({ oneRequest, allRequests, setAllRequests }) => {
 
   return (
     <>
-      <button
+      <button className="waves-effect waves-light btn-small call-to-action-button donor-fulfill-button"
         onClick = {(e) => {
         e.preventDefault();
         sendEmailAlert()
         ChangeStatus(oneRequest._id, jsonDonor)}} >
-        Fulfill this request
+        {t("donor_fulfill_request")}
       </button>
       {/* < EmailAlert oneRequest={oneRequest} /> */}
     </> 
