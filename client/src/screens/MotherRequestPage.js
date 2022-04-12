@@ -36,7 +36,7 @@ const MotherRequestPage = () => {
     
     <div className="container order-list">
       <div className='row'>
-  <>    <div className='m-requests-question'> 
+  <>    <div> 
           <div className='col s6'>
             < AddRequest 
               setAllRequests={setAllRequests}
@@ -45,7 +45,7 @@ const MotherRequestPage = () => {
               setBasket={setBasket}
             />
         <div>
-          <div className='col s6 '>
+          <div className='col s6'>
             <p className="requested-city-title">{t("requested_title")}</p>
             <div className='m-requests-list'>
               {allRequests.map( oneRequest => {
@@ -77,12 +77,12 @@ const MotherRequestPage = () => {
           <ul className='m-requests-items-all'>
             {allItems.map((item, index) => {
                   return (   
-                          <li className="col s3" key={item._id}><span className={item.name} id={index} item={item}></span> 
-                            <img className="m-requests-img" src={`${item.image}`} alt={`${item.name}`}></img>
-                            <br/>
-                            <button className="waves-effect waves-light btn-small call-to-action-button center" onClick={() => addToBasket(item)}> Add {item.name}</button>
-                          </li>
-                        )
+                      <li className="col s3" key={item._id}><span className={item.name} id={index} item={item}></span> 
+                        <img className="m-requests-img" src={`${item.image}`} alt={`${item.name}`}></img>
+                        <br/>
+                        <button className="waves-effect waves-light btn-small call-to-action-button center" onClick={() => addToBasket(item)}> Add {item.name}</button>
+                      </li>
+                    )
             })}
           </ul>
   </>

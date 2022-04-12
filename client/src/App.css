@@ -4,6 +4,14 @@
   left: auto;
 }
 
+a {
+  color: #93EFFE;
+}
+
+a :hover {
+  color: white;
+}
+
 
 /* == NAVBAR == */
 
@@ -127,6 +135,7 @@ nav .dropdown-text :hover {
 
 .call-to-action-button {
   background-color: #9e59fb;
+  font-size: 0.7vw;
 }
 
 button .call-to-action-button {
@@ -151,24 +160,27 @@ button .call-to-action-button :hover {
 
 /* items the mother can request */
 .m-requests-items-all {
-  align-content: center;
+  
+  /* align-content: center; */
 }
 
 .m-requests-items {
-  /* margin-left: 100px; */
+  margin-left: 100px;
 }
 
 /* request item images */
 .m-requests-img {
-  width: 20%;
-  margin-top: 10px;
+  width: 22%;
+  margin-top: 20px;
   margin-bottom: 10px;
+  margin-right: 30px;
   /* margin: 20px; */
 }
 
 .request_item_added_title {
   margin-left: 50px;
   font-size: 1.1vw;
+  margin-top: 50px;
 }
 
 .request_item_added {
@@ -178,17 +190,51 @@ button .call-to-action-button :hover {
 
 /* request question */
 .m-requests-question {
-  /* background-color: purple; */
+  font-size: 2vw;
 }
 
-/* requests in mothers city box */
-.m-requests-list {
-  background-color: #9e59fb;
+/* mother request items form */
+.m-request-form {
+  background-color: white;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-right: 35px;
+  border-radius: 10px;
+  outline: none;
   text-align: center;
-  /* padding-left: 10px; */
+  resize: none;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 120px;
+}
+
+/* mother type in your request */
+.m-request-type-request {
+  font-size: 1.2vw;
+  font-weight: 300;
+  color: white;
+}
+
+/* request placeholder text */
+::placeholder {
+  color: black;
+  font-size: 0.8vw;
+}
+
+/* requests in your area box */
+.m-list-requests-box {
+  background-color: #9e59fb;
+  border-radius: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  opacity: 95%;
+}
+
+.m-requests-list {
+  text-align: center;
   padding-top: 10px;
   padding-bottom: 30px;
-  /* padding-right: 10px; */
   font-size: 0.7vw;
   width: auto;
   height: 300px;
@@ -199,6 +245,7 @@ button .call-to-action-button :hover {
 
 .requested-city-title {
   font-size: 1.1vw;
+  margin-top: 50px;
 }
 
 
