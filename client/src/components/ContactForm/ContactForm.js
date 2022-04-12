@@ -63,7 +63,7 @@ const ContactForm = () => {
             id="email icon_prefix"
             type='email'
             name='from_email'
-            required="true"
+            required
             aria-required="true"
             value={toSend.from_email}
             onChange={handleChange}
@@ -77,7 +77,7 @@ const ContactForm = () => {
             className="materialize-textarea validate"
             id="message icon_prefix"
             name='message'
-            required="true"
+            required
             aria-required="true"
             value={toSend.message}
             onChange={handleChange}
