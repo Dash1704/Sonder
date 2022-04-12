@@ -37,23 +37,17 @@ const MotherRequestPage = () => {
     <div className="container order-list">
       <div className='row'>
   <>
-      <div className='col s12'>
           <ul className='m-requests-items-all'>
-            {allItems.map((item) => {
+            {allItems.map((item, index) => {
                   return (   
-                      <>
-                        <div className="m-requests-items" item={item}
-                        key={item._id}>
-                          <ul>
-                            <li><img className="m-requests-img" src={`${item.image}`} alt={`${item.name}`}></img></li> 
-                            <li><button onClick={() => addToBasket(item)}> Add to basket</button></li>
-                          </ul>
-                        </div>
-                      </>
+                          <li className="col s3" key={item._id}><span className={item.name} id={index} item={item}></span> 
+                            <img className="m-requests-img" src={`${item.image}`} alt={`${item.name}`}></img>
+                            <br/>
+                            <button className="waves-effect waves-light btn-small call-to-action-button center" onClick={() => addToBasket(item)}> Add {item.name}</button>
+                          </li>
                         )
                   })}
             </ul>
-      </div>
       <div>
          {
           basket.map((item) => { 
@@ -79,7 +73,7 @@ const MotherRequestPage = () => {
        </div>
           <>
         <div className='col s3'>
-            <h5>{t("requested_title")}</h5>
+            <h5 className="requested-city-title">{t("requested_title")}</h5>
             <div className='m-requests-list'>
               {allRequests.map( oneRequest => {
                   return < ListRequest 

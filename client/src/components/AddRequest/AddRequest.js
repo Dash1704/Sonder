@@ -44,7 +44,7 @@ const AddRequest = ({setAllRequests, allRequests, basket, setBasket}) => {
                 data-testid="requestBody"
             /> 
            
-            <button
+            <button className="waves-effect waves-light btn-small call-to-action-button"
                 data-testid="addRequestButton"
                 onClick = {(e) => {
                     e.preventDefault();
