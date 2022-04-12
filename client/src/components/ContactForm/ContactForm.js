@@ -39,31 +39,54 @@ const ContactForm = () => {
    <>
     <h5> Please get in touch if you have any feedback or help with our website and we will get back to you as soon as we can</h5>
       <div className='contact_form'>
-        <form onSubmit={onSubmit}>
+        <form className="col s12" onSubmit={onSubmit}>
+        <div className="row">
+        <div className="input-field col s6">
+        <i className="material-icons prefix">account_circle</i>
           <input
+            className="validate"
+            id="first_name icon_prefix" 
             type='text'
             name='from_name'
-            placeholder='from name'
+            required="true"
+            aria-required="true"
             value={toSend.from_name}
             onChange={handleChange}
           />
+        <label htmlFor="first_name">First Name</label>
+        <span className="helper-text" data-error="Required" data-success=""></span>
+        </div>
+        <div className="input-field col s6">
+        <i className="material-icons prefix">email</i>
            <input
+            className="validate"
+            id="email icon_prefix"
             type='email'
-            className='validate'
             name='from_email'
-            placeholder='Your email'
+            required
+            aria-required="true"
             value={toSend.from_email}
             onChange={handleChange}
           />
-          <input
-            type='text'
+        <label htmlFor="email">Email</label>
+        <span className="helper-text" data-error="Please enter a valid email" data-success=""></span>
+        </div>
+        <div className="input-field col s12">
+        <i className="material-icons prefix">create</i>
+          <textarea
+            className="materialize-textarea validate"
+            id="message icon_prefix"
             name='message'
-            placeholder='Your message'
+            required
+            aria-required="true"
             value={toSend.message}
             onChange={handleChange}
           />
-       
-          <button type='submit'>Submit</button>
+        <label htmlFor="message">Your message</label>
+        <span className="helper-text" data-error="Required" data-success=""></span>
+        </div>
+          <button className="btn waves-effect waves-light" type="submit" name="action">Send<i className="material-icons right">send</i></button>
+        </div>
         </form>
       </div>
    </>
