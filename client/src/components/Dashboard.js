@@ -89,74 +89,83 @@ const Dashboard = () => {
             padding: "20px",
             textAlign: "center"
             }}>
-
-    <h4><b>{t("Active Requests")}</b></h4>
-        {active.map(request => {
-            return (
-            <>
-            <div className="row">
-            <div className="card blue darken">
-            <div className="card-content white-text">
-                <p>{t("Request Note")}{request.text}</p> 
-                <p><b>{t("Items in this request")}</b></p>
-                <p>{request.basket.join(',   ')}</p>
-            </div>
-            </div>
-            </div>   
-            </>
-        )
-        })}
-    <h4><b>{t("Pending Requests")}</b></h4>
-        {pending.map(request => {
-            return(
-            <>
-            <div className="row">
-            <div className="card indigo">
-            <div className="card-content white-text">
-            <p> {t("These items were requested by you")}{request.basket.join(',   ')} </p>
-            <p> {request.fulfilledBy.name}{t("has offered to donate these items")}</p>
-            <div className="card-action">
-            <button className="waves-effect waves-light btn-small"
-                    onClick = {(e) => {
-                    e.preventDefault();
-                    acceptHelp(request._id)
-                    }}> 
-                    <i className="material-icons left">check_box</i>
-                    {t("Accept this donation")}
-            </button>
-            </div>
-            </div>
-            </div>
-            </div>
-            </>
-            )
-        })}
-    <h4><b>{t("Finished Requests")}</b></h4>
-        {finished.map(request => {
-            return (
-            <>
-            <div className="row">
-            <div className="card deep-purple">
-            <div className="card-content white-text">
-                <p>{t("These items were requested by you")} {request.basket.join(', ')} </p>
-                <p><b>{request.fulfilledBy.name}{t("has donated these items")}</b></p>
-                <div className="card-action">
-                <button className="waves-effect waves-light btn-small"
-                    onClick = {(e) => {
-                    e.preventDefault();
-                    repeatRequest(request._id)
-                    }}> 
-                    <i className="material-icons left">autorenew</i>
-                    {t("Repeat this request")}
-                </button>
+      <div className='manage-request-page'>
+        <div className='row'>
+          <div className='col s4'>
+            <h4 className='active-requests-header'>{t("Active Requests")}:</h4>
+            {active.map(request => {
+                return (
+                <>
+                <div className="row">
+                <div className="card blue darken requests-boxes">
+                <div className="card-content">
+                    <p className='active-requests-title-text'>{t("Request Note")}{request.text}</p> 
+                    <p><b>{t("Items in this request")}</b></p>
+                    <p>{request.basket.join(',   ')}</p>
                 </div>
-            </div>
-            </div>
-            </div>
-            </>
+                </div>
+                </div>   
+                </>
             )
-        })}
+            })}
+          </div>
+          <div className='col s4'>
+            <h4 className='active-requests-header'>{t("Pending Requests")}:</h4>
+            {pending.map(request => {
+                return(
+                <>
+                <div className="row">
+                  <div className="card indigo requests-boxes">
+                    <div className="card-content">
+                      <p className='active-requests-title-text'> {t("These items were requested by you")}{request.basket.join(',   ')} </p>
+                      <p> {request.fulfilledBy.name}{t("has offered to donate these items")}</p>
+                      <div className="card-action">
+                        <button className="waves-effect waves-light btn-small call-to-action-button"
+                                onClick = {(e) => {
+                                e.preventDefault();
+                                acceptHelp(request._id)
+                                }}> 
+                                <i className="material-icons left">check_box</i>
+                                {t("Accept this donation")}
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </>
+                )
+            })}
+          </div>
+          <div className='col s4'>
+            <h4 className='active-requests-header'>{t("Finished Requests")}:</h4>
+            {finished.map(request => {
+                return (
+                <>
+                <div className="row">
+                <div className="card deep-purple requests-boxes">
+                <div className="card-content">
+                    <p className='active-requests-header'>{t("These items were requested by you")} {request.basket.join(', ')} </p>
+                    <p><b>{request.fulfilledBy.name}{t("has donated these items")}</b></p>
+                    <div className="card-action">
+                    <button className="waves-effect waves-light btn-small call-to-action-button"
+                        onClick = {(e) => {
+                        e.preventDefault();
+                        repeatRequest(request._id)
+                        }}> 
+                        <i className="material-icons left">autorenew</i>
+                        {t("Repeat this request")}
+                    </button>
+                    </div>
+                </div>
+                </div>
+                </div>
+                </>
+                )
+            })}
+            </div>
+          </div>
         </div>
+      </div>
     </>
   )
 }

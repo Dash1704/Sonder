@@ -456,3 +456,25 @@ button .call-to-action-button {
   font-size: 1.5vw;
   margin-top: -5px;
 }
+
+/* == MOTHER MANAGE REQUESTS == */
+
+.manage-request-page {
+  margin-top: 50px;
+}
+
+.active-requests-title-text {
+  font-size: 0.8vw;
+}
+
+.active-requests-header {
+  font-size: 1.3vw;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.requests-boxes {
+  margin-right: 10px;
+  margin-left: 10px;
+  border-radius: 10px;
+}
