@@ -1,5 +1,68 @@
 # Sonder
-A web app for refugee mothers which connects them with resources and donors to support future generations.
+> *We help refugee mothers access all the help they need.*
+
+**Sonder is a web app designed to provide all the necessities to refugee mothers, to reopen the door back to experiencing the joys of motherhood and childhood, without any limitations.**
+
+Sonder is the two-week project of six Makers Academy students from the January 2022 cohort: Chloë, Jaroslaw, Eddie, Chris, Dash and Francesco. We all share the same passion of wanting to build something that does good.
+
+Some of us are personally impacted by the current international events, and all of us are deeply invested in the refugee crisis.
+
+While there are many charities helping refugees, we couldn't find a specific platform dedicated to helping refugee mothers and pregnant women.
+
+The term Sonder describes the sudden realisation that everyone has a story, and that each random passerby is living a life as vivid and complex as everyone else. We are all living connected stories. These values of communion and empathy are at the core of Sonder.
+
+<br>
+
+-----
+<br>
+
+## What you can do with Sonder
+
+* On Sonder, refugee mothers can log into their personal area, and submit a request of help by picking items from different categories.
+
+*  The request is then available on the platform.
+
+* Donors and volunteers can honour a request, and by doing so the mother in need is notified via email.
+
+* The website is fully translated in seven languages, including Ukrainian, to make it as accessible as possible. It also uses icons and images where possible, for the same reason.
+
+<br>
+
+-----
+<br>
+
+## Set up your project
+
+1. Fork this repository
+2. Clone your forked repository to your local machine
+3. Install ```Node.js```: please visit ```nodejs.org``` for the latest version
+4. Navigate to server directory and run:
+```
+npm install
+```
+5. Navigate to client directory and run:
+```
+npm install
+``` 
+6. Connect to a new MongoDB Atlas database.  Any MongoDB database would be suffice although MongoDB Atlas is recommended.
+   Please go to the MongoDB Atlas website and create an account for easy installation.  
+   Establish the connection in the 'App.js' file in the server directory.
+7. Navigate to the server directory and run:
+```
+npm start
+```
+8. At the same time in a seperate terminal navigate to the client directory and run:
+```
+npm start
+``` 
+
+*  Alternatively please visit the live website on Heroku: https://sonder-techforgood.herokuapp.com/
+* The website is best viewed at 1920 x 1080 resolution (or equivalent) due to a bug we have no been able to fix yet.
+
+<br>
+
+-----
+<br>
 
 ## Tech Stack
 - [Express](https://expressjs.com/) web framework for Node.js.
@@ -9,24 +72,28 @@ A web app for refugee mothers which connects them with resources and donors to s
 - [ESLint](https://eslint.org) for linting.
 - [Jest](https://jestjs.io/) for testing.
 - [Cypress](https://www.cypress.io/) for end-to-end testing.
-- [Bootstrap](https://getbootstrap.com/) for template rendering of HTML and CSS.
+- [Materialize.css](https://materializecss.com/) for template rendering of HTML and CSS.
 - [JWT](https://jwt.io/) JSON authentication.
-- [Moment]() date formatter.
-- [Axios](https://axios-http.com/) handles HTTP requests.
 - [Cors](https://momentjs.com/) provides a solution for double port deployment
-- [Multer](https://github.com/expressjs/multer/) importing photos to mongodb
 - [Bcrypt](https://www.npmjs.com/package/bcryptjs) hashing passwords.
 - [Dotenv](https://www.npmjs.com/package/dotenv/) environment variables.
 
-## MVP
+<br>
+
+-----
+<br>
+
+## Sonder MVP
 - Refugee: Sign up
 - Refugee: Sign in
 - Refugee Sign out
 - Refugee: Requests
 
+<br>
+
 ## MVP User Stories
 
-<details><summary>List MVP User Stories</summary>
+<details><summary>Show list</summary>
 
 ~~~~~~
 As a refugee mother
@@ -48,9 +115,14 @@ I would like to be able to post my requested items
 
 </details>
 
-## Extra User Stories
+<br>
 
-<details><summary>List Extra User Stories - First Round </summary>
+-----
+<br>
+
+## Extra User Stories: Round 1
+
+<details><summary>Show list</summary>
 
 ~~~~~~
 As a User
@@ -75,10 +147,11 @@ I would like to create a profile and view this
 ~~~~~~
 
 </details>
+<br>
 
-## Extra User Stories
+## Extra User Stories: Round 2
 
-<details><summary>List Extra User Stories - Second Round</summary>
+<details><summary>Show list</summary>
 
 ~~~~~~~
 
@@ -126,45 +199,33 @@ I would like to see her profile page with bio
 
 </details>
 
+<br>
 
-### Set up your project
-
-1. Fork this repository
-2. Clone your forked repository to your local machine
-3. Install Node.js:  please visit nodejs.org for the latest version
-4. Navigate to server directory and run:
-```
-npm install
-```
-5. Navigate to client directory and run:
-```
-npm install
-``` 
-6. Connect to a new MongoDB Atlas database.  Any MongoDB database would be suffice although MongoDB Atlas is recommended.
-   Please go to the MongoDB Atlas website and create an account for easy installation.  
-   Establish the connection in the 'App.js' file in the server directory.
-7. Navigate to the server directory and run:
-```
-npm start
-```
-8. At the same time in a seperate terminal navigate to the client directory and run:
-```
-npm start
-``` 
-
-*  Alternatively please visit the live website on Heroku: https://sonder-techforgood.herokuapp.com/
-
+-----
+<br>
 
 ## Diagram of the Application's Framework
 
 
 ![](./client/src/images/Screenshot_diagram_app_framework.png)
 
+<br>
 
+-----
+<br>
 
-## Screen Shots of the Live Website
+## Screenshots of the Live Website
 
 
 ![](./client/src/images/Screenshot_homepage.png)
 
 ![](./client/src/images/Screenshot_requestpage.png)
+
+<br>
+
+-----
+<br>
+
+## Screenshot of the Live Website Translated to Polish
+![](./client/src/images/Screenshot_homepage_polish.png)
+
