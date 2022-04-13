@@ -8,5 +8,7 @@ router.get('/filter/:city', RequestController.CityFilter)
 router.post('/:_id', RequestController.ChangeToPending)
 router.get('/active', RequestController.StatusFilter)
 router.get('/:_id', RequestController.ViewMyRequests)
+router.post('/accept/:_id', RequestController.AcceptHelp)
+router.post('/repeat/:_id', RequestController.RepeatRequest)
 
 module.exports = router

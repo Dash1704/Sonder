@@ -45,7 +45,6 @@ const MotherProfile = () => {
       })
       .then(response => response.json())
       .then(result => {
-        console.log(result.requests)
           setMyRequests(result.requests)
           })
     }
@@ -89,6 +88,7 @@ const MotherProfile = () => {
     <>
    <div className="container"> 
    <div className='profile'>
+     <h3><a href={`/dashboard`}>Click here to go to manage you requests</a></h3>
     <h4>
      <ul>
        <li>{t("name_profile")}: {profile.name}</li>
