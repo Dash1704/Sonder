@@ -202,7 +202,7 @@ button .call-to-action-button {
 
 /* request question */
 .m-requests-question {
-  font-size: 2vw;
+  font-size: 1vw;
 }
 
 /* mother request items form */
@@ -269,10 +269,20 @@ button .call-to-action-button {
 
 /* == DONOR REQUEST PAGE == */
 
+.d-requests-title {
+  font-size: 1.5vw;
+  margin-bottom: 5px;
+}
+
+.d-requests-question {
+  font-size: 0.8vw;
+  margin-right: 700px;
+  margin-bottom: -10px;
+}
+
 .donor-request-buttons {
   margin-right: 10px;
-  margin-top: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   margin-left: 10px;
 }
 
@@ -285,7 +295,7 @@ button .call-to-action-button {
 .d-requests-list {
   font-size: 0.8vw;
   width: auto;
-  height: 550px;
+  height: 450px;
   overflow: scroll;
 }
 
@@ -307,7 +317,7 @@ button .call-to-action-button {
 }
 
 .donor-image {
-  width: 100%;
+  width: 90%;
 }
 
 
