@@ -1,12 +1,12 @@
 {
     "welcome_to_sonder": "Ласкаво просимо в Зондер",
     "helping_mothers": "Ми допомагаємо матерям-біженцям отримати всю необхідну їм допомогу",
-    "sonder_motto": "We believe you come first, no two mothers' needs are the same, and you should have the power back in your hands.\n\n We help you set foundations and re-establish those important roots to support both you and your child.\n\n Sonder provides all the necessities to reopen the door back to experiencing the joys of motherhood and childhood without limitations.",
+    "sonder_motto": "Ми віримо, що ви на першому місці, немає однакових потреб двох матерів, і ви повинні мати владу у своїх руках.\n\n Ми допомагаємо вам закласти основи та відновити ці важливі коріння, щоб підтримати вас і вашу дитину. \n\n Sonder надає все необхідне, щоб знову відкрити двері до безмежних радощів материнства та дитинства.",
     "about_blurb": "Де матері-біженці можуть придбати необхідні речі для своїх дітей та під час вагітності",
-    "refugee_mother_call_to_action_title": "Are you a Mother in need?",
-    "refugee_mother_call_to_action": "We at Sonder are here to lessen the hardship of resettling for refugee mothers and their children. Sign up below to request the resources you and your child need.",
-    "donor_call_to_action_title": "Would you like to be a Donor?",
-    "donor_call_to_action": "It's our donors who make the magic happen here at Sonder. We are currently looking for nappies, toys, baby clothes. Sign up below to get donating and help make a change today.",
+    "refugee_mother_call_to_action_title": "Ти мати, яка потребує?",
+    "refugee_mother_call_to_action": "Ми в Sonder тут, щоб зменшити труднощі переселення для матерів-біженців та їхніх дітей. Зареєструйтеся нижче, щоб запитати ресурси, необхідні вам і вашій дитині.",
+    "donor_call_to_action_title": "Ви б хотіли стати донором?",
+    "donor_call_to_action": "Саме наші донори роблять магію тут, у Сондері. Зараз ми шукаємо підгузки, іграшки, дитячий одяг. Зареєструйтеся нижче, щоб отримати пожертвування та допомогти внести зміни сьогодні.",
     "refugee_mother_button": "Я мати біженка",
     "volunteer_button": "Я волонтер/волонтерка/донор",
     "about_us_navbar": "Про нас",
@@ -36,7 +36,7 @@
  
     "add_to_request_button": "Add to Request",
     "remove_button": "Remove",
-    "signed_in_as_navbar": "Signed in as: ",
+    "signed_in_as_navbar": "Увійшов як: ",
   
     "Nappies": "Nappies",
     "Baby Formula": "Baby Formula",
