@@ -1,12 +1,14 @@
 import React, {useState, useEffect} from 'react';
+import { useTranslation } from "react-i18next";
 
 
 const Dashboard = () => {
-  const mother = localStorage.getItem("mother")
-  const motherJson = JSON.parse(mother)
-  const [active, setActive] = useState([])
-  const [pending, setPending] = useState([])
-  const [finished, setFinished] = useState([])
+    const { t } = useTranslation();
+    const mother = localStorage.getItem("mother")
+    const motherJson = JSON.parse(mother)
+    const [active, setActive] = useState([])
+    const [pending, setPending] = useState([])
+    const [finished, setFinished] = useState([])
 
   useEffect(()=>{
     fetch(`/requests/${motherJson._id}`,{
@@ -88,15 +90,15 @@ const Dashboard = () => {
             textAlign: "center"
             }}>
 
-    <h4><b>Active Requests</b></h4>
+    <h4><b>{t("Active Requests")}</b></h4>
         {active.map(request => {
             return (
             <>
             <div className="row">
             <div className="card blue darken">
             <div className="card-content white-text">
-                <p>Request Note: {request.text}</p> 
-                <p><b>Items in this request: </b></p>
+                <p>{t("Request Note")}{request.text}</p> 
+                <p><b>{t("Items in this request")}</b></p>
                 <p>{request.basket.join(',   ')}</p>
             </div>
             </div>
@@ -104,15 +106,15 @@ const Dashboard = () => {
             </>
         )
         })}
-    <h4><b>Pending Requests</b></h4>
+    <h4><b>{t("Pending Requests")}</b></h4>
         {pending.map(request => {
             return(
             <>
             <div className="row">
             <div className="card indigo">
             <div className="card-content white-text">
-            <p> These items were requested by you: {request.basket.join(',   ')} </p>
-            <p> {request.fulfilledBy.name} has offered to donate these items</p>
+            <p> {t("These items were requested by you")}{request.basket.join(',   ')} </p>
+            <p> {request.fulfilledBy.name}{t("has offered to donate these items")}</p>
             <div className="card-action">
             <button className="waves-effect waves-light btn-small"
                     onClick = {(e) => {
@@ -120,7 +122,7 @@ const Dashboard = () => {
                     acceptHelp(request._id)
                     }}> 
                     <i className="material-icons left">check_box</i>
-                    Accept this donation
+                    {t("Accept this donation")}
             </button>
             </div>
             </div>
@@ -129,15 +131,15 @@ const Dashboard = () => {
             </>
             )
         })}
-    <h4><b>Finished Requests</b></h4>
+    <h4><b>{t("Finished Requests")}</b></h4>
         {finished.map(request => {
             return (
             <>
             <div className="row">
             <div className="card deep-purple">
             <div className="card-content white-text">
-                <p> These items were requested by you: {request.basket.join(', ')} </p>
-                <p><b>{request.fulfilledBy.name} has donated these items</b></p>
+                <p>{t("These items were requested by you")} {request.basket.join(', ')} </p>
+                <p><b>{request.fulfilledBy.name}{t("has donated these items")}</b></p>
                 <div className="card-action">
                 <button className="waves-effect waves-light btn-small"
                     onClick = {(e) => {
@@ -145,7 +147,7 @@ const Dashboard = () => {
                     repeatRequest(request._id)
                     }}> 
                     <i className="material-icons left">autorenew</i>
-                    Repeat this request
+                    {t("Repeat this request")}
                 </button>
                 </div>
             </div>
