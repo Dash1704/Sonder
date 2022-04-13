@@ -65,8 +65,8 @@ const MotherRequestPage = () => {
               return (
                 <>
                 <div className="request_item_added">
-                  <p key={item}>{item} </p>
-                  <btn className="waves-effect waves-light btn-small call-to-action-button" onClick={() => removeFromBasket(item)}> Remove </btn>
+                  <p key={item}>{t(`${item}`)} </p>
+                  <btn className="waves-effect waves-light btn-small call-to-action-button" onClick={() => removeFromBasket(item)}>{t("remove_button")} </btn>
                 </div>
                 </>
                 )
@@ -83,7 +83,7 @@ const MotherRequestPage = () => {
                       <li className="col s3" key={item._id}><span className={item.name} id={index} item={item}></span> 
                         <img className="m-requests-img" src={`${item.image}`} alt={`${item.name}`}></img>
                         <br/>
-                        <button className="waves-effect waves-light btn-small call-to-action-button center" onClick={() => addToBasket(item)}> Add {item.name}</button>
+                        <button className="waves-effect waves-light btn-small call-to-action-button center" onClick={() => addToBasket(item)}> {t("add")} {t(`${item.name}`)}</button>
                       </li>
                     )
             })}
