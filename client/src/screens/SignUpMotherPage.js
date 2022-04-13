@@ -6,7 +6,7 @@ const SignUpMotherPage = () => {
   const { t } = useTranslation();
     return (
       <div className="container">
-      <h1>{t("sign_up_mother")}</h1>
+      <p className='signup-title'>{t("sign_up_mother")}</p>
       < SignUpMotherForm />
       </div>
     )
