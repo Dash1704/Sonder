@@ -91,14 +91,14 @@ const MotherProfile = () => {
       <div className='row profile'>
         <div className='col s6'>
           <h1 className="m-profile-title">Welcome to your profile page {profile.name}</h1>
-          <ul>
-            <li><h5>{t("name_profile")}: </h5>{profile.name}</li>
-            <li><h5>{t("email")}: </h5><li>{profile.email}</li></li>
-            <li><h5>{t("city")}: </h5>{profile.city}</li>
+          <ul className="profile-details-box">
+            <li className='profile-input'><span className='profile-headers'>{t("name_profile")}: </span>{profile.name}</li>
+            <li className='profile-input'><span className='profile-headers'>{t("email")}: </span><li>{profile.email}</li></li>
+            <li className='profile-input'><span className='profile-headers'>{t("city")}: </span>{profile.city}</li>
             <ul>
-              <li className='profile-titles'><h5>{t("About Yourself")}: </h5>{profile.about_yourself}</li>
-              <li className='profile-titles'><h5>{t("Interests")}: </h5>{profile.languages}</li>
-              <li className='profile-titles'><h5>{t("Children")}: </h5>{profile.how_many_children}</li>
+              <li className='profile-input'><span className='profile-headers'>{t("About Yourself")}: </span>{profile.about_yourself}</li>
+              <li className='profile-input'><span className='profile-headers'>{t("Interests")}: </span>{profile.languages}</li>
+              <li className='profile-input'><span className='profile-headers'>{t("Children")}: </span>{profile.how_many_children}</li>
             </ul>
           </ul>
           <h5>Want to update your profile?</h5>

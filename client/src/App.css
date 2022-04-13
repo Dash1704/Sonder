@@ -333,12 +333,26 @@ button .call-to-action-button {
 }
 
 .m-profile-title {
-  font-size: 2.4vw;
+  font-size: 2vw;
   margin-top: -7px;
   color: white;
 }
 
-/* request placeholder text */
+.profile-headers {
+  font-size: 0.9vw;
+  font-weight: 600;
+}
+
+.profile-details-box {
+  background-color: #93EFFE;
+  padding: 30px;
+}
+
+.profile-input {
+  font-size: 0.9vw;
+}
+
+/* mother profile placeholder text */
 .m-profile-edit-form ::placeholder {
   font-size: 0.8vw;
 }
