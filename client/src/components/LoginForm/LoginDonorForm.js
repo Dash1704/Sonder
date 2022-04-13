@@ -29,15 +29,14 @@ const LoginDonorForm = () => {
 <div>
 
       <div className='card'>
-        <form className="col s12">
+        <form className="cardy">
         <div className="row">
-        <div className="input-field col s5">
+        <div className="input-field">
         <i className="material-icons prefix">email</i>
             <input 
                 className="validate"
                 id="email-donor icon_prefix"
                 type='email'
-                // placeholder='Your registered email'
                 required
                 aria-required="true"
                 data-testid="email-donor"
@@ -48,7 +47,7 @@ const LoginDonorForm = () => {
             <label htmlFor="email-donor">Email</label>
             <span className="helper-text" data-error="Please enter a valid email" data-success=""></span>
         </div>
-            <div className="input-field col s5">
+            <div className="input-field">
             <i className="material-icons prefix">lock_outside</i>
             <input 
                 className='validate'
@@ -62,7 +61,7 @@ const LoginDonorForm = () => {
             <label htmlFor="password-donor">{t("Password")}</label>
             </div>
 
-            <div className="input-field col s2">
+            <div className="input-field">
             <button className="btn waves-effect waves-light"
                 data-testid="login-donor-button"
                 onClick = {(e) => {
