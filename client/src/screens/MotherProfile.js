@@ -92,7 +92,7 @@ const MotherProfile = () => {
    <div className="container"> 
       <div className='row profile'>
         <div className='col s7'>
-          <h1 className="m-profile-title">Welcome {profile.name}</h1>
+          <h1 className="m-profile-title">{t("Welcome")}, {profile.name}</h1>
           <p className="m-profile-request-statement">{t("request_and_email_sentence_profile")}</p>
           <ul className="profile-details-box">
             <li className='profile-input'><span className='profile-headers'>{t("name_profile")}: </span>{profile.name}</li>
@@ -104,7 +104,7 @@ const MotherProfile = () => {
               <li className='profile-input'><span className='profile-headers'>{t("Children")}: </span>{profile.how_many_children}</li>
             </ul>
           </ul>
-          <h5 className="m-profile-update">Update Your Profile:</h5>
+          <h5 className="m-profile-update">{t("Update Your Profile")}:</h5>
           <div>
             <form onSubmit={onSubmit}>
               <div className='m-profile-edit-form'>
@@ -139,8 +139,8 @@ const MotherProfile = () => {
         <div className='col s5'>
           <div className="m-profile-requests-column">
             <div className="m-profile-requests-section">
-              <span className='m-your-requests'>Your Requests:<button className="waves-effect waves-light btn-small call-to-action-button m-profile-manage-requests-button"  onClick={()=> {
-            navigate('/dashboard')}}>Manage your requests</button></span>
+              <span className='m-your-requests'>{t("Your Requests")}:<button className="waves-effect waves-light btn-small call-to-action-button m-profile-manage-requests-button"  onClick={()=> {
+            navigate('/dashboard')}}>{t("Manage your requests")}</button></span>
             </div>
             <div className="m-profile-requests-list">
               {myRequests.map( oneRequest => {

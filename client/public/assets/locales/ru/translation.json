@@ -68,6 +68,21 @@
   "These items were requested by you": "These items were requested by you: ",
   "has offered to donate these items": " has offered to donate these items",
   "has donated these items": " has donated these items",
-  "Repeat this request": "Repeat this request"
+  "Repeat this request": "Repeat this request",
+  "requested_title": "Requests in your area:",
+  "request_item_added": "In your basket:",
+  "donor_request_title": "Hello, here are all requests that are waiting to be fullfilled",
+  "donor_fulfill_request": "I can fulfil this request",
+  "donor_fulfillment": "Thank you! This request is being fulfilled",
+  "refugee_mother_call_to_action_title": "Are you a Mother in need?",
+  "refugee_mother_call_to_action": "We at Sonder are here to lessen the hardship of resettling for refugee mothers and their children. Sign up below to request the resources you and your child need.",
+  "donor_call_to_action_title": "Would you like to be a Donor?",
+  "donor_call_to_action": "It's our donors who make the magic happen here at Sonder. We are currently looking for nappies, toys, baby clothes. Sign up below to get donating and help make a change today.",
+  "add": "add ",
+  "Update Your Profile": "Update Your Profile",
+  "Manage your requests": "Manage your requests",
+  "Your Requests": "Your Requests",
+  "Welcome": "Welcome"
+
 
   }
