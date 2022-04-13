@@ -100,7 +100,7 @@ const Dashboard = () => {
                 <div className="card blue darken requests-boxes">
                 <div className="card-content">
                     <p className='active-requests-title-text'>{t("Request Note")}{request.text}</p> 
-                    <p><b>{t("Items in this request")}</b></p>
+                    <p className='active-requests-title-header'><b>{t("Items in this request")}</b></p>
                     <p>{request.basket.join(',   ')}</p>
                 </div>
                 </div>
@@ -118,7 +118,7 @@ const Dashboard = () => {
                   <div className="card indigo requests-boxes">
                     <div className="card-content">
                       <p className='active-requests-title-text'> {t("These items were requested by you")}{request.basket.join(',   ')} </p>
-                      <p> {request.fulfilledBy.name}{t("has offered to donate these items")}</p>
+                      <p className='active-requests-title-header'> {request.fulfilledBy.name}{t("has offered to donate these items")}</p>
                       <div className="card-action">
                         <button className="waves-effect waves-light btn-small call-to-action-button"
                                 onClick = {(e) => {
@@ -144,8 +144,8 @@ const Dashboard = () => {
                 <div className="row">
                 <div className="card deep-purple requests-boxes">
                 <div className="card-content">
-                    <p className='active-requests-header'>{t("These items were requested by you")} {request.basket.join(', ')} </p>
-                    <p><b>{request.fulfilledBy.name}{t("has donated these items")}</b></p>
+                    <p className='active-requests-title-text'>{t("These items were requested by you")} {request.basket.join(', ')} </p>
+                    <p className='active-requests-title-header'>{request.fulfilledBy.name}{t("has donated these items")}</p>
                     <div className="card-action">
                     <button className="waves-effect waves-light btn-small call-to-action-button"
                         onClick = {(e) => {

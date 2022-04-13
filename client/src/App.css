@@ -425,7 +425,6 @@ button .call-to-action-button {
   height: 29.5vh;
 }
 
-
 .about-us-how-it-works {
   background-color: #9e59fb;
   border-radius: 10px;
@@ -479,4 +478,8 @@ button .call-to-action-button {
   margin-right: 10px;
   margin-left: 10px;
   border-radius: 10px;
+}
+
+.active-requests-title-header {
+  font-style: italic;
 }
