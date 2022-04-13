@@ -9,7 +9,7 @@ body {
   color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url(./images/gradient1.jpg); 
+  background-image: url(./images/homepage-background.jpg); 
   /* background-size: cover; */
   background-size: 100vmax;
 }
@@ -21,4 +21,16 @@ code {
 
 #root {
   white-space: pre-line;
+}
+
+.input-field label {
+  pointer-events: none;
+}
+
+.input-field .prefix {
+  z-index: -1;
+}
+
+#nav-mobile .material-icons {
+  line-height: 2.5;
 }

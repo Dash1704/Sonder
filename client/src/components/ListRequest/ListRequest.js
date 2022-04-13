@@ -9,21 +9,23 @@ const ListRequest = ({ oneRequest, allRequests, setAllRequests }) => {
   const userName = oneRequest.userCreatedBy.name
   const userCity = oneRequest.userCreatedBy.city
   const donor = localStorage.getItem("donor")
-
+  
     if(!donor) {
         return (
             <>
-            <div>
+          <div className='m-list-requests-box'>
                <p>{`${oneRequest.text}`}</p> 
                {oneRequest.basket.map(item => {
                    return (
                    <>
-                   <p> {item} </p>
+                   <p> - {item} - </p>
                    </>
                    )
                }
                )}
+
                <h5>{t("requested_by_info", {userName, userCity})}</h5>   
+               <p className="m-request-details">{t("requested_by_info", {userName, userCity})}</p>   
             </div>
             </>
         )

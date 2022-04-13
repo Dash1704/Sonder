@@ -1,12 +1,17 @@
 {
     "welcome_to_sonder": "Witamy w Sonder",
     "helping_mothers": "Pomagamy matkom uchodźczyniom uzyskać każdą pomoc, której potrzebują",
+    "sonder_motto": "Wierzymy, że to Ty jesteś na pierwszym miejscu. Potrzeby matek nie są takie same i to Ty powinnaś mieć władzę w swoich rękach.\n\n Pomożemy Ci zbudować fundamenty i przywrócić te ważne wartości, aby wspierać zarówno Ciebie, jak i Twoje dziecko. \n\n Sonder zapewnia wszystko, co potrzebne, aby ponownie otworzyć drzwi do doświadczania radości macierzyństwa i dzieciństwa bez ograniczeń.",
     "about_blurb": "Gdzie matki uchodźczynie mogą uzyskać potrzebne rzeczy dla swoich dzieci, również podczas ciąży",
+    "refugee_mother_call_to_action_title": "Czy jesteś matką w potrzebie?",
+    "refugee_mother_call_to_action": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "donor_call_to_action_title": "Chcesz zostać Darczyńcą?",
+    "donor_call_to_action": "To nasi darczyńcy sprawiają, że magia dzieje się w Sonder. Obecnie poszukujemy pieluch, zabawek, ubranek dla dzieci. Zarejestruj się poniżej, aby otrzymać darowiznę i pomóc dokonać zmian już dziś.",
     "refugee_mother_button": "Jestem matką uchodźczynią",
     "volunteer_button": "Jestem wolontariuszem / wolontariuszką / darczyńcą",
     "about_us_navbar": "O nas",
     "requests_navbar": "Prośby",
-    "profile_navbar": "PROFILE",
+    "profile_navbar": "Profil",
     "login": "Zaloguj się",
     "logout_navbar": "Wyloguj się",
     "type_request": "Wpisz tutaj swoją prośbę",
@@ -21,5 +26,41 @@
     "city": "Miasto",
     "sign_up": "Zarejestruj się",
     "sign_up_mother":"Zarejestruj się jako matka",
-    "sign_up_donor": "Zarejestruj się jako darczyńca"
+    "sign_up_donor": "Zarejestruj się jako darczyńca",
+
+
+    
+
+    "add_to_request_button": "Dodaj do wniosku",
+    "remove_button": "Usuń",
+    "signed_in_as_navbar": "Zalogowany jako: ",
+  
+    "Nappies": "Pieluchy",
+    "Baby Formula": "Formuła dla niemowląt",
+    "Boys clothes": "Ubrania dla chłopców",
+    "Girls clothes": "Ubrania dla dziewczynek",
+    "Toys": "Zabawki",
+    "School supplies": "Przybory szkolne",
+    "Fruit": "Owoce",
+    "Pram": "Wózek dziecięcy",
+    "Mobile phone": "Telefon komórkowy",
+    "Pregnancy supplements": "Suplementy ciążowe",
+    "name_profile": "Imię i nazwisko",
+    "email": "Email",
+    "bio": "Biografia",
+    "About Yourself": "O sobie",
+    "Interests": "Zainteresowania",
+    "Children": "Dzieci",
+    "about_yourself_placeholder": "Opowiedz nam o sobie",
+    "interests_placeholder": "Jakimi językami się posługujesz? Czy masz jakieś hobby?",
+    "children_bio_placeholder": "Ile masz dzieci? Jak się nazywają?",
+    "update_bio": "Aktualizuj biografię",
+    "request_and_email_sentence_profile": "Poniżej znajdziesz swoje prośby. Wiadomość e-mail zostanie wysłana do Ciebie, gdy wniosek zostanie zaakceptowany",
+    "Fulfill this request": "Spełnij tę prośbę",
+    "Filter by your city": "Filtruj według swojego miasta",
+    "Show active requests": "Pokaż aktywne prośby",
+    "See All Requests": "Zobacz wszystkie prośby",
+    "donor_request_page_intro": "Tutaj możesz zobaczyć wszystkie aktualne prośby wysyłane przez matki w całym kraju.\n Możesz filtrować prośby według miasta lub według tych które są aktywne, za pomocą poniższych przycisków.\n Możesz też po prostu kliknąć „wyświetl wszystkie prośby” aby zobaczyć, jakie przedmioty są w tej chwili naprawdę potrzebne.\n Dziękujemy za ciężką pracę i pomoc!",
+    "view_profile_button": "Wyświetl profil użytkownika {{userName}}"
+
   }

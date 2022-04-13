@@ -4,77 +4,94 @@ require("../mongodb_helper");
 const Mother = require("../../models/mother");
 
 
-describe('User model', () => {
+describe('Mother model', () => {
   beforeEach( async () => {
     await mongoose.connection.collections.mothers.deleteMany({});
   });
-  describe("User schema", () => {
+  describe("Mother schema", () => {
    
-    it("has a name", () => {
-      const user = new User({
+    it("has a name", async () => {
+      const mother = new Mother({
         name: "Megan Markle",
         email: "someone@example.com",
         password: "password",
+        city: "London"
       });
-      expect(user.name).toEqual("Megan Markle");
+      await mother.save()
+      expect(mother.name).toEqual("Megan Markle");
     });
 
     it("has a password", () => {
-      const user = new User({
+      const mother = new Mother({
         name: "Megan Markle",
         email: "someone@example.com",
         password: "password",
+        city: "London"
       });
-      expect(user.password).toEqual("password");
+      expect(mother.password).toEqual("password");
+    });
+
+    it("has a city", () => {
+      const mother = new Mother({
+        name: "Megan Markle",
+        email: "someone@example.com",
+        password: "password",
+        city: "London"
+      });
+      expect(mother.city).toEqual("London");
     });
 
     it("has an email", () => {
-      const user = new User({
+      const mother = new Mother({
         name: "Megan Markle",
         email: "someone@example.com",
         password: "password",
+        city: "London"
       });
-      expect(user.email).toEqual("someone@example.com");
+      expect(mother.email).toEqual("someone@example.com");
     });
 
     it("can list all users", async () => {
-      let users = await User.find();
+      let users = await Mother.find();
   
       expect(users).toEqual([]);
     });
 
     it("can save a user",  async () => {
-      const user = new User({ name: "Bob", email: "someone@example.com", password: "password" });
+      const mother = new Mother({ name: "Bob", email: "someone@example.com", password: "password", city: "London" });
   
-      await user.save();
-      const data = await User.find()
+      await mother.save();
+      const data = await Mother.find()
   
       expect(data[0]).toMatchObject({
         name: "Bob",
         email: "someone@example.com",
         password: "password",
+        city: "London"
         });
     });
     it("can't save a user with an email aready signed up", async () => {
-      const user1 = new User({
-        name: "Bob",
+      const mother1 = new Mother({
+        name: "Susan",
         email: "someone@example.com",
         password: "password",
+        city: "London"
       });
   
-      const user2 = new User({
-        name: "Chris",
+      const mother2 = new Mother({
+        name: "Mary",
         email: "someone@example.com",
         password: "password1",
+        city: "London"
       });
   
-      await user1.save()
+      await mother1.save()
       
-      await user2.save((err) =>{
+      await mother2.save((err) =>{
         expect(err).toBeTruthy()
       })
   
-      const data = await User.find() 
+      const data = await Mother.find() 
       
       expect(data.length).toEqual(1)
     

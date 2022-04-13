@@ -34,17 +34,18 @@ const AddRequest = ({setAllRequests, allRequests, basket, setBasket}) => {
     return (
     <div>
         
-        <h2>{t("request_page_intro_sentence", {userName})}</h2>
+        <h2 className="m-requests-question">{t("request_page_intro_sentence", {userName})}</h2>
         <form>
-            <label htmlFor="request">{t("type_request")}</label>
+          <div className="m-request-form">
+            <label className="m-request-type-request" htmlFor="request">{t("type_request")}</label>
             <input type="text" 
                 value={newRequest}
                 onChange = {(e) => setNewRequest(e.target.value)}
                 placeholder={t("request_placeholder")}
                 data-testid="requestBody"
             /> 
-           
-            <button
+          </div>
+            <button className="waves-effect waves-light btn-small call-to-action-button"
                 data-testid="addRequestButton"
                 onClick = {(e) => {
                     e.preventDefault();

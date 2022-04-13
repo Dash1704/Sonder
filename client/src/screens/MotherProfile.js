@@ -1,8 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import ListRequest from '../components/ListRequest/ListRequest.js'
 import M from 'materialize-css';
+import { useTranslation } from "react-i18next";
 
 const MotherProfile = () => {
+  const { t } = useTranslation();
   const [profile, setProfile] = useState([])
   const [myRequests, setMyRequests] = useState([])
   const [toSend, setToSend] = useState({
@@ -64,21 +66,20 @@ const MotherProfile = () => {
         body: JSON.stringify({
           toSend
         })
-        
-        })
-        .then(response => response.json())
-        .then((bigResponse) => {
-          setProfile(bigResponse.resMother[0])
-          console.log('Success, bio added');
-        })
-        .catch((err) => {
-          console.log('Failed to add to bio...', err);
-        });
-        setToSend({
-          about_yourself: "",
-          languages: "",
-          how_many_children: "",
-        })
+      })
+      .then(response => response.json())
+      .then((bigResponse) => {
+        setProfile(bigResponse.resMother[0])
+        console.log('Success, bio added');
+      })
+      .catch((err) => {
+        console.log('Failed to add to bio...', err);
+      });
+      setToSend({
+        about_yourself: "",
+        languages: "",
+        how_many_children: "",
+      })
     }
   };
     
@@ -90,13 +91,13 @@ const MotherProfile = () => {
      <h3><a href={`/dashboard`}>Click here to go to manage you requests</a></h3>
     <h4>
      <ul>
-       <li>Name: {profile.name}</li>
-       <li>Email: {profile.email}</li>
-       <li>City: {profile.city}</li>
-       <ul>Bio:
-         <li><h5>About Yourself: {profile.about_yourself}</h5></li>
-         <li><h5>Languages: {profile.languages}</h5></li>
-         <li><h5>Children: {profile.how_many_children}</h5></li>
+       <li>{t("name_profile")}: {profile.name}</li>
+       <li>{t("email")}: {profile.email}</li>
+       <li>{t("city")}: {profile.city}</li>
+       <ul>{t("bio")}:
+         <li><h5>{t("About Yourself")}: {profile.about_yourself}</h5></li>
+         <li><h5>{t("Interests")}: {profile.languages}</h5></li>
+         <li><h5>{t("Children")}: {profile.how_many_children}</h5></li>
        </ul>
       </ul>
     </h4>
@@ -106,30 +107,30 @@ const MotherProfile = () => {
           <input
             type='text'
             name='about_yourself'
-            placeholder='tell us about yourself'
+            placeholder={t("about_yourself_placeholder")}
             value={toSend.about_yourself}
             onChange={handleChange}
           />
           <input
             type='text'
             name='languages'
-            placeholder='What language do you speak'
+            placeholder={t("interests_placeholder")}
             value={toSend.languages}
             onChange={handleChange}
           />
           <input
             type='text'
             name='how_many_children'
-            placeholder='Do you have kids or are they on the way?'
+            placeholder={t("children_bio_placeholder")}
             value={toSend.how_many_children}
             onChange={handleChange}
           />
-          <button type='submit'>Update Bio</button>
+          <button type='submit'>{t("update_bio")}</button>
         </form>
       </div>
 
       <div className='my_requests'>
-        <h5>Please find your requests below. An email will be sent to you when the request has been accepted</h5>
+        <h5>{t("request_and_email_sentence_profile")}</h5>
         {myRequests.map( oneRequest => {
               return < ListRequest 
               oneRequest={oneRequest}
