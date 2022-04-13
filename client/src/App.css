@@ -144,9 +144,6 @@ button .call-to-action-button {
   padding: 10px;
 }
 
-button .call-to-action-button :hover {
-  background-color: #8789fc; /* isnt working right now */
-}
 
 .call_to_action_title {
   font-size: 0.9vw;
@@ -187,14 +184,8 @@ button .call-to-action-button :hover {
   margin-top: 50px;
 }
 
-/* items the mother can request */
-.m-requests-items-all {
-  
-  /* align-content: center; */
-}
-
 .m-requests-items {
-  margin-left: 100px;
+  /* margin-left: 100px; */
 }
 
 /* request item images */
@@ -203,7 +194,6 @@ button .call-to-action-button :hover {
   margin-top: 20px;
   margin-bottom: 10px;
   margin-right: 30px;
-  /* margin: 20px; */
 }
 
 .request_item_added_title {
@@ -284,6 +274,49 @@ button .call-to-action-button :hover {
 }
 
 /* == DONOR REQUEST PAGE == */
+
+.donor-request-buttons {
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  margin-left: 10px;
+}
+
+.donor-fulfill-button {
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.d-requests-list {
+  font-size: 0.8vw;
+  width: auto;
+  height: 550px;
+  overflow: scroll;
+}
+
+.donor-requests-box {
+  border-radius: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  opacity: 95%;
+  margin-top: 10px;
+  padding-left: 15px;
+  background-color: #70A7FC;
+  opacity: 95%;
+}
+
+.donor-fulfillment {
+  font-size: 0.9vw;
+  margin-bottom: 30px;
+}
+
+.donor-image {
+  width: 100%;
+}
+
+
 
 /* == MOTHER SIGN UP PAGE == */
 

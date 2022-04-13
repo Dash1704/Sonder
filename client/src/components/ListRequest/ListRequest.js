@@ -31,20 +31,20 @@ const ListRequest = ({ oneRequest, allRequests, setAllRequests }) => {
     } else {
         return (
             <>
-            <div>
-               <p>{`${oneRequest.text}`}</p> 
-               <h5>{t("requested_by_info", {userName, userCity})}</h5>
-               <a href={`/viewmotherprofile/${oneRequest.userCreatedBy._id}`}>{t("view_profile_button", {userName})}</a>
-              
-                {
-                oneRequest.status=== "NEW" ? 
-                <RequestHelpButton
-                    oneRequest={oneRequest}
-                    allRequests={allRequests}
-                    setAllRequests={setAllRequests}/> : 
-                    <p>Request is being fulfilled</p>
-                }
-            </div>
+                <div className='donor-requests-box'>
+                  <p>{`${oneRequest.text}`}</p> 
+                  <p>{t("requested_by_info", {userName, userCity})}</p>
+                </div>
+                <div>  
+                    {
+                    oneRequest.status=== "NEW" ? 
+                    <RequestHelpButton
+                        oneRequest={oneRequest}
+                        allRequests={allRequests}
+                        setAllRequests={setAllRequests}/> : 
+                        <p className='donor-fulfillment'>{t("donor_fulfillment")}</p>
+                    }
+                </div>
         </>
         )
     }

@@ -9,7 +9,7 @@ body {
   color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url(./images/gradient1.jpg); 
+  background-image: url(./images/homepage-background.jpg); 
   /* background-size: cover; */
   background-size: 100vmax;
 }

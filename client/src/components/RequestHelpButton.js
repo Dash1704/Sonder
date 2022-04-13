@@ -1,5 +1,6 @@
 import React from 'react';
 import { send } from 'emailjs-com';
+import { t } from 'i18next';
 import { useTranslation } from "react-i18next";
 
 const RequestHelpButton = ({ oneRequest, allRequests, setAllRequests }) => {
@@ -54,15 +55,15 @@ const RequestHelpButton = ({ oneRequest, allRequests, setAllRequests }) => {
     };
 
   return (
-    <>
-      <button
+      <>
+      <button className="waves-effect waves-light btn-small call-to-action-button donor-fulfill-button"
         onClick = {(e) => {
         e.preventDefault();
         sendEmailAlert()
         ChangeStatus(oneRequest._id, jsonDonor)}} >
-          {t("Fulfill this request")}
+        {t("donor_fulfill_request")}
       </button>
-    </> 
+      </>
   )
 }
 

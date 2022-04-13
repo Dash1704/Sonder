@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import ListRequest from '../components/ListRequest/ListRequest.js';
 import { useTranslation } from "react-i18next";
-
+import donorImage from "../images/mothering.png";
 
 const DonorRequestPage = () => {
 
@@ -50,44 +50,50 @@ const DonorRequestPage = () => {
         }
 
     return (
-      <>
-      <h5>{t("donor_request_page_intro")}</h5>
-        <>
+      <div className='container'>
+        <div className='row'>
+          <h1 className="m-requests-question col s6">{t("donor_request_title")}</h1>
+        </div>
+        <div className='row'>
+          <button className="waves-effect waves-light btn-small call-to-action-button donor-request-buttons"
+                  data-testid="seeAllRequests"
+                  onClick = {(e) => {
+                      e.preventDefault();
+                      seeAllRequests()}} >
+                  {t("See All Requests")}
+          </button>    
+          <button className="waves-effect waves-light btn-small call-to-action-button donor-request-buttons"
+              data-testid="filterCityButton"
+              onClick = {(e) => {
+                  e.preventDefault();
+                  filterByCity(jsonUser.city)}} >
+              {t("Filter by your city")}
+          </button>
 
-        <button
-            data-testid="seeAllRequests"
-            onClick = {(e) => {
-                e.preventDefault();
-                seeAllRequests()}} >
-                    {t("See All Requests")}
-        </button>
-
-        <button
-            data-testid="filterCityButton"
-            onClick = {(e) => {
-                e.preventDefault();
-                filterByCity(jsonUser.city)}} >
-                    {t("Filter by your city")}
-        </button>
-
-        <button
-            data-testid="filterByFilteredRequests"
-            onClick = {(e) => {
-                e.preventDefault();
-                filterByActive()}} >
-                    {t("Show active requests")}
-        </button>
- 
-        {allRequests.map( oneRequest => {
-            return < ListRequest
-            oneRequest={oneRequest}
-            setAllRequests={setAllRequests}
-            allRequests={allRequests}
-            key={oneRequest._id}
-            />
-        })}
-        </>
-      </>
+          <button className="waves-effect waves-light btn-small call-to-action-button donor-request-buttons"
+              data-testid="filterByFilteredRequests"
+              onClick = {(e) => {
+                  e.preventDefault();
+                  filterByActive()}} >
+              {t("Show active requests")}
+          </button>
+        </div>
+        <div className='row'>
+        <div className='col s5 right donor-image-box'>
+          <img className="donor-image" src={donorImage}></img>
+        </div>
+          <div className='d-requests-list col s6'>
+          {allRequests.map( oneRequest => {
+              return < ListRequest
+              oneRequest={oneRequest}
+              setAllRequests={setAllRequests}
+              allRequests={allRequests}
+              key={oneRequest._id}
+              />
+          })}
+          </div>
+        </div>
+      </div>
     )
   }
 
