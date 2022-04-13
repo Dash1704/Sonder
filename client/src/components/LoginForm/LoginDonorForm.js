@@ -62,7 +62,7 @@ const LoginDonorForm = () => {
             </div>
 
             <div className="input-field">
-            <button className="btn waves-effect waves-light"
+            <button className="btn waves-effect waves-light call-to-action-button"
                 data-testid="login-donor-button"
                 onClick = {(e) => {
                     e.preventDefault();

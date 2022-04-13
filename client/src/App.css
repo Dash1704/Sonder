@@ -168,6 +168,10 @@ button .call-to-action-button {
   margin-top: 50px;
 }
 
+.login-margin-fix {
+  margin-bottom: -5px;
+}
+
 /* == MOTHER REQUESTS PAGE == */
 
 /* container box */

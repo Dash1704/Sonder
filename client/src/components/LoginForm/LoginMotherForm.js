@@ -68,7 +68,7 @@ const LoginMotherForm = () => {
             </div>
 
             <div className="input-field">
-            <button className="btn waves-effect waves-light"
+            <button className="btn waves-effect waves-light call-to-action-button"
                 data-testid="login-mother-button"
                 onClick = {(e) => {
                     e.preventDefault();

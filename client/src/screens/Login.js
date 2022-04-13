@@ -8,12 +8,13 @@ const Login = () => {
     return (
       
       <div className="container">
-      <h1> {t("Login_as_mother")}</h1>
-      < LoginMotherForm />
-      <h1> {t("Login_as_donor")}</h1>
-      < LoginDonorForm />
+        <div className='signup-login-box'>
+          <p className='signup-login-title login-margin-fix'> {t("Login_as_mother")}</p>
+          < LoginMotherForm />
+          <p className='signup-login-title login-margin-fix'> {t("Login_as_donor")}</p>
+          < LoginDonorForm />
+        </div>
       </div>
-
     )
   }
 
