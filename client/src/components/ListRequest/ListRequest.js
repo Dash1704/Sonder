@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { useTranslation } from "react-i18next";
 import RequestHelpButton from '../RequestHelpButton'
 
@@ -13,7 +12,7 @@ const ListRequest = ({ oneRequest, allRequests, setAllRequests }) => {
     if(!donor) {
         return (
             <>
-          <div className='m-list-requests-box'>
+            <div className='m-list-requests-box'>
                <p>{`${oneRequest.text}`}</p> 
                {oneRequest.basket.map(item => {
                    return (
@@ -23,33 +22,31 @@ const ListRequest = ({ oneRequest, allRequests, setAllRequests }) => {
                    )
                }
                )}
-
                <p className="m-request-details">{t("requested_by_info", {userName, userCity})}</p>   
+               <a href={`/viewmotherprofile`}>{t("view_profile_button")}</a>
             </div>
             </>
         )
     } else {
         return (
             <>
-            <div>
-               <p>{`${oneRequest.text}`}</p> 
-               <p>Items Requested: {oneRequest.basket.join(',     ')}</p>
-               <h5>{t("requested_by_info", {userName, userCity})}</h5>
-               <a href={`/viewmotherprofile/${oneRequest.userCreatedBy._id}`}>View {userName} Profile</a>
-               
-                {
-                oneRequest.status=== "NEW" ? 
-                <RequestHelpButton
-                    oneRequest={oneRequest}
-                    allRequests={allRequests}
-                    setAllRequests={setAllRequests}/> : 
-                    <p>Request is being fulfilled</p>
-                }
-            </div>
+                <div className='donor-requests-box'>
+                  <p>{`${oneRequest.text}`}</p> 
+                  <p>{t("requested_by_info", {userName, userCity})}</p>
+                </div>
+                <div>  
+                    {
+                    oneRequest.status=== "NEW" ? 
+                    <RequestHelpButton
+                        oneRequest={oneRequest}
+                        allRequests={allRequests}
+                        setAllRequests={setAllRequests}/> : 
+                        <p className='donor-fulfillment'>{t("donor_fulfillment")}</p>
+                    }
+                </div>
         </>
         )
     }
-    
 }
 
 export default ListRequest
