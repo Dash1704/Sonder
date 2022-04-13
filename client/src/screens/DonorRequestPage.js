@@ -52,7 +52,7 @@ const DonorRequestPage = () => {
     return (
       <div className='container'>
         <div className='row'>
-          <h1 className="d-requests-title donor_request_page_title col s6">{t("donor_request_page_title")}</h1>
+          <h1 className="d-requests-title col s6">{t("donor_request_page_title")}</h1>
         <div className='row'>
           <p className="d-requests-question col s">{t("donor_request_page_intro")}</p>
         </div>
