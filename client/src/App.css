@@ -388,6 +388,7 @@ button .call-to-action-button {
 
 .m-profile-request-statement {
   margin-top: 10px;
+  margin-right: 80px;
   font-size: 0.9vw;
 }
 
@@ -399,5 +400,9 @@ button .call-to-action-button {
 }
 
 .m-profile-manage-requests-button {
-  margin-left: 158px;
+  margin-left: 150px;
+}
+
+.m-profile-requests-section {
+  margin-bottom: 30px;
 }

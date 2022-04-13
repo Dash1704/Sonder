@@ -136,7 +136,9 @@ const MotherProfile = () => {
         </div>
         <div className='col s5'>
           <div>
-            <span className='m-your-requests'>Your requests:<button className="waves-effect waves-light btn-small call-to-action-button m-profile-manage-requests-button" href={`/dashboard`}>Manage your requests</button></span>
+            <div className="m-profile-requests-section">
+              <span className='m-your-requests'>Your Requests:<button className="waves-effect waves-light btn-small call-to-action-button m-profile-manage-requests-button" href={`/dashboard`}>Manage your requests</button></span>
+            </div>
             <div className="m-profile-requests-list">
               {myRequests.map( oneRequest => {
                     return < ListRequest 
