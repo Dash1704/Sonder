@@ -4,7 +4,7 @@
     "sonder_motto": "Wierzymy, że to Ty jesteś na pierwszym miejscu. Potrzeby matek nie są takie same i to Ty powinnaś mieć władzę w swoich rękach.\n\n Pomożemy Ci zbudować fundamenty i przywrócić te ważne wartości, aby wspierać zarówno Ciebie, jak i Twoje dziecko. \n\n Sonder zapewnia wszystko, co potrzebne, aby ponownie otworzyć drzwi do doświadczania radości macierzyństwa i dzieciństwa bez ograniczeń.",
     "about_blurb": "Gdzie matki uchodźczynie mogą uzyskać potrzebne rzeczy dla swoich dzieci, również podczas ciąży",
     "refugee_mother_call_to_action_title": "Czy jesteś matką w potrzebie?",
-    "refugee_mother_call_to_action": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "refugee_mother_call_to_action": "My w Sonder jesteśmy tutaj, aby zmniejszyć trudności związane z przesiedleniem matek-uchodźców i ich dzieci. Zarejestruj się poniżej, aby poprosić o zasoby potrzebne Tobie i Twojemu dziecku.",
     "donor_call_to_action_title": "Chcesz zostać Darczyńcą?",
     "donor_call_to_action": "To nasi darczyńcy sprawiają, że magia dzieje się w Sonder. Obecnie poszukujemy pieluch, zabawek, ubranek dla dzieci. Zarejestruj się poniżej, aby otrzymać darowiznę i pomóc dokonać zmian już dziś.",
     "refugee_mother_button": "Jestem matką uchodźczynią",
@@ -21,9 +21,9 @@
     "requested_title": "",
     "requested_by_info": "Zgłoszone przez {{userName}}, w {{userCity}}",
     "request_item_added": "In your basket:",
-    "donor_request_title": "Hello, here are all requests that are waiting to be fullfilled",
-    "donor_fulfill_request": "Fulfill this request",
-    "donor_fulfillment": "Thank you, the request is being fulfilled",
+    "donor_request_title": "Witamy, oto wszystkie prośby, które czekają na spełnienie",
+    "donor_fulfill_request": "Mogę spełnić tę prośbę",
+    "donor_fulfillment": "Dziękuję! Ta prośba jest spełniana",
     "Login_as_mother": "Zaloguj się jako matka",
     "Login_as_donor": "Zaloguj się jako darczyńca",
     "password": "hasło",
@@ -65,7 +65,7 @@
     "Filter by your city": "Filtruj według swojego miasta",
     "Show active requests": "Pokaż aktywne prośby",
     "See All Requests": "Zobacz wszystkie prośby",
-    "donor_request_page_intro": "Tutaj możesz zobaczyć wszystkie aktualne prośby wysyłane przez matki w całym kraju.\n Możesz filtrować prośby według miasta lub według tych które są aktywne, za pomocą poniższych przycisków.\n Możesz też po prostu kliknąć „wyświetl wszystkie prośby” aby zobaczyć, jakie przedmioty są w tej chwili naprawdę potrzebne.\n Dziękujemy za ciężką pracę i pomoc!",
+    "donor_request_page_intro": "Tutaj możesz zobaczyć wszystkie aktualne prośby wysyłane przez matki w całym kraju.\n Możesz filtrować prośby według miasta lub według tych które są aktywne, za pomocą poniższych przycisków.\n Możesz też po prostu kliknąć „wyświetl wszystkie prośby” aby zobaczyć, jakie przedmioty są w tej chwili naprawdę potrzebne.",
     "view_profile_button": "Wyświetl profil użytkownika {{userName}}"
 
   }
