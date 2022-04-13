@@ -26,39 +26,56 @@ const LoginDonorForm = () => {
 
     return (
 
-    <div>
-        <div className='card'>
-        <form>
-            <div className="input-field validate">
-            <label htmlFor="email">Email</label>
-            <input type="email" 
-                data-testid="email"
+<div>
+
+      <div className='card'>
+        <form className="col s12">
+        <div className="row">
+        <div className="input-field col s5">
+        <i className="material-icons prefix">email</i>
+            <input 
+                className="validate"
+                id="email-donor icon_prefix"
+                type='email'
+                // placeholder='Your registered email'
+                required
+                aria-required="true"
+                data-testid="email-donor"
+
                 value={email}
                 onChange = {(e) => setEmail(e.target.value)}
             />
-            </div>
-            
-            <div className="input-field validate">
-            <label htmlFor="password">{t("password")}</label>
-            <input type="password" 
+            <label htmlFor="email-donor">Email</label>
+            <span className="helper-text" data-error="Please enter a valid email" data-success=""></span>
+        </div>
+            <div className="input-field col s5">
+            <i className="material-icons prefix">lock_outside</i>
+            <input 
                 className='validate'
-                data-testid="password"
+                id="password-donor icon_prefix"
+                type="password" 
+                aria-required="true"
+                data-testid="password-donor"
                 value={password}
                 onChange = {(e) => setPassword(e.target.value)}
             />
+            <label htmlFor="password-donor">{t("Password")}</label>
             </div>
 
-
+            <div className="input-field col s2">
             <button className="btn waves-effect waves-light"
-                data-testid="login-button"
+                data-testid="login-donor-button"
                 onClick = {(e) => {
                     e.preventDefault();
                     DonorLogin()
                     }
                 } >
-               {t("login")}
+               {t("Login")}
             </button>
+            </div>
+        </div>
     </form>
+                </div>
     </div>
     </div>
 

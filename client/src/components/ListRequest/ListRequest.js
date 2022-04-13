@@ -9,22 +9,22 @@ const ListRequest = ({ oneRequest, allRequests, setAllRequests }) => {
   const userName = oneRequest.userCreatedBy.name
   const userCity = oneRequest.userCreatedBy.city
   const donor = localStorage.getItem("donor")
-
+  
     if(!donor) {
         return (
             <>
-            <div>
+          <div className='m-list-requests-box'>
                <p>{`${oneRequest.text}`}</p> 
                {oneRequest.basket.map(item => {
                    return (
                    <>
-                   <p> {item} </p>
+                   <p> - {item} - </p>
                    </>
                    )
                }
                )}
-               <h5>{t("requested_by_info", {userName, userCity})}</h5>  
-               {/* <a href={`/viewmotherprofile/${oneRequest.userCreatedBy._id}`}>View {userName} Profile</a> */}
+               <p className="m-request-details">{t("requested_by_info", {userName, userCity})}</p>   
+               <a href={`/viewmotherprofile`}>View {userName}s Profile</a>
             </div>
             </>
         )
@@ -34,7 +34,7 @@ const ListRequest = ({ oneRequest, allRequests, setAllRequests }) => {
             <div>
                <p>{`${oneRequest.text}`}</p> 
                <h5>{t("requested_by_info", {userName, userCity})}</h5>
-               <a href={`/viewmotherprofile/${oneRequest.userCreatedBy._id}`}>View {userName} Profile</a>
+               <a href={`/viewmotherprofile/${oneRequest.userCreatedBy._id}`}>{t("view_profile_button", {userName})}</a>
               
                 {
                 oneRequest.status=== "NEW" ? 
