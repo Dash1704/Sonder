@@ -2,9 +2,12 @@ import React, {useState, useEffect} from 'react';
 import ListRequest from '../components/ListRequest/ListRequest.js'
 import M from 'materialize-css';
 import { useTranslation } from "react-i18next";
+import motherProfileImage from "../images/mother-profile-icons.png";
+import {useNavigate} from 'react-router-dom';
 
 const MotherProfile = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const [profile, setProfile] = useState([])
   const [myRequests, setMyRequests] = useState([])
   const [toSend, setToSend] = useState({
@@ -87,60 +90,73 @@ const MotherProfile = () => {
   return (
     <>
    <div className="container"> 
-   <div className='profile'>
-     <h3><a href={`/dashboard`}>Click here to go to manage you requests</a></h3>
-    <h4>
-     <ul>
-       <li>{t("name_profile")}: {profile.name}</li>
-       <li>{t("email")}: {profile.email}</li>
-       <li>{t("city")}: {profile.city}</li>
-       <ul>{t("bio")}:
-         <li><h5>{t("About Yourself")}: {profile.about_yourself}</h5></li>
-         <li><h5>{t("Interests")}: {profile.languages}</h5></li>
-         <li><h5>{t("Children")}: {profile.how_many_children}</h5></li>
-       </ul>
-      </ul>
-    </h4>
-   </div>
-      <div className='update_bio_form'>
-        <form onSubmit={onSubmit}>
-          <input
-            type='text'
-            name='about_yourself'
-            placeholder={t("about_yourself_placeholder")}
-            value={toSend.about_yourself}
-            onChange={handleChange}
-          />
-          <input
-            type='text'
-            name='languages'
-            placeholder={t("interests_placeholder")}
-            value={toSend.languages}
-            onChange={handleChange}
-          />
-          <input
-            type='text'
-            name='how_many_children'
-            placeholder={t("children_bio_placeholder")}
-            value={toSend.how_many_children}
-            onChange={handleChange}
-          />
-          <button type='submit'>{t("update_bio")}</button>
-        </form>
-      </div>
-
-      <div className='my_requests'>
-        <h5>{t("request_and_email_sentence_profile")}</h5>
-        {myRequests.map( oneRequest => {
-              return < ListRequest 
-              oneRequest={oneRequest}
-              setMyRequests={setMyRequests}
-              myRequests={myRequests}
-              key={oneRequest._id}
-              />
-          })}
-      </div>
-   </div>
+      <div className='row profile'>
+        <div className='col s7'>
+          <h1 className="m-profile-title">Welcome {profile.name}</h1>
+          <p className="m-profile-request-statement">{t("request_and_email_sentence_profile")}</p>
+          <ul className="profile-details-box">
+            <li className='profile-input'><span className='profile-headers'>{t("name_profile")}: </span>{profile.name}</li>
+            <li className='profile-input'><span className='profile-headers'>{t("email")}: </span>{profile.email}</li>
+            <li className='profile-input'><span className='profile-headers'>{t("city")}: </span>{profile.city}</li>
+            <ul>
+              <li className='profile-input'><span className='profile-headers'>{t("About Yourself")}: </span>{profile.about_yourself}</li>
+              <li className='profile-input'><span className='profile-headers'>{t("Interests")}: </span>{profile.languages}</li>
+              <li className='profile-input'><span className='profile-headers'>{t("Children")}: </span>{profile.how_many_children}</li>
+            </ul>
+          </ul>
+          <h5 className="m-profile-update">Update Your Profile:</h5>
+          <div>
+            <form onSubmit={onSubmit}>
+              <div className='m-profile-edit-form'>
+                <input
+                  type='text'
+                  name='about_yourself'
+                  placeholder={t("about_yourself_placeholder")}
+                  value={toSend.about_yourself}
+                  onChange={handleChange}
+                />
+                <input
+                  type='text'
+                  name='languages'
+                  placeholder={t("interests_placeholder")}
+                  value={toSend.languages}
+                  onChange={handleChange}
+                />
+                <input
+                  type='text'
+                  name='how_many_children'
+                  placeholder={t("children_bio_placeholder")}
+                  value={toSend.how_many_children}
+                  onChange={handleChange}
+                />
+              </div>
+              <div>
+                <button className="waves-effect waves-light btn-small call-to-action-button" type='submit'>{t("update_bio")}</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div className='col s5'>
+          <div className="m-profile-requests-column">
+            <div className="m-profile-requests-section">
+              <span className='m-your-requests'>Your Requests:<button className="waves-effect waves-light btn-small call-to-action-button m-profile-manage-requests-button"  onClick={()=> {
+            navigate('/dashboard')}}>Manage your requests</button></span>
+            </div>
+            <div className="m-profile-requests-list">
+              {myRequests.map( oneRequest => {
+                    return < ListRequest 
+                    oneRequest={oneRequest}
+                    setMyRequests={setMyRequests}
+                    myRequests={myRequests}
+                    key={oneRequest._id}
+                    />
+              })}
+            </div>
+            <img className="m-profile-icons" src={motherProfileImage} alt="Motherhood icons"/>
+          </div>
+        </div>
+    </div>
+  </div>
    </>
     )
   }

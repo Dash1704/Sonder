@@ -39,7 +39,7 @@ const ContactForm = () => {
    <>
 
    <div className='card'>
-    <h5> Please get in touch if you have any feedback or help with our website and we will get back to you as soon as we can</h5>
+    <h3>Get in touch</h3>
       <div className='contact_form'>
         <form className="col s12" onSubmit={onSubmit}>
         <div className="row">

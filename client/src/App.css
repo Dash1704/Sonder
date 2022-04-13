@@ -224,7 +224,7 @@ button .call-to-action-button {
 }
 
 /* request placeholder text */
-::placeholder {
+.m-request-type-request ::placeholder {
   color: black;
   font-size: 0.8vw;
 }
@@ -320,8 +320,6 @@ button .call-to-action-button {
 }
 
 
-
-
 /* == MOTHER SIGN UP PAGE == */
 
 /* == DONOR SIGN UP PAGE == */
@@ -330,5 +328,93 @@ button .call-to-action-button {
 
 /* == MOTHER PROFILE PAGE == */
 
-/* == DONOR PROFILE PAGE == */
+.profile {
+  margin-top: 50px;
+}
 
+.m-profile-title {
+  font-size: 2vw;
+  margin-top: -7px;
+  color: white;
+}
+
+.profile-headers {
+  font-size: 0.8vw;
+  font-weight: 600;
+  padding-right: 18px;
+}
+
+.profile-details-box {
+  background-color: #8789fc;
+  padding: 10px;
+  border-radius: 10px;
+  margin-right: 30px;
+  margin-top: 30px;
+}
+
+.profile-input {
+  font-size: 0.8vw;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  margin-left: 15px;
+}
+
+/* mother profile placeholder text */
+.m-profile-edit-form ::placeholder {
+  font-size: 0.8vw;
+}
+
+.m-profile-edit-form {
+  background-color: white;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-right: 35px;
+  border-radius: 10px;
+  outline: none;
+  text-align: center;
+  resize: none;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 20vh;
+}
+
+.m-profile-icons {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.m-profile-requests-list {
+  font-size: 0.8vw;
+  width: auto;
+  height: 450px;
+  overflow: scroll;
+  text-align: center;
+}
+
+.m-profile-request-statement {
+  margin-top: 10px;
+  margin-right: 80px;
+  font-size: 0.9vw;
+}
+
+.m-your-requests {
+  font-size: 1.1vw;
+  margin-top: 10px;
+  margin-left: -5px;
+  margin-bottom: 14px;
+}
+
+.m-profile-manage-requests-button {
+  margin-left: 150px;
+}
+
+.m-profile-requests-section {
+  margin-bottom: 30px;
+}
+
+.m-profile-update {
+  font-size: 1.1vw;
+  margin-top: 30px;
+  margin-left: -5px;
+}
