@@ -7,12 +7,15 @@ const ViewMotherProfile = () => {
   const { _id } = useParams()
 
   useEffect(()=>{
+    console.log('Here')
     console.log(_id)
     fetch(`/users/mother/profile/${_id}`,{
       headers: {'Content-Type':'application/json'},
     })
     .then(res => res.json())
     .then(result => {
+      console.log('result from backend')
+      console.log(result)
       setProfile(result.mother)
     })
     .catch(err => console.log(err))

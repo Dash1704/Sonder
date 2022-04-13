@@ -35,7 +35,8 @@ const ListRequest = ({ oneRequest, allRequests, setAllRequests }) => {
                <p>{`${oneRequest.text}`}</p> 
                <p>Items Requested: {oneRequest.basket.join(',     ')}</p>
                <h5>{t("requested_by_info", {userName, userCity})}</h5>
-               <a href={`/viewmotherprofile`}>View {userName} Profile</a>
+               <a href={`/viewmotherprofile/${oneRequest.userCreatedBy._id}`}>View {userName} Profile</a>
+               
                 {
                 oneRequest.status=== "NEW" ? 
                 <RequestHelpButton
