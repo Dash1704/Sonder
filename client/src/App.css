@@ -415,13 +415,13 @@ button .call-to-action-button {
 /* == ABOUT US PAGE == */
 
 .contact-us-form {
-  margin-top: 20px;
   border-radius: 10px;
-  height: 35vh;
+  height: 27.7vh;
 }
 
 .contact-form-button {
-  margin-top: 30px;
+  margin-top: -40px;
+  margin-left: 400px;
 }
 
 .about-us-how-it-works {
@@ -429,6 +429,7 @@ button .call-to-action-button {
   border-radius: 10px;
   padding: 20px;
   margin-right: 30px;
+  font-size: 0.61vw;
 }
 
 .about-us-header {
@@ -438,7 +439,7 @@ button .call-to-action-button {
 }
 
 .about-us-image {
-  width: 90%;
+  width: 30vw;
   margin-left: 25px;
   margin-top: 50px;
   border-radius: 30px;
