@@ -34,10 +34,3 @@ code {
 #nav-mobile .material-icons {
   line-height: 2.5;
 }
-
-.aboutus {
-  max-width: 50%;
-}
-.aboutus h1, .aboutus h2, .aboutus h3 { 
-    text-align: center;
-}
