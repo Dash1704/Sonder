@@ -26,6 +26,8 @@ A web app for refugee mothers which connects them with resources and donors to s
 
 ## MVP User Stories
 
+<details><summary>List MVP User Stories</summary>
+
 ~~~~~~
 As a refugee mother
 In order to have access to the application
@@ -44,8 +46,12 @@ So that I could request resources
 I would like to be able to post my requested items
 ~~~~~~
 
+</details>
+
 ## Extra User Stories
-*(1st round)*
+
+<details><summary>List Extra User Stories - First Round </summary>
+
 ~~~~~~
 As a User
 So that I can specify who I am
@@ -67,3 +73,59 @@ As a User
 So that I can display my details
 I would like to create a profile and view this
 ~~~~~~
+
+</details>
+
+## Extra User Stories
+
+<details><summary>List Extra User Stories - Second Round</summary>
+
+~~~~~~~
+
+As a Refugee Mother
+So that I can manage my requests
+I would like to see my requests and their status
+
+As a Refugee Mother
+So that I can manage my requests
+I would like to accept donations
+
+As a Refugee Mother
+So that I can manage my requests
+I would like to replicate my fulfiled requests
+
+As a Refugee Mother
+So I know when a Donor has offered to fulfil my request
+I would like to see the requests as fulfiled
+
+As a Refugee Mother
+So I know when a Donor has offered to fulfil my request
+I would like to get an email notification of a fulfiled request
+
+As a user
+So I could provide feedback to the website's creators
+I would like to be able to contact them by email
+
+As a Donor
+So that I know what requests are outstanding
+I would like to be able to see the outstanding requests
+
+As a user
+So that I could interact with the website
+I would like the text, fields, and buttons to be in my native language
+
+As a Refugee Mother
+So that I could interact with the website
+I would like to have visual representations to aid me in the use of the website's functions
+
+As a Donor
+So that I have additional information about the Refugee Mother I am interested in helping
+I would like to see her profile page with bio
+
+~~~~~~~
+
+</details>
+
+
+
+
