@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import ListRequest from '../components/ListRequest/ListRequest.js'
+import M from 'materialize-css';
 
 const MotherProfile = () => {
   const [profile, setProfile] = useState([])
@@ -52,8 +53,10 @@ const MotherProfile = () => {
     };
     
     const onSubmit = async (e) => {
-      console.log(toSend)
       e.preventDefault();
+      if( toSend.about_yourself === "" || toSend.languages === "" || toSend.how_many_children === ""){
+        return M.toast({html: 'Please fill in all fields', classes: '#536dfe indigo accent-2'})
+      } else {
       fetch(`/users/mother/${userEmail}`,{
         method: "post",
         headers:{
@@ -77,7 +80,8 @@ const MotherProfile = () => {
           languages: "",
           how_many_children: "",
         })
-    };
+    }
+  };
     
 
   return (

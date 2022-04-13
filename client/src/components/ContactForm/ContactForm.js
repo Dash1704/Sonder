@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import { send } from 'emailjs-com';
+import M from 'materialize-css';
+
 
 const ContactForm = () => {
 
@@ -19,7 +21,11 @@ const ContactForm = () => {
     )
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
-      })
+        setToSend({from_name: '',
+        message: '',
+        from_email: '',
+      })})
+      .then(M.toast({html: 'Email Sent To Sonder HQ', classes: '#536dfe indigo accent-2'}))
       .catch((err) => {
         console.log('FAILED...', err);
       });
@@ -41,6 +47,14 @@ const ContactForm = () => {
             value={toSend.from_name}
             onChange={handleChange}
           />
+           <input
+            type='email'
+            className='validate'
+            name='from_email'
+            placeholder='Your email'
+            value={toSend.from_email}
+            onChange={handleChange}
+          />
           <input
             type='text'
             name='message'
@@ -48,13 +62,7 @@ const ContactForm = () => {
             value={toSend.message}
             onChange={handleChange}
           />
-          <input
-            type='text'
-            name='from_email'
-            placeholder='Your email'
-            value={toSend.from_email}
-            onChange={handleChange}
-          />
+       
           <button type='submit'>Submit</button>
         </form>
       </div>
