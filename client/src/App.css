@@ -329,5 +329,12 @@ button .call-to-action-button {
 
 /* == MOTHER PROFILE PAGE == */
 
-/* == DONOR PROFILE PAGE == */
+.profile {
+  background-color: black;
+  margin-top: 50px;
+}
+
+.m-profile-title {
+  font-size: 1.5vw;
+}
 

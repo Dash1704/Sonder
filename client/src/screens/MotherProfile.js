@@ -87,60 +87,62 @@ const MotherProfile = () => {
   return (
     <>
    <div className="container"> 
-   <div className='profile'>
-     <h3><a href={`/dashboard`}>Click here to go to manage you requests</a></h3>
-    <h4>
-     <ul>
-       <li>{t("name_profile")}: {profile.name}</li>
-       <li>{t("email")}: {profile.email}</li>
-       <li>{t("city")}: {profile.city}</li>
-       <ul>{t("bio")}:
-         <li><h5>{t("About Yourself")}: {profile.about_yourself}</h5></li>
-         <li><h5>{t("Interests")}: {profile.languages}</h5></li>
-         <li><h5>{t("Children")}: {profile.how_many_children}</h5></li>
-       </ul>
-      </ul>
-    </h4>
-   </div>
-      <div className='update_bio_form'>
-        <form onSubmit={onSubmit}>
-          <input
-            type='text'
-            name='about_yourself'
-            placeholder={t("about_yourself_placeholder")}
-            value={toSend.about_yourself}
-            onChange={handleChange}
-          />
-          <input
-            type='text'
-            name='languages'
-            placeholder={t("interests_placeholder")}
-            value={toSend.languages}
-            onChange={handleChange}
-          />
-          <input
-            type='text'
-            name='how_many_children'
-            placeholder={t("children_bio_placeholder")}
-            value={toSend.how_many_children}
-            onChange={handleChange}
-          />
-          <button type='submit'>{t("update_bio")}</button>
-        </form>
-      </div>
-
-      <div className='my_requests'>
-        <h5>{t("request_and_email_sentence_profile")}</h5>
-        {myRequests.map( oneRequest => {
-              return < ListRequest 
-              oneRequest={oneRequest}
-              setMyRequests={setMyRequests}
-              myRequests={myRequests}
-              key={oneRequest._id}
+      <div className='row profile'>
+        <div className='col s6'>
+          <h1 className="">Welcome to your profile page {profile.name}</h1>
+          <ul>
+            <li>{t("name_profile")}: {profile.name}</li>
+            <li>{t("email")}: {profile.email}</li>
+            <li>{t("city")}: {profile.city}</li>
+            <ul>{t("bio")}:
+              <li><h5>{t("About Yourself")}: {profile.about_yourself}</h5></li>
+              <li><h5>{t("Interests")}: {profile.languages}</h5></li>
+              <li><h5>{t("Children")}: {profile.how_many_children}</h5></li>
+            </ul>
+          </ul>
+          <div className='update_bio_form'>
+            <form onSubmit={onSubmit}>
+              <input
+                type='text'
+                name='about_yourself'
+                placeholder={t("about_yourself_placeholder")}
+                value={toSend.about_yourself}
+                onChange={handleChange}
               />
-          })}
-      </div>
-   </div>
+              <input
+                type='text'
+                name='languages'
+                placeholder={t("interests_placeholder")}
+                value={toSend.languages}
+                onChange={handleChange}
+              />
+              <input
+                type='text'
+                name='how_many_children'
+                placeholder={t("children_bio_placeholder")}
+                value={toSend.how_many_children}
+                onChange={handleChange}
+              />
+              <button type='submit'>{t("update_bio")}</button>
+            </form>
+          </div>
+        </div>
+        <div className='col s6'>
+          <button className="waves-effect waves-light btn-small call-to-action-button" href={`/dashboard`}>Manage your requests</button>
+          <div className='my_requests'>
+            <h5>{t("request_and_email_sentence_profile")}</h5>
+            {myRequests.map( oneRequest => {
+                  return < ListRequest 
+                  oneRequest={oneRequest}
+                  setMyRequests={setMyRequests}
+                  myRequests={myRequests}
+                  key={oneRequest._id}
+                  />
+              })}
+          </div>
+        </div>
+    </div>
+  </div>
    </>
     )
   }
