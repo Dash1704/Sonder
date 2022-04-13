@@ -43,7 +43,6 @@ const LoginMotherForm = () => {
                 className="validate"
                 id="email-mother icon_prefix"
                 type='email'
-                // placeholder='Your registered email'
                 required
                 aria-required="true"
                 data-testid="email-mother"

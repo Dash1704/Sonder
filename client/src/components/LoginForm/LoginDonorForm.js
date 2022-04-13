@@ -37,7 +37,6 @@ const LoginDonorForm = () => {
                 className="validate"
                 id="email-donor icon_prefix"
                 type='email'
-                // placeholder='Your registered email'
                 required
                 aria-required="true"
                 data-testid="email-donor"
