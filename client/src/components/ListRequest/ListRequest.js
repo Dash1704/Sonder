@@ -47,7 +47,6 @@ const ListRequest = ({ oneRequest, allRequests, setAllRequests }) => {
         </>
         )
     }
-    
 }
 
 export default ListRequest
