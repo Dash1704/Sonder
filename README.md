@@ -226,6 +226,6 @@ I would like to see her profile page with bio
 -----
 <br>
 
-## Screenshot of the Live Website Translated to Polish
-![](./client/src/images/Screenshot_homepage_polish.png)
+## Screenshot of the Live Website Translated to Ukrainian
+![](./client/src/images/Screenshot_homepage_ukrainian.png)
 
