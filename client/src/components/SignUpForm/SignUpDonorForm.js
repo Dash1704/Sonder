@@ -92,7 +92,7 @@ const SignUpForm = () => {
                       }
                   } >
                   {t("sign_up")}
-              </button>
+                  <i className="material-icons right">send</i></button>
             </div>
     </form>
     </div>

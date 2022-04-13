@@ -70,7 +70,7 @@ const LoginDonorForm = () => {
                     }
                 } >
                {t("Login")}
-            </button>
+               <i className="material-icons right">send</i></button>
             </div>
         </div>
     </form>
