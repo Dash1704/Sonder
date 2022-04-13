@@ -26,7 +26,9 @@ const LoginDonorForm = () => {
 
     return (
 
-    <div>
+<div>
+
+      <div className='card'>
         <form className="col s12">
         <div className="row">
         <div className="input-field col s5">
@@ -39,6 +41,7 @@ const LoginDonorForm = () => {
                 required
                 aria-required="true"
                 data-testid="email-donor"
+
                 value={email}
                 onChange = {(e) => setEmail(e.target.value)}
             />
@@ -72,6 +75,8 @@ const LoginDonorForm = () => {
             </div>
         </div>
     </form>
+                </div>
+    </div>
     </div>
 
     )

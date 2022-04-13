@@ -33,6 +33,8 @@ const LoginMotherForm = () => {
     return (
 
     <div>
+
+     <div className='card'>
         <form className="col s12">
         <div className="row">
         <div className="input-field col s5">
@@ -45,6 +47,7 @@ const LoginMotherForm = () => {
                 required
                 aria-required="true"
                 data-testid="email-mother"
+
                 value={email}
                 onChange = {(e) => setEmail(e.target.value)}
             />
@@ -78,6 +81,8 @@ const LoginMotherForm = () => {
             </div>
         </div>
     </form>
+    </div>
+    </div>
     </div>
 
     )

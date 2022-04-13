@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import M from 'materialize-css';
 import { useTranslation } from "react-i18next";
+//import motherimage from "../../images/pregnantmother2.png"
 
 const SignUpMotherForm = () => {
     const { t } = useTranslation();
@@ -23,7 +24,7 @@ const SignUpMotherForm = () => {
                 password,
                 city
             })
-        })
+        }) 
         .then(response => response.json())
         .then(data => {
             if (data.error) {
@@ -39,7 +40,12 @@ const SignUpMotherForm = () => {
     return (
 
     <div>
-        <form>
+       {/* <div className="mother-image-cropped">
+            <img className="mother-image" src={motherimage}/>
+          </div> */}
+    
+        <div className="card ">
+         <form>
             <div className="input-field validate">
             <label htmlFor="name">{t("name")}</label>
             <input type="text" 
@@ -49,7 +55,7 @@ const SignUpMotherForm = () => {
             /> 
             </div>
 
-            <div className="input-field validate">
+        <div className="input-field validate">
             <label htmlFor="email">Email</label>
             <input type="email" 
                 data-testid="email"
@@ -87,6 +93,9 @@ const SignUpMotherForm = () => {
             </button>
     </form>
     </div>
+            </div>
+            
+    
 
     )
   }
