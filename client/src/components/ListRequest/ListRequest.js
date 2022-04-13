@@ -32,17 +32,17 @@ const ListRequest = ({ oneRequest, allRequests, setAllRequests }) => {
     } else {
         return (
             <>
-            <div>
+            <div className='donor-requests-box'>
                <p>{`${oneRequest.text}`}</p> 
                <h5>{t("requested_by_info", {userName, userCity})}</h5>
-               <a href={`/viewmotherprofile`}>View {userName} Profile</a>
+               <a href={`/viewmotherprofile`}>View {userName}s Profile</a>
                 {
                 oneRequest.status=== "NEW" ? 
                 <RequestHelpButton
                     oneRequest={oneRequest}
                     allRequests={allRequests}
                     setAllRequests={setAllRequests}/> : 
-                    <p>Request is being fulfilled</p>
+                    <p className='donor-fulfillment'>{t("donor_fulfillment")}</p>
                 }
             </div>
         </>
