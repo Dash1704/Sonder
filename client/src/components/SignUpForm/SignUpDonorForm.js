@@ -42,6 +42,7 @@ const SignUpForm = () => {
     <div>
         <div className="card">
         <form>
+          <div>
             <div className="input-field validate">
             <i className="material-icons prefix">account_circle</i>
             <label htmlFor="name">{t("name")}</label>
@@ -81,16 +82,18 @@ const SignUpForm = () => {
                 onChange = {(e) => setCity(e.target.value)}
             />
             </div>
-
-            <button className="btn waves-effect waves-light"
-                data-testid="signup-button"
-                onClick = {(e) => {
-                    e.preventDefault();
-                    postSignup();
-                    }
-                } >
-                {t("sign_up")}
-            </button>
+            </div>
+            <div>
+              <button className="btn waves-effect waves-light call-to-action-button"
+                  data-testid="signup-button"
+                  onClick = {(e) => {
+                      e.preventDefault();
+                      postSignup();
+                      }
+                  } >
+                  {t("sign_up")}
+              </button>
+            </div>
     </form>
     </div>
     </div>

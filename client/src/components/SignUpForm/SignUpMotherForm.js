@@ -85,7 +85,7 @@ const SignUpMotherForm = () => {
                 onChange = {(e) => setCity(e.target.value)}
             />
             </div>
-            <button className="btn waves-effect waves-light"
+            <button className="btn waves-effect waves-light call-to-action-button"
                 data-testid="signup-button"
                 onClick = {(e) => {
                     e.preventDefault();
