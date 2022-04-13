@@ -2,10 +2,12 @@ import React, {useState, useEffect} from 'react';
 import ListRequest from '../components/ListRequest/ListRequest.js'
 import M from 'materialize-css';
 import { useTranslation } from "react-i18next";
-import motherProfileImage from "../images/mother-profile-icons.png"
+import motherProfileImage from "../images/mother-profile-icons.png";
+import {useNavigate} from 'react-router-dom';
 
 const MotherProfile = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const [profile, setProfile] = useState([])
   const [myRequests, setMyRequests] = useState([])
   const [toSend, setToSend] = useState({
@@ -137,7 +139,8 @@ const MotherProfile = () => {
         <div className='col s5'>
           <div className="m-profile-requests-column">
             <div className="m-profile-requests-section">
-              <span className='m-your-requests'>Your Requests:<button className="waves-effect waves-light btn-small call-to-action-button m-profile-manage-requests-button" href={`/dashboard`}>Manage your requests</button></span>
+              <span className='m-your-requests'>Your Requests:<button className="waves-effect waves-light btn-small call-to-action-button m-profile-manage-requests-button"  onClick={()=> {
+            navigate('/dashboard')}}>Manage your requests</button></span>
             </div>
             <div className="m-profile-requests-list">
               {myRequests.map( oneRequest => {
