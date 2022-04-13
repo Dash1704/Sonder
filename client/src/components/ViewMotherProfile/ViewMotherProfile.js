@@ -7,7 +7,6 @@ const ViewMotherProfile = () => {
   const { _id } = useParams()
 
   useEffect(()=>{
-    console.log(_id)
     fetch(`/users/mother/profile/${_id}`,{
       headers: {'Content-Type':'application/json'},
     })
@@ -16,8 +15,6 @@ const ViewMotherProfile = () => {
       setProfile(result.mother)
     })
     .catch(err => console.log(err))
-
-    
     }, [])
   
   return (

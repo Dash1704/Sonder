@@ -150,7 +150,7 @@ button .call-to-action-button {
   font-weight: 500;
 }
 
-
+/* == SIGN UP AND LOGIN PAGES ==  */
 .card{
   background: rgba(255, 255, 255, 0.15);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -159,13 +159,6 @@ button .call-to-action-button {
   max-width: 450px;
   margin: 10px auto;
   color: #ffffff;
-  
-
-}
-
-.container{
-  text-align: center;
-  font-family: 'Inter', sans-serif;
 }
 
 .mother-image {
@@ -256,29 +249,43 @@ button .call-to-action-button {
   padding-bottom: 30px;
   font-size: 0.7vw;
   width: auto;
-  height: 300px;
+  height: 30vh;
   border-radius: 10px;
   overflow: scroll;
   margin-bottom: 30px;
+  margin-left: -10px;
 }
 
 .requested-city-title {
   font-size: 1.1vw;
   margin-top: 50px;
+  margin-left: -10px;
+  margin-bottom: 14px;
 }
 
 
 /* request details - name, city */
 .m-request-details {
+  font-size: 0.7vw;
   font-style: italic;
 }
 
 /* == DONOR REQUEST PAGE == */
 
+.d-requests-title {
+  font-size: 1.5vw;
+  margin-bottom: 5px;
+}
+
+.d-requests-question {
+  font-size: 0.8vw;
+  margin-right: 700px;
+  margin-bottom: -10px;
+}
+
 .donor-request-buttons {
   margin-right: 10px;
-  margin-top: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   margin-left: 10px;
 }
 
@@ -291,7 +298,7 @@ button .call-to-action-button {
 .d-requests-list {
   font-size: 0.8vw;
   width: auto;
-  height: 550px;
+  height: 450px;
   overflow: scroll;
 }
 
@@ -313,7 +320,7 @@ button .call-to-action-button {
 }
 
 .donor-image {
-  width: 100%;
+  width: 90%;
 }
 
 

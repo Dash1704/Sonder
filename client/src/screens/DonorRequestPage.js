@@ -52,7 +52,10 @@ const DonorRequestPage = () => {
     return (
       <div className='container'>
         <div className='row'>
-          <h1 className="m-requests-question col s6">{t("donor_request_title")}</h1>
+          <h1 className="d-requests-title col s6">{t("donor_request_page_title")}</h1>
+        <div className='row'>
+          <p className="d-requests-question col s">{t("donor_request_page_intro")}</p>
+        </div>
         </div>
         <div className='row'>
           <button className="waves-effect waves-light btn-small call-to-action-button donor-request-buttons"
@@ -98,3 +101,8 @@ const DonorRequestPage = () => {
   }
 
   export default DonorRequestPage
+
+  
+  // {t("See All Requests")}
+  // {t("Filter by your city")}
+  // {t("Show active requests")}

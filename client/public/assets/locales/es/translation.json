@@ -62,5 +62,16 @@
   "Show active requests": "Ver pedidos activos",
   "See All Requests": "Ver todos los pedidos",
   "donor_request_page_intro": "Aquí puedes ver cada pedido recibido por Sonder de madres por todo el país.\n Puedes filtrar los pedidos por su ciudad o cuales estan en este momento activos con los botones abajo.\n O simplemente hacer clic en 'Ver todos los pedidos' para ver cuales son los articulos realmente necesarios en este momento .\n ¡Mil gracias por todo su apoyo y gran trabajo!",
-  "view_profile_button": "Ver el perfil de {{userName}}"
+  "view_profile_button": "Ver el perfil de {{userName}}",
+
+  "Active Requests": "Active Requests",
+  "Pending Requests": "Pending Requests",
+  "Finished Requests": "Finished Requests",
+  "Request Note": "Request Note: ",
+  "Items in this request": "Items in this request: ",
+  "Accept this donation": "Accept this donation",
+  "These items were requested by you": "These items were requested by you: ",
+  "has offered to donate these items": " has offered to donate these items",
+  "has donated these items": " has donated these items",
+  "Repeat this request": "Repeat this request"
 }

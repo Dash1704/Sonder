@@ -24,6 +24,8 @@
   "donor_request_title": "Hello, here are all requests that are waiting to be fullfilled",
   "donor_fulfill_request": "I can fulfil this request",
   "donor_fulfillment": "Thank you! This request is being fulfilled",
+  "donor_request_page_title": "Hello, here you can see all the current requests that are being made by mothers across the country.",
+  "donor_request_page_intro": "You can filter the requests by your city or by which ones are active with the buttons below. Or just click on 'view all requests' to see what items are really needed right now.",
   "Login_as_mother": "Login as a mother",
   "Login_as_donor": "Login as a donor",
   "password": "password",
@@ -67,5 +69,15 @@
   "See All Requests": "See All Requests",
   "donor_request_page_intro": "Here you can see all the current requests that are being made by mothers across the country.\n You can filter the requests by your city or by which ones are active with the buttons below.\n Or just click on 'view all requests' to see what items are really needed right now.",
   "view_profile_button": "View {{userName}}'s profile"
+  "Active Requests": "Active Requests",
+  "Pending Requests": "Pending Requests",
+  "Finished Requests": "Finished Requests",
+  "Request Note": "Request Note: ",
+  "Items in this request": "Items in this request: ",
+  "Accept this donation": "Accept this donation",
+  "These items were requested by you": "These items were requested by you: ",
+  "has offered to donate these items": " has offered to donate these items",
+  "has donated these items": " has donated these items",
+  "Repeat this request": "Repeat this request"
 
 }

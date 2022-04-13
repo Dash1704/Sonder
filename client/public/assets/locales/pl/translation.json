@@ -65,7 +65,21 @@
     "Filter by your city": "Filtruj według swojego miasta",
     "Show active requests": "Pokaż aktywne prośby",
     "See All Requests": "Zobacz wszystkie prośby",
+
     "donor_request_page_intro": "Tutaj możesz zobaczyć wszystkie aktualne prośby wysyłane przez matki w całym kraju.\n Możesz filtrować prośby według miasta lub według tych które są aktywne, za pomocą poniższych przycisków.\n Możesz też po prostu kliknąć „wyświetl wszystkie prośby” aby zobaczyć, jakie przedmioty są w tej chwili naprawdę potrzebne.",
     "view_profile_button": "Wyświetl profil użytkownika {{userName}}"
+    "donor_request_page_intro": "Tutaj możesz zobaczyć wszystkie aktualne prośby wysyłane przez matki w całym kraju.\n Możesz filtrować prośby według miasta lub według tych które są aktywne, za pomocą poniższych przycisków.\n Możesz też po prostu kliknąć „wyświetl wszystkie prośby” aby zobaczyć, jakie przedmioty są w tej chwili naprawdę potrzebne.\n Dziękujemy za ciężką pracę i pomoc!",
+    "view_profile_button": "Wyświetl profil użytkownika {{userName}}",
+
+    "Active Requests": "Active Requests",
+    "Pending Requests": "Pending Requests",
+    "Finished Requests": "Finished Requests",
+    "Request Note": "Request Note: ",
+    "Items in this request": "Items in this request: ",
+    "Accept this donation": "Accept this donation",
+    "These items were requested by you": "These items were requested by you: ",
+    "has offered to donate these items": " has offered to donate these items",
+    "has donated these items": " has donated these items",
+    "Repeat this request": "Repeat this request"
 
   }
