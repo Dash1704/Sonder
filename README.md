@@ -214,7 +214,7 @@ I would like to see her profile page with bio
 -----
 <br>
 
-## Screen Shots of the Live Website
+## Screenshots of the Live Website
 
 
 ![](./client/src/images/Screenshot_homepage.png)
@@ -226,6 +226,6 @@ I would like to see her profile page with bio
 -----
 <br>
 
-## Screen Shots of the Live Website Translated to Polish
+## Screenshot of the Live Website Translated to Polish
 ![](./client/src/images/Screenshot_homepage_polish.png)
 
