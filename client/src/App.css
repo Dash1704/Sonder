@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;800&display=swap');
+
 #toast-container{
   top: 30px;
   right: 20px;
@@ -157,13 +158,12 @@ button .call-to-action-button {
   color: #ffffff;
 }
 
-.mother-image {
+/* .mother-image {
   margin-right: -70%;
   margin-left: auto;
   width: 10;
   height: 10;
   /* position: sticky; */
-}
 
 
 /* == MOTHER REQUESTS PAGE == */
@@ -319,13 +319,6 @@ button .call-to-action-button {
   width: 90%;
 }
 
-
-/* == MOTHER SIGN UP PAGE == */
-
-/* == DONOR SIGN UP PAGE == */
-
-/* == ABOUT US PAGE == */
-
 /* == MOTHER PROFILE PAGE == */
 
 .profile {
@@ -417,4 +410,49 @@ button .call-to-action-button {
   font-size: 1.1vw;
   margin-top: 30px;
   margin-left: -5px;
+}
+
+/* == ABOUT US PAGE == */
+
+.contact-us-form {
+  border-radius: 10px;
+  height: 27.7vh;
+}
+
+.contact-form-button {
+  margin-top: -40px;
+  margin-left: 400px;
+}
+
+.about-us-how-it-works {
+  background-color: #9e59fb;
+  border-radius: 10px;
+  padding: 20px;
+  margin-right: 30px;
+  font-size: 0.61vw;
+}
+
+.about-us-header {
+  font-size: 2.8vw;
+  font-weight: 300;
+  padding: 0;
+}
+
+.about-us-image {
+  width: 30vw;
+  margin-left: 25px;
+  margin-top: 50px;
+  border-radius: 30px;
+  align-items: center;
+}
+
+.about-us-blurb {
+  margin-right: 37px;
+  font-weight: 300;
+  font-size: 0.8vw;
+}
+
+.about-us-works-header {
+  font-size: 1.5vw;
+  margin-top: -5px;
 }
