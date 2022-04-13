@@ -87,6 +87,7 @@ const MotherProfile = () => {
     <>
    <div className="container"> 
    <div className='profile'>
+     <h3><a href={`/dashboard`}>Click here to go to manage you requests</a></h3>
     <h4>
      <ul>
        <li>Name: {profile.name}</li>
