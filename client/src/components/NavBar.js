@@ -133,9 +133,8 @@ const NavBar = () => {
     else {
       return [
         <li key="aboutus"><Link to="/aboutus">{t("about_us_navbar")}</Link></li>,
-        <li key="login"><Link to="/login">{t("login")}</Link></li>, <li key="lang"></li> ,
+        <li key="login"><Link to="/login">{t("login")}</Link></li>,
         languageDropdownButton
-        
       ]
     }
   }
