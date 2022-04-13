@@ -1,6 +1,5 @@
 import React from 'react';
 import { send } from 'emailjs-com';
-import { t } from 'i18next';
 import { useTranslation } from "react-i18next";
 
 const RequestHelpButton = ({ oneRequest, allRequests, setAllRequests }) => {
