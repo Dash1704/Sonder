@@ -42,13 +42,9 @@ nav .logout-button :hover {
 
 /* language drop down */
 nav .dropdown-content {
-  margin-top: 100px;
-  padding-left: 40px;
-  padding-right: 120px;
-  padding-bottom: 30px;
   align-items: center;
   text-align: center;
-  background-color: #8789fc;
+  background-color: white;
   font-family: 'Inter', sans-serif; 
   border-radius: 10px;
 }
