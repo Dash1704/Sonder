@@ -24,7 +24,6 @@ const ListRequest = ({ oneRequest, allRequests, setAllRequests }) => {
                }
                )}
 
-               <h5>{t("requested_by_info", {userName, userCity})}</h5>   
                <p className="m-request-details">{t("requested_by_info", {userName, userCity})}</p>   
             </div>
             </>
