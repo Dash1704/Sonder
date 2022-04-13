@@ -38,7 +38,7 @@ const ContactForm = () => {
  return (
    <>
 
-   <div className='card'>
+   <div className='card contact-us-form'>
     <h3>Get in touch</h3>
       <div className='contact_form'>
         <form className="col s12" onSubmit={onSubmit}>
@@ -85,10 +85,10 @@ const ContactForm = () => {
             onChange={handleChange}
           />
 
-        <label htmlFor="message">Your message</label>
+        <label className="contact-form-filler-text"htmlFor="message">Your message</label>
         <span className="helper-text" data-error="Required" data-success=""></span>
         </div>
-          <button className="btn waves-effect waves-light" type="submit" name="action">Send<i className="material-icons right">send</i></button>
+          <button className="btn waves-effect waves-light call-to-action-button contact-form-button" type="submit" name="action">Send<i className="material-icons right">send</i></button>
         </div>
         </form>
       </div>
