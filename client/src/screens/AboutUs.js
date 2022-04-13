@@ -9,9 +9,9 @@ const AboutUs = () => {
         <div className="container">
           <div className='row'>
             <div className='col s7'>
-              <h1 className='about-us-header'>{t("welcome_to_sonder")}</h1>
+              <h1 className='about-us-header'>{t("we_are_sonder")}</h1>
               <p className='about-us-blurb'>{t("about_blurb")}</p>
-              <h3>{t("about_how_it_works")}</h3>
+              <h3 className="about-us-works-header">{t("about_how_it_works")}:</h3>
               <p className='about-us-how-it-works'>{t("about_blurb_2")}</p>
             </div>
           <div className='col s5'>
