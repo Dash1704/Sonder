@@ -155,11 +155,16 @@ npm start
 *  Alternatively please visit the live website on Heroku: https://sonder-techforgood.herokuapp.com/
 
 
+## Diagram of the Application's Framework
+
+
+![](./client/src/images/Screenshot_diagram_app_framework.png)
+
+
+
+## Screen Shots of the Live Website
 
 
 ![](./client/src/images/Screenshot_homepage.png)
 
 ![](./client/src/images/Screenshot_requestpage.png)
-
-
-
