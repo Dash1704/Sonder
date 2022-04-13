@@ -1,7 +1,7 @@
 # Sonder
 > *We help refugee mothers access all the help they need.*
 
-**Sonder provides all the necessities to reopen the door back to experiencing the joys of motherhood and childhood without limitations.**
+**Sonder is a web app designed to provide all the necessities to refugee mothers, to reopen the door back to experiencing the joys of motherhood and childhood, without any limitations.**
 
 Sonder is the two-week project of six Makers Academy students from the January 2022 cohort: Chloë, Jaroslaw, Eddie, Chris, Dash and Francesco. We all share the same passion of wanting to build something that does good.
 
