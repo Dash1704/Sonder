@@ -47,6 +47,7 @@ const SignUpMotherForm = () => {
         <div className="card ">
          <form>
             <div className="input-field validate">
+            <i className="material-icons prefix">account_circle</i>
             <label htmlFor="name">{t("name")}</label>
             <input type="text" 
                 data-testid="name"
@@ -56,6 +57,7 @@ const SignUpMotherForm = () => {
             </div>
 
         <div className="input-field validate">
+        <i className="material-icons prefix">email</i>
             <label htmlFor="email">Email</label>
             <input type="email" 
                 data-testid="email"
@@ -65,6 +67,7 @@ const SignUpMotherForm = () => {
             </div>
 
             <div className="input-field validate">
+            <i className="material-icons prefix">lock_outside</i>
             <label htmlFor="password">{t("password")}</label>
             <input type="password" 
                 data-testid="password"
@@ -74,6 +77,7 @@ const SignUpMotherForm = () => {
             </div>
 
             <div className="input-field validate">
+            <i className="material-icons prefix">location_city</i>
             <label htmlFor="city">{t("city")}</label>
             <input type="text" 
                 data-testid="city"
