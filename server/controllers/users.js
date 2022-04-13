@@ -76,6 +76,7 @@ const UsersController = {
   }),
 
   ShowMotherProfile: asyncHandler (async (req, res) => {
+    console.log('Here here')
     console.log(req.params._id)
     const mother = await Mother.findById(req.params._id)
     if(mother) {

@@ -23,7 +23,6 @@ const ListRequest = ({ oneRequest, allRequests, setAllRequests }) => {
                }
                )}
                <p className="m-request-details">{t("requested_by_info", {userName, userCity})}</p>   
-               <a href={`/viewmotherprofile`}>{t("view_profile_button")}</a>
             </div>
             </>
         )
@@ -32,7 +31,9 @@ const ListRequest = ({ oneRequest, allRequests, setAllRequests }) => {
             <>
                 <div className='donor-requests-box'>
                   <p>{`${oneRequest.text}`}</p> 
+                  <p>{oneRequest.basket.join(',   ')}</p>
                   <p>{t("requested_by_info", {userName, userCity})}</p>
+                  <a href={`/viewmotherprofile/${oneRequest.userCreatedBy._id}`}>{t("view_profile_button",  {userName})}</a>
                 </div>
                 <div>  
                     {
