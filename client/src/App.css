@@ -438,10 +438,11 @@ button .call-to-action-button {
 }
 
 .about-us-image {
-  width: 98%;
+  width: 90%;
   margin-left: 25px;
   margin-top: 50px;
   border-radius: 30px;
+  align-items: center;
 }
 
 .about-us-blurb {

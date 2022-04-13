@@ -37,9 +37,8 @@ const ContactForm = () => {
 
  return (
    <>
-
+   <h3 className='about-us-works-header'>Get in touch</h3>
    <div className='card contact-us-form'>
-    <h3>Get in touch</h3>
       <div className='contact_form'>
         <form className="col s12" onSubmit={onSubmit}>
         <div className="row">
