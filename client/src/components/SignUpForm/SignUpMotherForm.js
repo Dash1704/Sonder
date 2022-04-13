@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import M from 'materialize-css';
 import { useTranslation } from "react-i18next";
-//import motherimage from "../../images/pregnantmother.png"
+//import motherimage from "../../images/pregnantmother2.png"
 
 const SignUpMotherForm = () => {
     const { t } = useTranslation();
@@ -24,7 +24,7 @@ const SignUpMotherForm = () => {
                 password,
                 city
             })
-        })
+        }) 
         .then(response => response.json())
         .then(data => {
             if (data.error) {
