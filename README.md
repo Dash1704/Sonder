@@ -1,4 +1,4 @@
-# Sonder
+# Sonder 💙 
 > *We help refugee mothers access all the help they need.*
 
 **Sonder is a web app designed to provide all the necessities to refugee mothers, to reopen the door back to experiencing the joys of motherhood and childhood, without any limitations.**
