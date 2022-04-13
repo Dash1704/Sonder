@@ -39,7 +39,7 @@ const ContactForm = () => {
    <>
 
    <div className='card'>
-    <h5>Get in touch</h5>
+    <h3>Get in touch</h3>
       <div className='contact_form'>
         <form className="col s12" onSubmit={onSubmit}>
         <div className="row">
