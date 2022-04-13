@@ -6,8 +6,10 @@ const SignUpDonorPage = () => {
   const { t } = useTranslation();
     return (
       <div className="container">
-      <h1>{t("sign_up_donor")}</h1>
-      < SignUpDonorForm />
+        <div className='signup-login-box'>
+          <p className='signup-login-title' >{t("sign_up_donor")}</p>
+          < SignUpDonorForm />
+        </div>
       </div>
     )
   }

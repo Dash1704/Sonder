@@ -40,64 +40,64 @@ const SignUpMotherForm = () => {
     return (
 
     <div>
-       {/* <div className="mother-image-cropped">
-            <img className="mother-image" src={motherimage}/>
-          </div> */}
-    
-        <div className="card ">
+        <div className="card">
          <form>
-            <div className="input-field validate">
-            <i className="material-icons prefix">account_circle</i>
-            <label htmlFor="name">{t("name")}</label>
-            <input type="text" 
-                data-testid="name"
-                value={name}
-                onChange = {(e) => setName(e.target.value)}
-            /> 
-            </div>
+            <div>
+              <div className="input-field validate">
+                <i className="material-icons prefix">account_circle</i>
+                <label htmlFor="name">{t("name")}</label>
+                <input type="text" 
+                    data-testid="name"
+                    value={name}
+                    onChange = {(e) => setName(e.target.value)}
+                /> 
+              </div>
 
-        <div className="input-field validate">
-        <i className="material-icons prefix">email</i>
-            <label htmlFor="email">Email</label>
-            <input type="email" 
-                data-testid="email"
-                value={email}
-                onChange = {(e) => setEmail(e.target.value)}
-            /> 
-            </div>
+              <div className="input-field validate">
+                <i className="material-icons prefix">email</i>
+                    <label htmlFor="email">Email</label>
+                    <input type="email" 
+                        data-testid="email"
+                        value={email}
+                        onChange = {(e) => setEmail(e.target.value)}
+                    /> 
+              </div>
 
-            <div className="input-field validate">
-            <i className="material-icons prefix">lock_outside</i>
-            <label htmlFor="password">{t("password")}</label>
-            <input type="password" 
-                data-testid="password"
-                value={password}
-                onChange = {(e) => setPassword(e.target.value)}
-            />
-            </div>
+              <div className="input-field validate">
+              <i className="material-icons prefix">lock_outside</i>
+              <label htmlFor="password">{t("password")}</label>
+              <input type="password" 
+                  data-testid="password"
+                  value={password}
+                  onChange = {(e) => setPassword(e.target.value)}
+              />
+              </div>
 
-            <div className="input-field validate">
-            <i className="material-icons prefix">location_city</i>
-            <label htmlFor="city">{t("city")}</label>
-            <input type="text" 
-                data-testid="city"
-                value={city}
-                onChange = {(e) => setCity(e.target.value)}
-            />
+              <div className="input-field validate">
+                <i className="material-icons prefix">location_city</i>
+                <label htmlFor="city">{t("city")}</label>
+                <input type="text" 
+                    data-testid="city"
+                    value={city}
+                    onChange = {(e) => setCity(e.target.value)}
+                />
+              </div>
             </div>
-            <button className="btn waves-effect waves-light call-to-action-button"
-                data-testid="signup-button"
-                onClick = {(e) => {
-                    e.preventDefault();
-                    postSignup();
-                    }
-                } >
-                {t("sign_up")}
-                
-            </button>
-    </form>
+            <div>
+                <button className="btn waves-effect waves-light call-to-action-button"
+                    data-testid="signup-button"
+                    onClick = {(e) => {
+                        e.preventDefault();
+                        postSignup();
+                        }
+                    } >
+                    {t("sign_up")}
+                    
+                </button>
+              </div>
+          </form>
+      </div>
     </div>
-            </div>
             
     
 

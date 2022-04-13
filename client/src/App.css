@@ -156,15 +156,21 @@ button .call-to-action-button {
   max-width: 450px;
   margin: 10px auto;
   color: #ffffff;
+  border-radius: 10px;
 }
 
-/* .mother-image {
-  margin-right: -70%;
-  margin-left: auto;
-  width: 10;
-  height: 10;
-  /* position: sticky; */
+.signup-login-title {
+  font-size: 2vw;
+  text-align: center;
+}
 
+.signup-login-box {
+  margin-top: 50px;
+}
+
+.login-margin-fix {
+  margin-bottom: -5px;
+}
 
 /* == MOTHER REQUESTS PAGE == */
 
