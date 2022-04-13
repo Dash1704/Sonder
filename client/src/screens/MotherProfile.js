@@ -90,10 +90,11 @@ const MotherProfile = () => {
    <div className="container"> 
       <div className='row profile'>
         <div className='col s6'>
-          <h1 className="m-profile-title">Welcome to your profile page {profile.name}</h1>
+          <h1 className="m-profile-title">Welcome {profile.name}</h1>
+          <p className="m-profile-request-statement">{t("request_and_email_sentence_profile")}</p>
           <ul className="profile-details-box">
             <li className='profile-input'><span className='profile-headers'>{t("name_profile")}: </span>{profile.name}</li>
-            <li className='profile-input'><span className='profile-headers'>{t("email")}: </span><li>{profile.email}</li></li>
+            <li className='profile-input'><span className='profile-headers'>{t("email")}: </span>{profile.email}</li>
             <li className='profile-input'><span className='profile-headers'>{t("city")}: </span>{profile.city}</li>
             <ul>
               <li className='profile-input'><span className='profile-headers'>{t("About Yourself")}: </span>{profile.about_yourself}</li>
@@ -134,11 +135,9 @@ const MotherProfile = () => {
           </div>
         </div>
         <div className='col s5'>
-          <img className="m-profile-icons" src={motherProfileImage} alt="Motherhood icons"/>
-          <button className="waves-effect waves-light btn-small call-to-action-button" href={`/dashboard`}>Manage your requests</button>
-          <div className='my_requests'>
-            <h5>{t("request_and_email_sentence_profile")}</h5>
-            <div className="d-requests-list">
+          <div>
+            <span className='m-your-requests'>Your requests:<button className="waves-effect waves-light btn-small call-to-action-button m-profile-manage-requests-button" href={`/dashboard`}>Manage your requests</button></span>
+            <div className="m-profile-requests-list">
               {myRequests.map( oneRequest => {
                     return < ListRequest 
                     oneRequest={oneRequest}
@@ -148,6 +147,7 @@ const MotherProfile = () => {
                     />
               })}
             </div>
+            <img className="m-profile-icons" src={motherProfileImage} alt="Motherhood icons"/>
           </div>
         </div>
     </div>

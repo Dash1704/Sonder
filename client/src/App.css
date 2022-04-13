@@ -328,7 +328,6 @@ button .call-to-action-button {
 /* == MOTHER PROFILE PAGE == */
 
 .profile {
-  background-color: black;
   margin-top: 50px;
 }
 
@@ -341,15 +340,18 @@ button .call-to-action-button {
 .profile-headers {
   font-size: 0.9vw;
   font-weight: 600;
+  padding-right: 10px;
 }
 
 .profile-details-box {
-  background-color: #93EFFE;
-  padding: 30px;
+  padding: 10px;
 }
 
 .profile-input {
   font-size: 0.9vw;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
 }
 
 /* mother profile placeholder text */
@@ -373,4 +375,29 @@ button .call-to-action-button {
 
 .m-profile-icons {
   width: 100%;
+  margin-top: 40px;
+}
+
+.m-profile-requests-list {
+  font-size: 0.8vw;
+  width: auto;
+  height: 450px;
+  overflow: scroll;
+  text-align: center;
+}
+
+.m-profile-request-statement {
+  margin-top: 10px;
+  font-size: 0.9vw;
+}
+
+.m-your-requests {
+  font-size: 1.1vw;
+  margin-top: 10px;
+  margin-left: -5px;
+  margin-bottom: 14px;
+}
+
+.m-profile-manage-requests-button {
+  margin-left: 158px;
 }
