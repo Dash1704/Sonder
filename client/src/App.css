@@ -416,11 +416,11 @@ button .call-to-action-button {
 
 .contact-us-form {
   border-radius: 10px;
-  height: 27.7vh;
+  height: 29.5vh;
 }
 
 .contact-form-button {
-  margin-top: -40px;
+  margin-top: -20px;
   margin-left: 400px;
 }
 
@@ -439,7 +439,7 @@ button .call-to-action-button {
 }
 
 .about-us-image {
-  width: 30vw;
+  width: 28vw;
   margin-left: 25px;
   margin-top: 50px;
   border-radius: 30px;

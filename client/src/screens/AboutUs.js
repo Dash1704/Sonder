@@ -18,7 +18,7 @@ const AboutUs = () => {
             </div>
           </div>
               <div className='row'>
-                <div className='about-us-works-box col s5'>
+                <div className='about-us-works-box col s4'>
                   <h3 className="about-us-works-header">{t("about_how_it_works")}:</h3>
                   <p className='about-us-how-it-works'>{t("about_blurb_2")}</p>
                 </div>
