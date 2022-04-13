@@ -31,6 +31,7 @@ The term Sonder describes the sudden realisation that everyone has a story, and 
 -----
 <br>
 
+
 ## Set up your project
 
 1. Fork this repository
@@ -58,6 +59,17 @@ npm start
 
 *  Alternatively please visit the live website on Heroku: https://sonder-techforgood.herokuapp.com/
 * The website is best viewed at 1920 x 1080 resolution (or equivalent) due to a bug we have no been able to fix yet.
+
+<br>
+
+-----
+<br>
+
+## Links
+- [The Presentation](https://docs.google.com/presentation/d/1YCZbzBootK7E9iQd9vGCHjPPfxzPOgMOM2yWOEtt4KY/edit#slide=id.p)
+- [The Project Board](https://github.com/Dash1704/Sonder/projects/1)
+- [Standup Board](https://miro.com/app/board/uXjVOAEg51A=/)
+- [Team Charter](https://docs.google.com/document/d/1dh_80CdoNvoA97Du76ZvXs5M2MllfEZmn3IJPEgdVfo/edit)
 
 <br>
 
@@ -228,14 +240,3 @@ I would like to see her profile page with bio
 
 ## Screenshot of the Live Website Translated to Ukrainian
 ![](./client/src/images/Screenshot_homepage_ukrainian.png)
-
-<br>
-
------
-<br>
-
-## Links
-- [The Presentation](https://docs.google.com/presentation/d/1YCZbzBootK7E9iQd9vGCHjPPfxzPOgMOM2yWOEtt4KY/edit#slide=id.p)
-- [The Project Board](https://github.com/Dash1704/Sonder/projects/1)
-- [Standup Board](https://miro.com/app/board/uXjVOAEg51A=/)
-- [Team Charter](https://docs.google.com/document/d/1dh_80CdoNvoA97Du76ZvXs5M2MllfEZmn3IJPEgdVfo/edit)
