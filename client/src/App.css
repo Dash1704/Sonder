@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;800&display=swap');
 #toast-container{
   top: 30px;
   right: 20px;
@@ -147,6 +149,33 @@ button .call-to-action-button {
   font-size: 0.9vw;
   font-weight: 500;
 }
+
+
+.card{
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  padding: 30px;
+  text-align: center;
+  max-width: 450px;
+  margin: 10px auto;
+  color: #ffffff;
+  
+
+}
+
+.container{
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.mother-image {
+  margin-right: -70%;
+  margin-left: auto;
+  width: 10;
+  height: 10;
+  /* position: sticky; */
+}
+
 
 /* == MOTHER REQUESTS PAGE == */
 
@@ -298,3 +327,4 @@ button .call-to-action-button {
 /* == MOTHER PROFILE PAGE == */
 
 /* == DONOR PROFILE PAGE == */
+

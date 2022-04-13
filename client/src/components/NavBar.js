@@ -50,7 +50,9 @@ const NavBar = () => {
       inDuration: 300,
       outDuration: 225,
       hover: true,
-      belowOrigin: true
+      belowOrigin: true,
+      constrainWidth: false,
+      coverTrigger: false
     };
     M.Dropdown.init(dropdowns, options);
     }, [])
@@ -72,27 +74,30 @@ const NavBar = () => {
         }}
       >language</a>
         <ul id='dropdown1' className='dropdown-content'>
-          <li className="dropdown-text" onClick={() => i18next.changeLanguage(languages[0].code)}>
-            <span>{getUnicodeFlagIcon("GB")}</span>{languages[0].name}
-          </li>
-          <li className="dropdown-text" onClick={() => i18next.changeLanguage(languages[1].code)}>
-            <span>{getUnicodeFlagIcon("ES")}</span>{languages[1].name}
-          </li>
-          <li className="dropdown-text" onClick={() => i18next.changeLanguage(languages[2].code)}>
-            <span>{getUnicodeFlagIcon("IT")}</span>{languages[2].name}
-          </li>
-          <li className="dropdown-text" onClick={() => i18next.changeLanguage(languages[3].code)}>
-            <span>{getUnicodeFlagIcon("FR")}</span>{languages[3].name}
-          </li>
-          <li className="dropdown-text" onClick={() => i18next.changeLanguage(languages[4].code)}>
-            <span>{getUnicodeFlagIcon("PL")}</span>{languages[4].name}
-          </li>
-          <li className="dropdown-text" onClick={() => i18next.changeLanguage(languages[5].code)}>
-            <span>{getUnicodeFlagIcon("RU")}</span>{languages[5].name}
-          </li>
-          <li className="dropdown-text" onClick={() => i18next.changeLanguage(languages[6].code)}>
-            <span>{getUnicodeFlagIcon("UA")}</span>{languages[6].name}
-          </li>
+
+
+        <li onClick={() => i18next.changeLanguage(languages[0].code)}>
+          <span>{getUnicodeFlagIcon("GB")} {languages[0].name}</span>
+        </li>
+        <li onClick={() => i18next.changeLanguage(languages[1].code)}>
+          <span>{getUnicodeFlagIcon("ES")} {languages[1].name}</span>
+        </li>
+        <li onClick={() => i18next.changeLanguage(languages[2].code)}>
+          <span>{getUnicodeFlagIcon("IT")} {languages[2].name}</span>
+        </li>
+        <li onClick={() => i18next.changeLanguage(languages[3].code)}>
+          <span>{getUnicodeFlagIcon("FR")} {languages[3].name}</span>
+        </li>
+        <li onClick={() => i18next.changeLanguage(languages[4].code)}>
+          <span>{getUnicodeFlagIcon("PL")} {languages[4].name}</span>
+        </li>
+        <li onClick={() => i18next.changeLanguage(languages[5].code)}>
+          <span>{getUnicodeFlagIcon("RU")} {languages[5].name}</span>
+        </li>
+        <li onClick={() => i18next.changeLanguage(languages[6].code)}>
+          <span>{getUnicodeFlagIcon("UA")} {languages[6].name}</span>
+        </li>
+
         </ul>
   </li>
   const logoutNavbar =
@@ -100,7 +105,7 @@ const NavBar = () => {
         <button className="btn-small waves-effect logout-button"
             onClick={()=> {
               localStorage.clear()
-              navigate('/login')
+              navigate('/')
             }}>
           {t("logout_navbar")}
         </button>
@@ -108,19 +113,19 @@ const NavBar = () => {
       
     if(mother){
       return[
-        <li key="userName">Signed in as {JSON.parse(localStorage.getItem('mother')).name}</li>,
-        <li key="aboutus"><Link to="/aboutus">About Us</Link></li>,
-        <li key="request"><Link to="/requests/mother">Requests</Link></li>,
-        <li key="motherprofile"><Link to="/profile/mother">Profile</Link></li>,
+        <li key="userName">{t("signed_in_as_navbar")}{JSON.parse(localStorage.getItem('mother')).name}</li>,
+        <li key="aboutus"><Link to="/aboutus">{t("about_us_navbar")}</Link></li>,
+        <li key="request"><Link to="/requests/mother">{t("requests_navbar")}</Link></li>,
+        <li key="motherprofile"><Link to="/profile/mother">{t("profile_navbar")}</Link></li>,
         languageDropdownButton,
         logoutNavbar
       ]
     } 
     else if(donor){
       return[
-        <li key="userName">Signed in as {JSON.parse(localStorage.getItem('donor')).name}</li>,
-        <li key="aboutus"><Link to="/aboutus">About Us</Link></li>,
-        <li key="request"><Link to="/requests/donor">Requests</Link></li>,
+        <li key="userName">{t("signed_in_as_navbar")}{JSON.parse(localStorage.getItem('donor')).name}</li>,
+        <li key="aboutus"><Link to="/aboutus">{t("about_us_navbar")}</Link></li>,
+        <li key="request"><Link to="/requests/donor">{t("requests_navbar")}</Link></li>,
         languageDropdownButton,
         logoutNavbar
       ]

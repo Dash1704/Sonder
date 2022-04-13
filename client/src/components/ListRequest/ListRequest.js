@@ -13,7 +13,7 @@ const ListRequest = ({ oneRequest, allRequests, setAllRequests }) => {
     if(!donor) {
         return (
             <>
-            <div className='m-list-requests-box'>
+          <div className='m-list-requests-box'>
                <p>{`${oneRequest.text}`}</p> 
                {oneRequest.basket.map(item => {
                    return (

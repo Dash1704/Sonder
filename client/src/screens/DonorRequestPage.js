@@ -3,8 +3,8 @@ import ListRequest from '../components/ListRequest/ListRequest.js';
 import { useTranslation } from "react-i18next";
 import donorImage from "../images/mothering.png";
 
-
 const DonorRequestPage = () => {
+
     const { t } = useTranslation();
     const user = localStorage.getItem("donor")
     const jsonUser = JSON.parse(user)
@@ -60,14 +60,14 @@ const DonorRequestPage = () => {
                   onClick = {(e) => {
                       e.preventDefault();
                       seeAllRequests()}} >
-                  See All Requests
+                  {t("See All Requests")}
           </button>    
           <button className="waves-effect waves-light btn-small call-to-action-button donor-request-buttons"
               data-testid="filterCityButton"
               onClick = {(e) => {
                   e.preventDefault();
                   filterByCity(jsonUser.city)}} >
-              Filter by your city
+              {t("Filter by your city")}
           </button>
 
           <button className="waves-effect waves-light btn-small call-to-action-button donor-request-buttons"
@@ -75,7 +75,7 @@ const DonorRequestPage = () => {
               onClick = {(e) => {
                   e.preventDefault();
                   filterByActive()}} >
-              Show active requests
+              {t("Show active requests")}
           </button>
         </div>
         <div className='row'>
