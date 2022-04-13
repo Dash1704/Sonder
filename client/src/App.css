@@ -159,9 +159,13 @@ button .call-to-action-button {
   border-radius: 10px;
 }
 
-.signup-title {
+.signup-login-title {
   font-size: 2vw;
   text-align: center;
+}
+
+.signup-login-box {
+  margin-top: 50px;
 }
 
 /* == MOTHER REQUESTS PAGE == */
