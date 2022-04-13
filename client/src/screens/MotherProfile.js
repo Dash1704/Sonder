@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import ListRequest from '../components/ListRequest/ListRequest.js'
 import M from 'materialize-css';
 import { useTranslation } from "react-i18next";
+import motherProfileImage from "../images/mother-profile-icons.png"
 
 const MotherProfile = () => {
   const { t } = useTranslation();
@@ -132,8 +133,8 @@ const MotherProfile = () => {
             </form>
           </div>
         </div>
-        <div className='col s6'>
-          <img src={profileimage} alt="Motherhood icons"/>
+        <div className='col s5'>
+          <img className="m-profile-icons" src={motherProfileImage} alt="Motherhood icons"/>
           <button className="waves-effect waves-light btn-small call-to-action-button" href={`/dashboard`}>Manage your requests</button>
           <div className='my_requests'>
             <h5>{t("request_and_email_sentence_profile")}</h5>

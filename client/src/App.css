@@ -319,8 +319,6 @@ button .call-to-action-button {
   width: 90%;
 }
 
-
-
 /* == MOTHER SIGN UP PAGE == */
 
 /* == DONOR SIGN UP PAGE == */
@@ -357,4 +355,8 @@ button .call-to-action-button {
   padding-left: 15px;
   padding-right: 15px;
   height: 20vh;
+}
+
+.m-profile-icons {
+  width: 100%;
 }
