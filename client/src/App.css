@@ -202,7 +202,7 @@ button .call-to-action-button {
 
 /* request question */
 .m-requests-question {
-  font-size: 1vw;
+  font-size: 2vw;
 }
 
 /* mother request items form */
@@ -249,21 +249,24 @@ button .call-to-action-button {
   padding-bottom: 30px;
   font-size: 0.7vw;
   width: auto;
-  height: 300px;
+  height: 30vh;
   border-radius: 10px;
   overflow: scroll;
   margin-bottom: 30px;
+  margin-left: -10px;
 }
 
 .requested-city-title {
   font-size: 1.1vw;
   margin-top: 50px;
+  margin-left: -10px;
+  margin-bottom: 14px;
 }
 
 
 /* request details - name, city */
 .m-request-details {
-  font-size: 1vw;
+  font-size: 0.7vw;
   font-style: italic;
 }
 
