@@ -89,56 +89,64 @@ const MotherProfile = () => {
    <div className="container"> 
       <div className='row profile'>
         <div className='col s6'>
-          <h1 className="">Welcome to your profile page {profile.name}</h1>
+          <h1 className="m-profile-title">Welcome to your profile page {profile.name}</h1>
           <ul>
-            <li>{t("name_profile")}: {profile.name}</li>
-            <li>{t("email")}: {profile.email}</li>
-            <li>{t("city")}: {profile.city}</li>
-            <ul>{t("bio")}:
-              <li><h5>{t("About Yourself")}: {profile.about_yourself}</h5></li>
-              <li><h5>{t("Interests")}: {profile.languages}</h5></li>
-              <li><h5>{t("Children")}: {profile.how_many_children}</h5></li>
+            <li><h5>{t("name_profile")}: </h5>{profile.name}</li>
+            <li><h5>{t("email")}: </h5><li>{profile.email}</li></li>
+            <li><h5>{t("city")}: </h5>{profile.city}</li>
+            <ul>
+              <li className='profile-titles'><h5>{t("About Yourself")}: </h5>{profile.about_yourself}</li>
+              <li className='profile-titles'><h5>{t("Interests")}: </h5>{profile.languages}</li>
+              <li className='profile-titles'><h5>{t("Children")}: </h5>{profile.how_many_children}</li>
             </ul>
           </ul>
-          <div className='update_bio_form'>
+          <h5>Want to update your profile?</h5>
+          <div>
             <form onSubmit={onSubmit}>
-              <input
-                type='text'
-                name='about_yourself'
-                placeholder={t("about_yourself_placeholder")}
-                value={toSend.about_yourself}
-                onChange={handleChange}
-              />
-              <input
-                type='text'
-                name='languages'
-                placeholder={t("interests_placeholder")}
-                value={toSend.languages}
-                onChange={handleChange}
-              />
-              <input
-                type='text'
-                name='how_many_children'
-                placeholder={t("children_bio_placeholder")}
-                value={toSend.how_many_children}
-                onChange={handleChange}
-              />
-              <button type='submit'>{t("update_bio")}</button>
+              <div className='m-profile-edit-form'>
+                <input
+                  type='text'
+                  name='about_yourself'
+                  placeholder={t("about_yourself_placeholder")}
+                  value={toSend.about_yourself}
+                  onChange={handleChange}
+                />
+                <input
+                  type='text'
+                  name='languages'
+                  placeholder={t("interests_placeholder")}
+                  value={toSend.languages}
+                  onChange={handleChange}
+                />
+                <input
+                  type='text'
+                  name='how_many_children'
+                  placeholder={t("children_bio_placeholder")}
+                  value={toSend.how_many_children}
+                  onChange={handleChange}
+                />
+              </div>
+              <div>
+                <button className="waves-effect waves-light btn-small call-to-action-button" type='submit'>{t("update_bio")}</button>
+              </div>
             </form>
           </div>
         </div>
         <div className='col s6'>
+          <img src={profileimage} alt="Motherhood icons"/>
           <button className="waves-effect waves-light btn-small call-to-action-button" href={`/dashboard`}>Manage your requests</button>
           <div className='my_requests'>
             <h5>{t("request_and_email_sentence_profile")}</h5>
-            {myRequests.map( oneRequest => {
-                  return < ListRequest 
-                  oneRequest={oneRequest}
-                  setMyRequests={setMyRequests}
-                  myRequests={myRequests}
-                  key={oneRequest._id}
-                  />
+            <div className="d-requests-list">
+              {myRequests.map( oneRequest => {
+                    return < ListRequest 
+                    oneRequest={oneRequest}
+                    setMyRequests={setMyRequests}
+                    myRequests={myRequests}
+                    key={oneRequest._id}
+                    />
               })}
+            </div>
           </div>
         </div>
     </div>

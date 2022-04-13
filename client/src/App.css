@@ -224,7 +224,7 @@ button .call-to-action-button {
 }
 
 /* request placeholder text */
-::placeholder {
+.m-request-type-request ::placeholder {
   color: black;
   font-size: 0.8vw;
 }
@@ -335,6 +335,26 @@ button .call-to-action-button {
 }
 
 .m-profile-title {
-  font-size: 1.5vw;
+  font-size: 2.4vw;
+  margin-top: -7px;
+  color: white;
 }
 
+/* request placeholder text */
+.m-profile-edit-form ::placeholder {
+  font-size: 0.8vw;
+}
+
+.m-profile-edit-form {
+  background-color: white;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-right: 35px;
+  border-radius: 10px;
+  outline: none;
+  text-align: center;
+  resize: none;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 20vh;
+}
