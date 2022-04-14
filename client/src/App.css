@@ -95,17 +95,20 @@ nav .dropdown-text :hover {
   font-size: 2.6vw;
   font-weight: 500;
   padding: 0;
+  filter: drop-shadow(0 0 0.75rem #9e59fb);
 }
 
 .homepage-slogan {
   font-size: 1.3vw;
   font-weight: 500;
   font-style: italic;
+  filter: drop-shadow(0 0 0.75rem #9e59fb);
 }
 
 .homepage-motto {
   font-size: 0.9vw;
   font-weight: 500;
+  filter: drop-shadow(0 0 0.5rem #9e59fb);
 }
 
 .homepage-top-divide {
@@ -145,6 +148,7 @@ button .call-to-action-button {
 .call_to_action_title {
   font-size: 0.9vw;
   font-weight: 500;
+  filter: drop-shadow(0 0 0.75rem #9e59fb);
 }
 
 /* == SIGN UP AND LOGIN PAGES ==  */
@@ -196,16 +200,19 @@ button .call-to-action-button {
   font-size: 1.1vw;
   margin-top: 50px;
   font-weight: 500;
+  filter: drop-shadow(0 0 0.75rem #9e59fb);
 }
 
 .request_item_added {
   margin-left: 50px;
   font-size: 0.8vw;
+  filter: drop-shadow(0 0 0.75rem #9e59fb);
 }
 
 /* request question */
 .m-requests-question {
   font-size: 2vw;
+  filter: drop-shadow(0 0 0.75rem #9e59fb);
 }
 
 /* mother request items form */
@@ -265,6 +272,7 @@ button .call-to-action-button {
   margin-left: -10px;
   margin-bottom: 14px;
   font-weight: 500;
+  filter: drop-shadow(0 0 0.75rem #9e59fb);
 }
 
 
@@ -279,6 +287,7 @@ button .call-to-action-button {
 .d-requests-title {
   font-size: 1.5vw;
   margin-bottom: 5px;
+  filter: drop-shadow(0 0 0.75rem #9e59fb);
 }
 
 .d-requests-question {
@@ -286,6 +295,7 @@ button .call-to-action-button {
   margin-right: 700px;
   margin-bottom: -10px;
   font-weight: 500;
+  filter: drop-shadow(0 0 0.3rem #9e59fb);
 }
 
 .donor-request-buttons {
@@ -322,6 +332,7 @@ button .call-to-action-button {
 .donor-fulfillment {
   font-size: 0.9vw;
   margin-bottom: 30px;
+  filter: drop-shadow(0 0 0.75rem #9e59fb);
 }
 
 .donor-image {
@@ -339,6 +350,7 @@ button .call-to-action-button {
   margin-top: -7px;
   color: white;
   font-weight: 500;
+  filter: drop-shadow(0 0 0.75rem #9e59fb);
 }
 
 .profile-headers {
@@ -400,6 +412,7 @@ button .call-to-action-button {
   margin-top: 10px;
   margin-right: 80px;
   font-size: 0.9vw;
+  filter: drop-shadow(0 0 0.75rem #9e59fb);
 }
 
 .m-your-requests {
@@ -421,6 +434,7 @@ button .call-to-action-button {
   font-size: 1.1vw;
   margin-top: 30px;
   margin-left: -5px;
+  filter: drop-shadow(0 0 0.75rem #9e59fb);
 }
 
 /* == ABOUT US PAGE == */
@@ -436,12 +450,14 @@ button .call-to-action-button {
   padding: 20px;
   margin-right: 30px;
   font-size: 0.61vw;
+  filter: drop-shadow(0 0 0.75rem #9e59fb);
 }
 
 .about-us-header {
   font-size: 2.8vw;
   font-weight: 500;
   padding: 0;
+  filter: drop-shadow(0 0 0.75rem #9e59fb);
 }
 
 .about-us-image {
@@ -456,11 +472,13 @@ button .call-to-action-button {
   margin-right: 37px;
   font-weight: 500;
   font-size: 0.8vw;
+  filter: drop-shadow(0 0 0.99rem #9e59fb);
 }
 
 .about-us-works-header {
   font-size: 1.5vw;
   margin-top: -5px;
+  filter: drop-shadow(0 0 0.75rem #9e59fb);
 }
 
 /* == MOTHER MANAGE REQUESTS == */
@@ -471,12 +489,14 @@ button .call-to-action-button {
 
 .active-requests-title-text {
   font-size: 0.8vw;
+  filter: drop-shadow(0 0 0.75rem #9e59fb);
 }
 
 .active-requests-header {
   font-size: 1.3vw;
   text-align: left;
   margin-bottom: 30px;
+  filter: drop-shadow(0 0 0.75rem #9e59fb);
 }
 
 .requests-boxes {
