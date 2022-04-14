@@ -3,7 +3,7 @@
 
 **Sonder is a web app designed to provide all the necessities to refugee mothers, to reopen the door back to experiencing the joys of motherhood and childhood, without any limitations.**
 
-Sonder is the two-week project of six Makers Academy students from the January 2022 cohort 'Tech for Good' group: Chloë, Jaroslaw, Eddie, Chris, Dash and Francesco. We all share the same passion of wanting to build something that does good.
+Sonder is the two-week project of six Makers Academy students from the January 2022 cohort 'Tech for Good' group: Chloë, Chris, Dash, Eddie, Francesco and Jaroslaw. We all share the same passion of wanting to build something that does good.
 
 Some of us are personally impacted by the current international events, and all of us are deeply invested in the refugee crisis.
 
