@@ -241,3 +241,11 @@ I would like to see her profile page with bio
 
 ## Screenshot of the Live Website Translated to Ukrainian
 ![](./client/src/images/Screenshot_homepage_ukrainian.png)
+
+<br>
+
+-----
+<br>
+
+## Screenshot of the Request Fulfilment Confirmation Email to The Mother
+![](./client/src/images/Sonder_email_to_mother.png)
