@@ -95,7 +95,7 @@ npm start
 -----
 <br>
 
-## Sonder MVP
+## MVP
 - Refugee: Sign up
 - Refugee: Sign in
 - Refugee Sign out
