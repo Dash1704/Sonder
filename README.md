@@ -3,7 +3,7 @@
 
 **Sonder is a web app designed to provide all the necessities to refugee mothers, to reopen the door back to experiencing the joys of motherhood and childhood, without any limitations.**
 
-Sonder is the two-week project of six Makers Academy students from the January 2022 cohort Tech for Good group: Chloë, Jaroslaw, Eddie, Chris, Dash and Francesco. We all share the same passion of wanting to build something that does good.
+Sonder is the two-week project of six Makers Academy students from the January 2022 cohort 'Tech for Good' group: Chloë, Jaroslaw, Eddie, Chris, Dash and Francesco. We all share the same passion of wanting to build something that does good.
 
 Some of us are personally impacted by the current international events, and all of us are deeply invested in the refugee crisis.
 
@@ -85,6 +85,7 @@ npm start
 - [Jest](https://jestjs.io/) for testing.
 - [Cypress](https://www.cypress.io/) for end-to-end testing.
 - [Materialize.css](https://materializecss.com/) for template rendering of HTML and CSS.
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) for styling.
 - [JWT](https://jwt.io/) JSON authentication.
 - [Cors](https://momentjs.com/) provides a solution for double port deployment
 - [Bcrypt](https://www.npmjs.com/package/bcryptjs) hashing passwords.
