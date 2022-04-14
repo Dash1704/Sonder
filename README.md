@@ -248,4 +248,4 @@ I would like to see her profile page with bio
 <br>
 
 ## Screenshot of the Request Fulfilment Confirmation Email to The Mother
-![](./client/src/images/Sonder_email_to_mother.png)
+![](./client/src/images/Sonder_email_to_Mother.png)
