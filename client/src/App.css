@@ -195,6 +195,7 @@ button .call-to-action-button {
   margin-left: 50px;
   font-size: 1.1vw;
   margin-top: 50px;
+  font-weight: 500;
 }
 
 .request_item_added {
@@ -263,6 +264,7 @@ button .call-to-action-button {
   margin-top: 50px;
   margin-left: -10px;
   margin-bottom: 14px;
+  font-weight: 500;
 }
 
 
@@ -335,12 +337,14 @@ button .call-to-action-button {
   font-size: 2vw;
   margin-top: -7px;
   color: white;
+  font-weight: 500;
 }
 
 .profile-headers {
   font-size: 0.8vw;
   font-weight: 600;
   padding-right: 18px;
+  font-weight: 500;
 }
 
 .profile-details-box {
