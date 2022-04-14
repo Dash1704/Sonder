@@ -80,7 +80,7 @@ nav .dropdown-text :hover {
 }
 
 .homepage-image-cropped {
-  width: 250px; /* width of container */
+  width: 250vw; /* width of container */
   height: 448px; /* height of container */
   object-fit: cover;
   position: relative;
@@ -92,20 +92,20 @@ nav .dropdown-text :hover {
 }
 
 .homepage-header {
-  font-size: 2.8vw;
-  font-weight: 300;
+  font-size: 2.6vw;
+  font-weight: 500;
   padding: 0;
 }
 
 .homepage-slogan {
   font-size: 1.3vw;
-  font-weight: 200;
+  font-weight: 500;
   font-style: italic;
 }
 
 .homepage-motto {
   font-size: 0.9vw;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .homepage-top-divide {
